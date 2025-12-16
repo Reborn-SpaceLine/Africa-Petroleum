@@ -1,0 +1,306 @@
+/* Piscine Page Styles */
+.piscine-page {
+  padding: 80px 0 60px;
+  background: linear-gradient(135deg, #f8f9ff 0%, #e8f2ff 100%);
+  min-height: 100vh;
+}
+
+.piscine-page .page-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-bordeaux, #7d1935);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.piscine-page .page-description {
+  font-size: 1.2rem;
+  color: var(--text-light, #666666);
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+}
+
+/* Piscine Hero Section */
+.piscine-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 4rem;
+  background: white;
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 10px 30px rgba(125, 25, 53, 0.1);
+}
+
+.hero-content h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--primary-bordeaux, #7d1935);
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  color: var(--text-dark, #2c2c2c);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.hero-features {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--secondary-orange, #ff6b6b);
+  font-weight: 500;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Packages Section */
+.packages-section {
+  margin-bottom: 4rem;
+}
+
+.packages-section .section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--primary-bordeaux, #7d1935);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.package-card {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 5px 20px rgba(125, 25, 53, 0.08);
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.package-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(125, 25, 53, 0.15);
+}
+
+.package-card.selected {
+  border-color: var(--secondary-orange, #ff6b6b);
+  box-shadow: 0 5px 20px rgba(255, 107, 107, 0.2);
+}
+
+.package-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.package-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-bordeaux, #7d1935);
+  margin-bottom: 0.5rem;
+}
+
+.package-price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--secondary-orange, #ff6b6b);
+  margin-bottom: 0.25rem;
+}
+
+.package-duration {
+  font-size: 0.9rem;
+  color: var(--text-light, #666666);
+}
+
+.package-features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.package-features li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f0f0f0;
+  color: var(--text-dark, #2c2c2c);
+}
+
+.package-features li:last-child {
+  border-bottom: none;
+}
+
+.package-btn {
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  background: var(--secondary-orange, #ff6b6b);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.package-card.selected .package-btn {
+  background: var(--primary-bordeaux, #7d1935);
+}
+
+.package-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+}
+
+/* Facilities Section */
+.facilities-section {
+  margin-bottom: 4rem;
+}
+
+.facilities-section .section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--primary-bordeaux, #7d1935);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.facilities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.facility-card {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(125, 25, 53, 0.08);
+  transition: all 0.3s ease;
+}
+
+.facility-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(125, 25, 53, 0.15);
+}
+
+.facility-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--primary-bordeaux, #7d1935), var(--secondary-orange, #ff6b6b));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  color: white;
+}
+
+.facility-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary-bordeaux, #7d1935);
+  margin-bottom: 0.5rem;
+}
+
+.facility-description {
+  color: var(--text-light, #666666);
+  line-height: 1.5;
+}
+
+/* Piscine Info Section */
+.piscine-info {
+  background: white;
+  border-radius: 15px;
+  padding: 3rem;
+  box-shadow: 0 5px 20px rgba(125, 25, 53, 0.08);
+}
+
+.info-section h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-bordeaux, #7d1935);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+.info-item svg {
+  color: var(--secondary-orange, #ff6b6b);
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+
+.info-item strong {
+  display: block;
+  color: var(--primary-bordeaux, #7d1935);
+  margin-bottom: 0.25rem;
+}
+
+.info-item p {
+  color: var(--text-dark, #2c2c2c);
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .piscine-hero {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .hero-features {
+    justify-content: center;
+  }
+
+  .packages-grid,
+  .facilities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .piscine-page .page-title {
+    font-size: 2rem;
+  }
+
+  .hero-content h2 {
+    font-size: 1.5rem;
+  }
+}

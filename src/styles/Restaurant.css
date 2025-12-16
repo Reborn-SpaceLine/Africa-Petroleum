@@ -1,0 +1,218 @@
+/* Restaurant Page Styles */
+.restaurant-page {
+  padding: 80px 0 60px;
+  background: linear-gradient(135deg, #f8f9ff 0%, #e8f2ff 100%);
+  min-height: 100vh;
+}
+
+.restaurant-page .page-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-bordeaux, #7d1935);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.restaurant-page .page-description {
+  font-size: 1.2rem;
+  color: var(--text-light, #666666);
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+}
+
+/* Menu Categories */
+.menu-categories {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.category-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 25px;
+  color: var(--text-dark, #2c2c2c);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.category-btn:hover {
+  border-color: var(--secondary-orange, #ff6b6b);
+  color: var(--secondary-orange, #ff6b6b);
+}
+
+.category-btn.active {
+  background: var(--secondary-orange, #ff6b6b);
+  border-color: var(--secondary-orange, #ff6b6b);
+  color: white;
+}
+
+/* Menu Grid */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.menu-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(125, 25, 53, 0.08);
+  transition: all 0.3s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(125, 25, 53, 0.15);
+}
+
+.menu-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.menu-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.menu-card:hover .menu-image img {
+  transform: scale(1.05);
+}
+
+.menu-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0.25rem 0.5rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--primary-bordeaux, #7d1935);
+}
+
+.menu-content {
+  padding: 1.5rem;
+}
+
+.menu-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary-bordeaux, #7d1935);
+  margin-bottom: 0.5rem;
+}
+
+.menu-description {
+  color: var(--text-light, #666666);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.menu-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-time {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: var(--text-light, #666666);
+  font-size: 0.85rem;
+}
+
+.menu-price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--secondary-orange, #ff6b6b);
+}
+
+/* Restaurant Info */
+.restaurant-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.info-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(125, 25, 53, 0.08);
+  transition: all 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(125, 25, 53, 0.15);
+}
+
+.info-card svg {
+  width: 48px;
+  height: 48px;
+  color: var(--secondary-orange, #ff6b6b);
+  margin-bottom: 1rem;
+}
+
+.info-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary-bordeaux, #7d1935);
+  margin-bottom: 0.5rem;
+}
+
+.info-card p {
+  color: var(--text-light, #666666);
+  line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .restaurant-page .page-title {
+    font-size: 2rem;
+  }
+
+  .menu-categories {
+    gap: 0.5rem;
+  }
+
+  .category-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .restaurant-info {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+}
