@@ -4,7 +4,7 @@
  * Les actualités sont chargées depuis src/data/news.json
  */
 import { useState, useEffect } from 'react';
-import { Newspaper, Calendar, User } from 'lucide-react';
+import { Newspaper, Calendar, User, ArrowRight, TrendingUp } from 'lucide-react';
 import newsData from '../data/news.json';
 import '../styles/News.css';
 
@@ -71,8 +71,18 @@ export default function News() {
             <Newspaper size={18} />
             <span>Actualités</span>
           </div>
-          <h1 className="page-title">Actualités Africa Petroleum</h1>
-          <p className="page-description">Restez informé des dernières nouvelles et développements de nos stations</p>
+          <h1 className="page-title">
+            Actualités <span className="title-accent">Africa Petroleum</span>
+          </h1>
+          <p className="page-description">
+            Restez informé des dernières nouvelles et développements de nos stations
+          </p>
+          <div className="news-stats">
+            <div className="stat-item">
+              <TrendingUp size={20} />
+              <span>{newsItems.length} actualités</span>
+            </div>
+          </div>
         </div>
 
         {/* État de chargement */}
@@ -89,10 +99,13 @@ export default function News() {
           </div>
         ) : (
           <div className="news-grid">
-            {newsItems.map(item => (
-            <div key={item.id} className="news-card">
-              <div className="news-image">
-                <img src={item.image} alt={item.title} />
+            {newsItems.map((item, index) => (
+            <article key={item.id} className="news-card" style={{ animationDelay: `${index * 0.1}s` }}>
+              <div className="news-image-wrapper">
+                <div className="news-image">
+                  <img src={item.image} alt={item.title} loading="lazy" />
+                  <div className="image-overlay"></div>
+                </div>
                 <div className="news-category">{item.category}</div>
               </div>
               <div className="news-content">
@@ -108,8 +121,14 @@ export default function News() {
                     <span>{item.author}</span>
                   </div>
                 </div>
+                <div className="news-footer">
+                  <button className="news-read-more">
+                    Lire la suite
+                    <ArrowRight size={16} />
+                  </button>
+                </div>
               </div>
-            </div>
+            </article>
             ))}
           </div>
         )}

@@ -182,25 +182,33 @@
   transform: scaleX(1);
 }
 
-/* Icône d'information avec fond gradient utilisant les couleurs du logo */
+/* Icône d'information avec fond gradient utilisant les couleurs du logo - Version améliorée */
 .info-icon {
   width: 64px;
   height: 64px;
-  /* Gradient bordeaux/orange du logo */
-  background: linear-gradient(135deg, rgba(90, 15, 36, 0.15), rgba(255, 140, 0, 0.15));
-  border-radius: 16px;
+  /* Gradient bordeaux/orange du logo avec plus de profondeur */
+  background: linear-gradient(135deg, 
+    rgba(90, 15, 36, 0.2) 0%, 
+    rgba(90, 15, 36, 0.15) 50%,
+    rgba(255, 140, 0, 0.2) 100%);
+  border-radius: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--primary-bordeaux);
   flex-shrink: 0;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 2px solid rgba(90, 15, 36, 0.1);
+  border: 2.5px solid rgba(90, 15, 36, 0.2);
   position: relative;
   overflow: hidden;
+  box-shadow: 
+    0 4px 12px rgba(90, 15, 36, 0.15),
+    0 0 0 1px rgba(255, 140, 0, 0.1) inset,
+    0 2px 4px rgba(0, 0, 0, 0.05);
+  filter: drop-shadow(0 2px 4px rgba(90, 15, 36, 0.1));
 }
 
-/* Effet de brillance sur l'icône */
+/* Effet de brillance amélioré sur l'icône */
 .info-icon::before {
   content: '';
   position: absolute;
@@ -208,14 +216,55 @@
   left: -50%;
   width: 200%;
   height: 200%;
-  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  background: linear-gradient(45deg, 
+    transparent 0%, 
+    rgba(255, 255, 255, 0.4) 30%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0.4) 70%,
+    transparent 100%);
   transform: rotate(45deg);
   transition: all 0.6s ease;
   opacity: 0;
 }
 
 .info-card:hover .info-icon::before {
-  animation: shine 0.6s ease;
+  animation: shine 0.8s ease;
+}
+
+/* Halo lumineux autour de l'icône */
+.info-icon::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle, 
+    rgba(255, 140, 0, 0.2) 0%, 
+    rgba(90, 15, 36, 0.1) 50%,
+    transparent 100%);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.info-card:hover .info-icon::after {
+  opacity: 1;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.8;
+  }
 }
 
 @keyframes shine {
@@ -232,14 +281,37 @@
   }
 }
 
-/* Effet hover sur l'icône avec rotation et élévation */
+/* Effet hover sur l'icône avec rotation et élévation améliorés */
 .info-card:hover .info-icon {
-  background: linear-gradient(135deg, var(--primary-bordeaux), var(--secondary-orange));
+  background: linear-gradient(135deg, 
+    var(--primary-bordeaux) 0%,
+    rgba(90, 15, 36, 0.9) 30%,
+    var(--secondary-orange) 70%,
+    rgba(255, 140, 0, 0.9) 100%);
   color: var(--white);
-  transform: scale(1.15) rotate(10deg);
-  box-shadow: 0 8px 20px rgba(90, 15, 36, 0.3),
-              0 0 0 4px rgba(255, 140, 0, 0.1);
-  border-color: transparent;
+  transform: scale(1.2) rotate(12deg);
+  box-shadow: 
+    0 12px 32px rgba(90, 15, 36, 0.4),
+    0 0 0 4px rgba(255, 140, 0, 0.2),
+    0 0 20px rgba(255, 140, 0, 0.3),
+    inset 0 2px 4px rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 140, 0, 0.5);
+  filter: drop-shadow(0 4px 8px rgba(90, 15, 36, 0.3));
+}
+
+/* Animation de l'icône SVG au survol */
+.info-card:hover .info-icon svg {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  animation: iconBounce 0.6s ease;
+}
+
+@keyframes iconBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
 }
 
 .info-content {
@@ -525,9 +597,10 @@
   }
 
   .info-icon {
-    width: 44px;
-    height: 44px;
-    font-size: 20px;
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    border-width: 2px;
   }
 
   .info-title {

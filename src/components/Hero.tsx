@@ -37,28 +37,38 @@ export default function Hero() {
           <div className="hero-showcase">
             <div className="showcase-item">
               <Fuel className="showcase-icon" />
-              <h3>Carburants Premium</h3>
-              <p>Essence et gasoil de qualité supérieure</p>
+              <div className="showcase-text">
+                <h3>Carburants Premium</h3>
+                <p>Essence et gasoil de qualité supérieure</p>
+              </div>
             </div>
             <div className="showcase-item">
               <Car className="showcase-icon" />
-              <h3>Service Auto</h3>
-              <p>Entretien et réparation automobile</p>
+              <div className="showcase-text">
+                <h3>Service Auto</h3>
+                <p>Entretien et réparation automobile</p>
+              </div>
             </div>
             <div className="showcase-item">
               <Clock className="showcase-icon" />
-              <h3>Ouvert 24/7</h3>
-              <p>Service continu pour votre confort</p>
+              <div className="showcase-text">
+                <h3>Ouvert 24/7</h3>
+                <p>Service continu pour votre confort</p>
+              </div>
             </div>
             <div className="showcase-item">
               <ShoppingCart className="showcase-icon" />
-              <h3>Boutique</h3>
-              <p>Produits et accessoires pour votre véhicule</p>
+              <div className="showcase-text">
+                <h3>Boutique</h3>
+                <p>Produits et accessoires pour votre véhicule</p>
+              </div>
             </div>
             <div className="showcase-item">
               <ShieldCheck className="showcase-icon" />
-              <h3>Sécurisés</h3>
-              <p>Espace sécurisés pour votre confort et votre sécurité</p>
+              <div className="showcase-text">
+                <h3>Sécurisés</h3>
+                <p>Espace sécurisés pour votre confort et votre sécurité</p>
+              </div>
             </div>
           </div>
         </div>
