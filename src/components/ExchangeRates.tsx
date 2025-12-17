@@ -28,7 +28,7 @@ export default function ExchangeRates() {
       <div className="container">
         <div className="section-header">
           <div className="section-badge">
-            <span className="badge-icon">💱</span>
+            <span>💱</span>
             <span>Taux du Jour</span>
           </div>
           <h2 className="section-title">Nos Taux de Change</h2>

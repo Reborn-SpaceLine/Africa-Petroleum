@@ -21,15 +21,7 @@
  position: static;
 }
 
-/* Badge section */
-.section-badge {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-weight: 600;
-  color: var(--primary-bordeaux);
-  margin-bottom: 12px;
-}
+/* Le style du badge est maintenant dans App.css pour uniformité */
 
 /* Titres */
 .section-title {
