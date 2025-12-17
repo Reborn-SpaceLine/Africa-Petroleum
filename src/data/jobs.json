@@ -1,0 +1,95 @@
+{
+  "jobs": [
+    {
+      "id": 1,
+      "title": "Technicien Carburant",
+      "location": "Bafoussam",
+      "type": "CDI - Temps plein",
+      "salary": "À discuter",
+      "department": "Technique",
+      "description": "Assurer la qualité du carburant, la maintenance des équipements et le service client à la station. Vous serez responsable du bon fonctionnement des pompes et de la satisfaction des clients.",
+      "requirements": [
+        "Diplôme technique ou expérience équivalente",
+        "Minimum 2 ans d'expérience dans le secteur pétrolier",
+        "Bonne connaissance des équipements de station-service",
+        "Sens du service client et de la sécurité"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Caissier / Caissière",
+      "location": "Douala",
+      "type": "CDI - Temps plein",
+      "salary": "À discuter",
+      "department": "Vente",
+      "description": "Gestion des paiements, suivi des transactions et accueil des clients. Vous serez le premier point de contact avec nos clients et contribuerez à leur expérience positive.",
+      "requirements": [
+        "Niveau Bac minimum",
+        "Expérience en caisse appréciée",
+        "Maîtrise des outils informatiques",
+        "Excellente présentation et sens du service"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Agent de Maintenance",
+      "location": "Yaoundé",
+      "type": "CDI - Temps plein",
+      "salary": "À discuter",
+      "department": "Technique",
+      "description": "Maintenance préventive et corrective des installations et équipements de la station. Assurer la disponibilité et le bon fonctionnement de tous les équipements.",
+      "requirements": [
+        "Formation technique en maintenance industrielle",
+        "Expérience en maintenance d'équipements pétroliers",
+        "Capacité à travailler en autonomie",
+        "Rigueur et sens de la sécurité"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Responsable Marketing",
+      "location": "Bafoussam",
+      "type": "CDI - Temps plein",
+      "salary": "À discuter",
+      "department": "Marketing",
+      "description": "Développer la visibilité de la marque, gérer les campagnes promotionnelles et les relations clients. Vous serez responsable de la stratégie marketing et de la communication.",
+      "requirements": [
+        "Bac+3 minimum en Marketing ou Communication",
+        "Minimum 3 ans d'expérience en marketing",
+        "Maîtrise des réseaux sociaux et outils digitaux",
+        "Créativité et sens de l'analyse"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Gestionnaire de Station",
+      "location": "Douala",
+      "type": "CDI - Temps plein",
+      "salary": "À discuter",
+      "department": "Management",
+      "description": "Supervision de l'équipe, gestion des stocks, contrôle qualité et optimisation des performances de la station. Leadership et gestion opérationnelle requise.",
+      "requirements": [
+        "Bac+2 minimum en Gestion ou équivalent",
+        "Minimum 5 ans d'expérience en management",
+        "Leadership et capacité de gestion d'équipe",
+        "Connaissance du secteur pétrolier"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Agent de Sécurité",
+      "location": "Yaoundé",
+      "type": "CDI - Temps plein",
+      "salary": "À discuter",
+      "department": "Sécurité",
+      "description": "Assurer la sécurité des installations, du personnel et des clients. Surveillance et prévention des risques. Poste de nuit disponible.",
+      "requirements": [
+        "Formation en sécurité ou expérience équivalente",
+        "Certificat d'aptitude à la sécurité",
+        "Bonne condition physique",
+        "Vigilance et sens des responsabilités"
+      ]
+    }
+  ]
+}
+

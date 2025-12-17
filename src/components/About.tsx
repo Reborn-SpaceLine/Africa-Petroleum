@@ -51,12 +51,12 @@ export default function About() {
   return (
     <section className="about" id="apropos">
       <div className="container">
+        <div className="section-badge">
+          <Award size={18} />
+          <span>À Propos de Nous</span>
+        </div>
         <div className="about-content">
           <div className="about-text">
-            <div className="section-badge">
-              <Award size={18} />
-              <span>À Propos de Nous</span>
-            </div>
             <h1 className="section-title">Africa Petroleum</h1>
             <h2 className="section-subtitle">Votre Station-Service de Référence</h2>
             <p className="about-description">

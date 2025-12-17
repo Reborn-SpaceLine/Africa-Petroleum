@@ -1,0 +1,59 @@
+{
+  "news": [
+    {
+      "id": 1,
+      "title": "Expansion des Stations Africa Petroleum",
+      "date": "15 Décembre 2024",
+      "author": "Direction Générale",
+      "excerpt": "Africa Petroleum annonce l'ouverture de 5 nouvelles stations dans les régions du Nord et de l'Ouest du Cameroun.",
+      "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800",
+      "category": "Expansion"
+    },
+    {
+      "id": 2,
+      "title": "Nouveau Programme de Fidélité",
+      "date": "10 Décembre 2024",
+      "author": "Service Marketing",
+      "excerpt": "Découvrez notre nouveau programme de fidélité avec des récompenses exclusives pour nos clients réguliers.",
+      "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800",
+      "category": "Programme"
+    },
+    {
+      "id": 3,
+      "title": "Initiatives Environnementales",
+      "date": "5 Décembre 2024",
+      "author": "Département Environnement",
+      "excerpt": "Africa Petroleum s'engage dans la protection de l'environnement avec de nouvelles initiatives écologiques.",
+      "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800",
+      "category": "Environnement"
+    },
+    {
+      "id": 4,
+      "title": "Amélioration des Services",
+      "date": "1 Décembre 2024",
+      "author": "Service Client",
+      "excerpt": "Découvrez les dernières améliorations apportées à nos services pour une meilleure expérience client.",
+      "image": "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800",
+      "category": "Service"
+    },
+    {
+      "id": 5,
+      "title": "Nouvelle Station à Douala",
+      "date": "20 Janvier 2025",
+      "author": "Direction Générale",
+      "excerpt": "Ouverture d'une nouvelle station moderne à Douala avec des équipements de dernière génération et des services premium.",
+      "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800",
+      "category": "Expansion"
+    },
+    {
+      "id": 6,
+      "title": "Partenariat avec les Transporteurs",
+      "date": "18 Janvier 2025",
+      "author": "Service Commercial",
+      "excerpt": "Nouveau partenariat stratégique avec les entreprises de transport pour des tarifs préférentiels et des services dédiés.",
+      "image": "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800",
+      "category": "Partenariat"
+    }
+  ]
+}
+

@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { ChevronDown } from 'lucide-react';
 import logoImage from '../assets/logo.webp';
 import '../styles/Header.css';
@@ -14,7 +14,7 @@ interface HeaderProps {
   onMapClick: () => void;
 }
 
-type Page = 'home' | 'restaurant' | 'piscine' | 'news' | 'boutique' | 'prix' | 'exchangeRates'| 'career';
+type Page = 'home' | 'restaurant' | 'piscine' | 'news' | 'boutique' | 'prix' | 'exchangeRates' | 'career' | 'map';
 
 interface HeaderWithPageProps extends HeaderProps {
   currentPage: Page;
@@ -57,31 +57,105 @@ export default function Header({
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  const closeAll = () => {
+  const closeAll = useCallback(() => {
     setIsMobileMenuOpen(false);
     setIsServicesOpen(false);
-  };
+  }, []);
 
-  const scrollToSection = (id: string) => {
-    const el = document.getElementById(id);
-    if (!el) return;
-    el.scrollIntoView({ behavior: 'smooth' });
-    closeAll();
-  };
-
+  /**
+   * Naviguer vers une section depuis n'importe quelle page
+   * @param id - L'ID de la section à atteindre
+   */
   const goToSectionFromAnyPage = (id: string) => {
+    // Si on n'est pas sur la page d'accueil, on y retourne d'abord
     if (currentPage !== 'home') {
-      setCurrentPage('home'); // revenir à la page Home
+      setCurrentPage('home');
+      // Mettre à jour l'URL avec le hash de la section
       setTimeout(() => {
-        const el = document.getElementById(id);
-        if (el) el.scrollIntoView({ behavior: 'smooth' });
-      }, 100);
+        window.location.hash = id;
+        scrollToSection(id);
+      }, 300);
     } else {
-      const el = document.getElementById(id);
-      if (el) el.scrollIntoView({ behavior: 'smooth' });
+      // Si on est déjà sur la page d'accueil, scroller directement
+      // Mettre à jour l'URL avec le hash de la section
+      window.location.hash = id;
+      scrollToSection(id);
     }
     closeAll();
   };
+
+  /**
+   * Scroller vers une section spécifique
+   * @param id - L'ID de la section
+   */
+  const scrollToSection = (id: string) => {
+    // Essayer plusieurs fois si l'élément n'est pas encore disponible
+    let attempts = 0;
+    const maxAttempts = 10;
+    
+    const tryScroll = () => {
+      const el = document.getElementById(id);
+      if (el) {
+        // Calculer la position en tenant compte du header fixe
+        const headerHeight = 80;
+        const elementPosition = el.getBoundingClientRect().top + window.pageYOffset;
+        const offsetPosition = elementPosition - headerHeight;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      } else if (attempts < maxAttempts) {
+        attempts++;
+        setTimeout(tryScroll, 100);
+      }
+    };
+
+    tryScroll();
+  };
+
+  /**
+   * Retourner à l'accueil et scroller vers le haut
+   */
+  const goToHome = () => {
+    if (currentPage !== 'home') {
+      setCurrentPage('home');
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 100);
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    closeAll();
+  };
+
+  /**
+   * Naviguer vers la page Map (Nos stations)
+   * Fonction dédiée pour garantir que la navigation fonctionne toujours
+   * Version simplifiée et robuste
+   */
+  const handleMapNavigation = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
+    // Empêcher tout comportement par défaut et la propagation
+    e.preventDefault();
+    e.stopPropagation();
+    
+    // Fermer les menus immédiatement (important pour mobile)
+    closeAll();
+    
+    // Forcer le scroll vers le haut immédiatement (sans animation)
+    window.scrollTo({ top: 0, behavior: 'auto' });
+    
+    // Navigation : utiliser à la fois setCurrentPage ET le callback
+    // pour double sécurité
+    setCurrentPage('map');
+    onMapClick();
+    
+    // Fallback : forcer une nouvelle fois après un court délai
+    // pour s'assurer que React a bien traité la mise à jour
+    setTimeout(() => {
+      setCurrentPage('map');
+    }, 10);
+  }, [setCurrentPage, onMapClick, closeAll]);
 
   return (
     <>
@@ -90,7 +164,7 @@ export default function Header({
           <div className="header-content">
 
             {/* LOGO */}
-            <div className="logo">
+            <div className="logo" onClick={goToHome} style={{ cursor: 'pointer' }}>
               <img
                 src={logoImage}
                 alt="Africa Petroleum"
@@ -128,11 +202,7 @@ export default function Header({
                 className="nav-link"
                 onClick={() => goToSectionFromAnyPage('apropos')}
               >
-                A propos
-              </button>
-
-              <button className="nav-link" onClick={() => { onNewsClick(); closeAll(); }}>
-                Actualités
+                À propos
               </button>
 
               {/* SERVICES DROPDOWN */}
@@ -147,6 +217,9 @@ export default function Header({
 
                 {isServicesOpen && (
                   <div className="nav-dropdown-menu">
+                    <button className="dropdown-item" onClick={() => { goToSectionFromAnyPage('services'); closeAll(); }}>
+                      Nos Services
+                    </button>
                     <button className="dropdown-item" onClick={() => { onRestaurantClick(); closeAll(); }}>
                       Restaurant
                     </button>
@@ -166,12 +239,21 @@ export default function Header({
                 )}
               </div>
 
-                
-              <button className="nav-link" onClick={() => { onCareerClick(); closeAll(); }}>
-                offres d'emploi
+              <button className="nav-link" onClick={() => { onNewsClick(); closeAll(); }}>
+                Actualités
               </button>
 
-              <button className="nav-link nav-link-cta" onClick={() => { onMapClick(); closeAll(); }}>
+              <button className="nav-link" onClick={() => { onCareerClick(); closeAll(); }}>
+                Offres d'emploi
+              </button>
+
+              <button 
+                className="nav-link nav-link-cta" 
+                onClick={handleMapNavigation}
+                onMouseDown={(e) => e.preventDefault()} // Empêcher le focus qui peut causer des problèmes
+                type="button"
+                aria-label="Voir nos stations sur la carte"
+              >
                 Nos stations
               </button>
 

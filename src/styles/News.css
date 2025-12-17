@@ -87,6 +87,70 @@
   gap: 6px;
 }
 
+/* États de chargement et vide */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid var(--border-color);
+  border-top-color: var(--primary-bordeaux);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-container p {
+  font-size: 1rem;
+  color: var(--text-light);
+}
+
+.no-news-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  text-align: center;
+  background: var(--white);
+  border-radius: 20px;
+  border: 2px solid var(--border-color);
+  max-width: 600px;
+  margin: 50px auto 0;
+}
+
+.no-news-container svg {
+  color: var(--primary-bordeaux);
+  margin-bottom: 20px;
+  opacity: 0.5;
+}
+
+.no-news-container h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+}
+
+.no-news-container p {
+  font-size: 1rem;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
 @media (max-width: 768px) {
   .news-grid {
     grid-template-columns: 1fr;

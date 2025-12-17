@@ -23,20 +23,44 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  user-select: none;
+}
+
+.logo:hover {
+  opacity: 0.8;
+  transform: scale(1.02);
+}
+
+.logo:active {
+  transform: scale(0.98);
 }
 
 .logo img {
   width: 32px;
   height: 32px;
+  transition: transform 0.2s ease;
+}
+
+.logo:hover img {
+  transform: rotate(-5deg);
 }
 
 .logo-name {
   font-size: 14px;
   font-weight: 700;
+  color: var(--primary-bordeaux);
+  transition: color 0.2s ease;
+}
+
+.logo:hover .logo-name {
+  color: var(--dark-bordeaux);
 }
 
 .logo-tagline {
   font-size: 10px;
+  color: var(--text-light);
 }
 
 /* ===== Burger ===== */
@@ -99,6 +123,15 @@
   background: none;
   border: none;
   cursor: pointer;
+}
+
+/* Flèche du dropdown */
+.dropdown-arrow {
+  transition: transform 0.3s ease;
+}
+
+.dropdown-arrow.rotated {
+  transform: rotate(180deg);
 }
 
 /* =========================
