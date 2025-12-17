@@ -1,63 +1,276 @@
+/* ============================================
+   CONTACT - Section de contact
+   Styles améliorés avec design moderne et animations fluides
+   ============================================ */
+
 .contact {
-  padding: 100px 0;
+  padding: 120px 0;
+  /* Fond avec dégradé subtil utilisant les couleurs du logo */
+  background: linear-gradient(135deg, 
+    rgba(90, 15, 36, 0.03) 0%, 
+    rgba(255, 140, 0, 0.03) 50%, 
+    rgba(90, 15, 36, 0.02) 100%
+  );
+  position: relative;
+  overflow: hidden;
 }
 
+/* Éléments décoratifs en arrière-plan avec animation */
+.contact::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  right: -10%;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(90, 15, 36, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+  animation: float 20s ease-in-out infinite;
+}
+
+.contact::after {
+  content: '';
+  position: absolute;
+  bottom: -20%;
+  left: -5%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255, 140, 0, 0.06) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+  animation: float 15s ease-in-out infinite reverse;
+}
+
+/* Animation de flottement pour les éléments décoratifs */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(-30px) translateX(20px);
+  }
+}
+
+.contact .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Styles améliorés pour l'en-tête de section */
+.contact .section-header {
+  text-align: center;
+  margin-bottom: 80px;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.contact .section-title {
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--primary-bordeaux);
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, var(--primary-bordeaux), var(--secondary-orange));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+}
+
+.contact .section-description {
+  font-size: 18px;
+  color: var(--text-light);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* Conteneur principal avec grille responsive */
 .contact-content {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   gap: 60px;
   margin-top: 60px;
+  align-items: start;
 }
 
+/* Conteneur des cartes d'information */
 .contact-info {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  position: sticky;
+  top: 100px; /* Reste visible lors du scroll */
 }
 
+/* Carte d'information avec design amélioré et glassmorphism */
 .info-card {
   display: flex;
   gap: 20px;
-  padding: 24px;
-  background: var(--white);
-  border-radius: 12px;
-  border: 2px solid var(--border-color);
-  transition: all 0.3s ease;
+  padding: 32px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 2px solid rgba(90, 15, 36, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(90, 15, 36, 0.06);
+  animation: fadeInUp 0.6s ease-out backwards;
 }
 
+/* Animation d'apparition pour les cartes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Délai d'animation pour chaque carte */
+.info-card:nth-child(1) { animation-delay: 0.1s; }
+.info-card:nth-child(2) { animation-delay: 0.2s; }
+.info-card:nth-child(3) { animation-delay: 0.3s; }
+.info-card:nth-child(4) { animation-delay: 0.4s; }
+
+/* Barre décorative en haut de la carte avec effet de brillance */
+.info-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(135deg, var(--primary-bordeaux), var(--secondary-orange));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 10px rgba(255, 140, 0, 0.3);
+}
+
+/* Effet de brillance animé sur la barre */
+.info-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+  transition: left 0.6s ease;
+}
+
+.info-card:hover::after {
+  left: 100%;
+}
+
+/* Effet hover sur les cartes d'information avec élévation */
 .info-card:hover {
   border-color: var(--secondary-orange);
-  transform: translateX(8px);
-  box-shadow: 0 4px 15px rgba(169, 64, 100, 0.08);
+  transform: translateX(10px) translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 40px rgba(90, 15, 36, 0.15), 
+              0 0 0 1px rgba(255, 140, 0, 0.1);
+  background: var(--white);
 }
 
+/* Animation de la barre décorative au survol */
+.info-card:hover::before {
+  transform: scaleX(1);
+}
+
+/* Icône d'information avec fond gradient utilisant les couleurs du logo */
 .info-icon {
-  width: 50px;
-  height: 50px;
-  background: linear-gradient(135deg, rgba(169, 64, 100, 0.1), rgba(255, 154, 139, 0.1));
-  border-radius: 12px;
+  width: 64px;
+  height: 64px;
+  /* Gradient bordeaux/orange du logo */
+  background: linear-gradient(135deg, rgba(90, 15, 36, 0.15), rgba(255, 140, 0, 0.15));
+  border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--primary-bordeaux);
   flex-shrink: 0;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid rgba(90, 15, 36, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Effet de brillance sur l'icône */
+.info-icon::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transform: rotate(45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.info-card:hover .info-icon::before {
+  animation: shine 0.6s ease;
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%) translateY(100%) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+/* Effet hover sur l'icône avec rotation et élévation */
+.info-card:hover .info-icon {
+  background: linear-gradient(135deg, var(--primary-bordeaux), var(--secondary-orange));
+  color: var(--white);
+  transform: scale(1.15) rotate(10deg);
+  box-shadow: 0 8px 20px rgba(90, 15, 36, 0.3),
+              0 0 0 4px rgba(255, 140, 0, 0.1);
+  border-color: transparent;
 }
 
 .info-content {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .info-title {
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 700;
   color: var(--primary-bordeaux);
-  margin-bottom: 8px;
+  margin-bottom: 4px;
+  transition: color 0.3s ease;
+}
+
+/* Effet hover sur le titre */
+.info-card:hover .info-title {
+  color: var(--secondary-orange);
 }
 
 .info-text {
   font-size: 14px;
-  line-height: 1.7;
+  line-height: 1.8;
   color: var(--text-light);
+  transition: color 0.3s ease;
+}
+
+/* Effet hover sur le texte */
+.info-card:hover .info-text {
+  color: var(--text-dark);
 }
 
 .social-links {
@@ -87,80 +300,179 @@
   transform: translateY(-3px);
 }
 
+/* Formulaire de contact avec design amélioré et glassmorphism */
 .contact-form {
-  background: var(--white);
-  padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0 8px 30px rgba(169, 64, 100, 0.08);
-  border: 2px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(20px);
+  padding: 52px;
+  border-radius: 28px;
+  box-shadow: 0 20px 60px rgba(90, 15, 36, 0.12),
+              0 0 0 1px rgba(90, 15, 36, 0.05);
+  border: 2px solid rgba(90, 15, 36, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 0.8s ease-out 0.2s backwards;
+}
+
+/* Fond décoratif du formulaire avec effet de brillance */
+.contact-form::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(135deg, var(--primary-bordeaux), var(--secondary-orange));
+  box-shadow: 0 2px 15px rgba(255, 140, 0, 0.4);
+}
+
+/* Effet de brillance animé sur le formulaire */
+.contact-form::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 140, 0, 0.05) 0%, transparent 70%);
+  animation: rotate 20s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Effet hover sur le formulaire avec élévation */
+.contact-form:hover {
+  box-shadow: 0 25px 70px rgba(90, 15, 36, 0.18),
+              0 0 0 1px rgba(255, 140, 0, 0.2);
+  border-color: rgba(255, 140, 0, 0.3);
+  transform: translateY(-4px);
 }
 
 .form-group {
-  margin-bottom: 24px;
+  margin-bottom: 28px;
+  position: relative;
 }
 
 .form-label {
   display: block;
   font-size: 14px;
   font-weight: 600;
-  color: var(--text-dark);
-  margin-bottom: 8px;
+  color: var(--primary-bordeaux);
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+/* Effet sur le label quand le champ est en focus */
+.form-group:focus-within .form-label {
+  color: var(--secondary-orange);
 }
 
 .form-input,
 .form-textarea {
   width: 100%;
-  padding: 14px 16px;
-  border: 2px solid var(--border-color);
-  border-radius: 10px;
+  padding: 18px 20px;
+  border: 2px solid rgba(90, 15, 36, 0.15);
+  border-radius: 14px;
   font-size: 15px;
   font-family: inherit;
   color: var(--text-dark);
-  transition: all 0.3s ease;
-  background: var(--white);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px rgba(90, 15, 36, 0.04);
 }
 
+/* État focus amélioré avec animation */
 .form-input:focus,
 .form-textarea:focus {
   outline: none;
   border-color: var(--secondary-orange);
-  box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.1);
+  box-shadow: 0 0 0 5px rgba(255, 140, 0, 0.15), 
+              0 8px 20px rgba(90, 15, 36, 0.12),
+              inset 0 2px 4px rgba(255, 140, 0, 0.05);
+  transform: translateY(-3px) scale(1.01);
+  background: var(--white);
+}
+
+/* Placeholder stylisé */
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: var(--text-light);
+  opacity: 0.6;
 }
 
 .form-textarea {
   resize: vertical;
-  min-height: 120px;
+  min-height: 140px;
+  line-height: 1.6;
 }
 
 .form-submit {
   width: 100%;
-  padding: 16px 32px;
+  padding: 18px 36px;
   background: linear-gradient(135deg, var(--primary-bordeaux), var(--secondary-orange));
   color: var(--white);
   border: none;
-  border-radius: 12px;
-  font-size: 16px;
+  border-radius: 14px;
+  font-size: 17px;
   font-weight: 700;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 12px;
   font-family: inherit;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(90, 15, 36, 0.2);
+}
+
+/* Effet de brillance sur le bouton */
+.form-submit::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transform: rotate(45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.form-submit:hover::before {
+  animation: shine 0.6s ease;
 }
 
 .form-submit:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 25px rgba(169, 64, 100, 0.25);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 10px 35px rgba(90, 15, 36, 0.35),
+              0 0 0 4px rgba(255, 140, 0, 0.2);
+}
+
+.form-submit:active {
+  transform: translateY(-2px) scale(0.98);
 }
 
 .form-submit svg {
-  transition: transform 0.3s ease;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 1;
 }
 
 .form-submit:hover svg {
-  transform: translateX(5px);
+  transform: translateX(8px) scale(1.1);
 }
 
 @media (max-width: 1024px) {

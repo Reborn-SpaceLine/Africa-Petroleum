@@ -39,18 +39,20 @@
   gap: 30px;
 }
 
+/* Carte de produit */
 .product-card {
   background: var(--white);
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(169, 64, 100, 0.08);
+  box-shadow: 0 4px 20px rgba(90, 15, 36, 0.08); /* Ombre avec couleur bordeaux du logo */
   transition: all 0.3s ease;
   border: 2px solid transparent;
 }
 
+/* Effet hover sur les cartes de produit */
 .product-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 40px rgba(169, 64, 100, 0.15);
+  box-shadow: 0 12px 40px rgba(90, 15, 36, 0.15); /* Ombre avec couleur bordeaux du logo */
   border-color: var(--secondary-orange);
 }
 
@@ -88,10 +90,12 @@
   padding: 24px;
 }
 
+/* Icône de produit avec fond gradient utilisant les couleurs du logo */
 .product-icon {
   width: 50px;
   height: 50px;
-  background: linear-gradient(135deg, rgba(169, 64, 100, 0.1), rgba(255, 154, 139, 0.1));
+  /* Gradient bordeaux/orange du logo (sans rose) */
+  background: linear-gradient(135deg, rgba(90, 15, 36, 0.1), rgba(255, 140, 0, 0.1));
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -134,8 +138,10 @@
   margin-top: 80px;
 }
 
+/* Carte d'information avec fond gradient utilisant les couleurs du logo */
 .info-card {
-  background: linear-gradient(135deg, rgba(169, 64, 100, 0.05), rgba(255, 154, 139, 0.05));
+  /* Gradient bordeaux/orange du logo (sans rose) */
+  background: linear-gradient(135deg, rgba(90, 15, 36, 0.05), rgba(255, 140, 0, 0.05));
   padding: 32px;
   border-radius: 16px;
   text-align: center;
@@ -146,7 +152,7 @@
 .info-card:hover {
   transform: translateY(-5px);
   border-color: var(--secondary-orange);
-  box-shadow: 0 8px 30px rgba(169, 64, 100, 0.15);
+  box-shadow: 0 8px 30px rgba(90, 15, 36, 0.15); /* Ombre avec couleur bordeaux du logo */
 }
 
 .info-card svg {

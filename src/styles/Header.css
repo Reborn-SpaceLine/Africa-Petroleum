@@ -2,13 +2,15 @@
 .header {
   position: fixed;
   inset: 0 0 auto 0;
-  background: var(--white);
+  /* Fond avec dégradé subtil utilisant les couleurs du logo */
+  background: linear-gradient(135deg, var(--primary-bordeaux), var(--dark-bordeaux));
   z-index: 1000;
   transition: box-shadow 0.3s ease;
 }
 
+/* Style du header quand on scroll (avec ombre plus prononcée) */
 .header-scrolled {
-  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée au scroll */
 }
 
 .header-content {
@@ -50,17 +52,17 @@
 .logo-name {
   font-size: 14px;
   font-weight: 700;
-  color: var(--primary-bordeaux);
+  color: var(--white); /* Texte blanc pour contraste sur fond bordeaux */
   transition: color 0.2s ease;
 }
 
 .logo:hover .logo-name {
-  color: var(--dark-bordeaux);
+  color: var(--secondary-orange); /* Orange au survol */
 }
 
 .logo-tagline {
   font-size: 10px;
-  color: var(--text-light);
+  color: rgba(255, 255, 255, 0.8); /* Texte blanc semi-transparent */
 }
 
 /* ===== Burger ===== */
@@ -77,7 +79,7 @@
 .mobile-menu-toggle span {
   width: 22px;
   height: 2px;
-  background: var(--primary-bordeaux);
+  background: var(--white); /* Lignes blanches pour contraste sur fond bordeaux */
 }
 
 /* ===== Nav ===== */
@@ -93,12 +95,14 @@
   background: none;
   border: none;
   cursor: pointer;
+  color: var(--white); /* Texte blanc pour contraste sur fond bordeaux */
+  transition: all 0.2s ease;
 }
 
 .nav-link:hover,
 .nav-link.active {
-  background: rgba(169,64,100,0.12);
-  color: var(--primary-bordeaux);
+  background: rgba(255, 255, 255, 0.15); /* Fond blanc semi-transparent au survol */
+  color: var(--secondary-orange); /* Orange au survol */
 }
 
 .nav-link-cta {
@@ -172,16 +176,16 @@
   text-align: left;
   font-size: 14px;
   font-weight: 500;
-  color: #222;
+  color: var(--text-dark); /* Texte sombre pour lisibilité */
 
   cursor: pointer;
   transition: background 0.2s ease, color 0.2s ease;
 }
 
-/* Hover effect */
+/* Effet hover sur les items du dropdown */
 .dropdown-item:hover {
-  background: rgba(209, 31, 79, 0.08);
-  color: #d11f4f;
+  background: rgba(90, 15, 36, 0.1); /* Fond bordeaux semi-transparent */
+  color: var(--primary-bordeaux); /* Texte bordeaux */
 }
 
 /* =========================
@@ -242,7 +246,8 @@
     height: 100vh;
     flex-direction: column;
     padding: 80px 20px;
-    background: white;
+    /* Fond avec dégradé utilisant les couleurs du logo */
+    background: linear-gradient(135deg, var(--primary-bordeaux), var(--dark-bordeaux));
     z-index: 999;
 
     /* Animation */

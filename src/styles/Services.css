@@ -38,13 +38,15 @@
   transition: transform 0.3s ease;
 }
 
+/* Overlay sur les images de service */
 .service-image-overlay {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to bottom, transparent, rgba(169, 64, 100, 0.1));
+  /* Gradient utilisant la couleur bordeaux du logo (sans rose) */
+  background: linear-gradient(to bottom, transparent, rgba(90, 15, 36, 0.1));
 }
 
 .service-card:hover .service-image img {
@@ -68,10 +70,12 @@
   flex-direction: column;
 }
 
+/* Icône de service avec fond gradient utilisant les couleurs du logo */
 .service-icon {
   width: 70px;
   height: 70px;
-  background: linear-gradient(135deg, rgba(169, 64, 100, 0.1), rgba(255, 154, 139, 0.1));
+  /* Gradient bordeaux/orange du logo (sans rose) */
+  background: linear-gradient(135deg, rgba(90, 15, 36, 0.1), rgba(255, 140, 0, 0.1));
   border-radius: 16px;
   display: flex;
   align-items: center;

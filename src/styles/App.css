@@ -1,32 +1,50 @@
-/* App.css */
+/* ============================================
+   APP.CSS - Styles principaux de l'application
+   Fichier central contenant les styles globaux et les variables CSS
+   ============================================ */
+
+/* Reset CSS global */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ============================================
+   VARIABLES CSS - Couleurs du thème
+   Basées sur les couleurs du logo AP Africa Petroleum
+   ============================================ */
 :root {
-  --primary-bordeaux: #7d1935;
-  --secondary-orange: #ff6b6b;
-  --accent-rose: #ff8fa3;
-  --dark-bordeaux: #5a0f24;
-  --light-bg: #fef5f7;
+  /* Couleurs principales du logo */
+  --primary-bordeaux: #5a0f24; /* Bordeaux foncé du logo (dark purple/maroon) - Couleur principale */
+  --secondary-orange: #FF8C00; /* Orange vif du logo (bright orange de la carte de l'Afrique) */
+  --dark-bordeaux: #3d0a18; /* Bordeaux encore plus foncé pour les variantes et effets hover */
+  
+  /* Couleurs d'accent du logo */
+  --accent-green: #2d5016; /* Vert foncé du liquide sur la carte (optionnel) */
+  --accent-silver: #C0C0C0; /* Gris argenté de la pompe à essence (optionnel) */
+  
+  /* Couleurs de fond et texte */
+  --light-bg: #f5f5f5; /* Fond clair neutre (remplace le rose) */
   --white: #ffffff;
-  --text-dark: #2c2c2c;
-  --text-light: #666666;
-  --border-color: #e0e0e0;
+  --text-dark: #2c2c2c; /* Texte principal */
+  --text-light: #666666; /* Texte secondaire */
+  --border-color: #e0e0e0; /* Bordures et séparateurs */
 }
 
+/* Styles de base pour le body */
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
   color: var(--text-dark);
   line-height: 1.6;
 }
 
+/* Conteneur principal de l'application */
 .app {
   min-height: 100vh;
 }
 
+/* Conteneur avec largeur maximale et centrage */
 .container {
   max-width: 1400px;
   margin: 0 auto;
@@ -45,20 +63,26 @@ body {
   }
 }
 
-/* Header */
+/* ============================================
+   HEADER - Navigation principale
+   ============================================ */
+
+/* Conteneur du header fixe en haut de la page */
 .header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background: var(--white);
+  /* Fond avec dégradé utilisant les couleurs du logo */
+  background: linear-gradient(135deg, var(--primary-bordeaux), var(--dark-bordeaux));
   z-index: 1000;
   transition: all 0.3s ease;
   border-bottom: 1px solid transparent;
 }
 
+/* Style du header quand on scroll (avec ombre) */
 .header.scrolled {
-  box-shadow: 0 2px 20px rgba(169, 64, 100, 0.08);
+  box-shadow: 0 2px 20px rgba(90, 15, 36, 0.08); /* Ombre avec couleur bordeaux du logo */
   border-bottom-color: var(--border-color);
 }
 
@@ -95,12 +119,12 @@ body {
 .logo-name {
   font-size: 20px;
   font-weight: 700;
-  color: var(--primary-bordeaux);
+  color: var(--white); /* Texte blanc pour contraste sur fond bordeaux */
 }
 
 .logo-tagline {
   font-size: 12px;
-  color: var(--secondary-orange);
+  color: rgba(255, 255, 255, 0.9); /* Texte blanc semi-transparent */
   font-weight: 500;
 }
 
@@ -134,13 +158,18 @@ body {
   padding: 10px 24px;
 }
 
+/* Effet hover sur le bouton CTA */
 .nav-link-cta:hover {
   background: linear-gradient(135deg, var(--dark-bordeaux), var(--primary-bordeaux));
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(169, 64, 100, 0.25);
+  box-shadow: 0 4px 12px rgba(90, 15, 36, 0.25); /* Ombre avec couleur bordeaux du logo */
 }
 
-/* Hero Section */
+/* ============================================
+   HERO SECTION - Section d'accueil principale
+   ============================================ */
+
+/* Conteneur principal de la section Hero */
 .hero {
   position: relative;
   min-height: 100vh;
@@ -150,13 +179,19 @@ body {
   overflow: hidden;
 }
 
+/* Fond de la section Hero avec dégradé subtil basé sur les couleurs du logo */
 .hero-background {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(169, 64, 100, 0.03) 0%, rgba(255, 154, 139, 0.03) 50%, rgba(255, 182, 193, 0.02) 100%);
+  /* Dégradé subtil utilisant les couleurs du logo (bordeaux et orange) */
+  background: linear-gradient(135deg, 
+    rgba(90, 15, 36, 0.02) 0%, 
+    rgba(255, 140, 0, 0.02) 50%, 
+    rgba(90, 15, 36, 0.01) 100%
+  );
 }
 
 .hero-content {
@@ -168,6 +203,7 @@ body {
   align-items: center;
 }
 
+/* Badge de la section Hero */
 .hero-badge {
   display: inline-flex;
   align-items: center;
@@ -178,7 +214,7 @@ body {
   font-size: 14px;
   font-weight: 500;
   color: var(--primary-bordeaux);
-  box-shadow: 0 4px 15px rgba(169, 64, 100, 0.1);
+  box-shadow: 0 4px 15px rgba(90, 15, 36, 0.1); /* Ombre avec couleur bordeaux du logo */
   margin-bottom: 24px;
 }
 
@@ -190,13 +226,18 @@ body {
   margin-bottom: 24px;
 }
 
-/* Style 
+/* ============================================
+   BOUTONS - Styles des boutons de l'application
+   ============================================ */
+
+/* Actions de la section Hero */
 .hero-actions {
   display: flex;
   gap: 16px;
   margin-bottom: 48px;
 }
 
+/* Style de base pour tous les boutons */
 .btn {
   padding: 14px 32px;
   border-radius: 12px;
@@ -208,15 +249,17 @@ body {
   font-family: inherit;
 }
 
+/* Bouton principal avec gradient bordeaux/orange du logo */
 .btn-primary {
   background: linear-gradient(135deg, var(--primary-bordeaux), var(--secondary-orange));
   color: var(--white);
-  box-shadow: 0 4px 15px rgba(169, 64, 100, 0.25);
+  box-shadow: 0 4px 15px rgba(90, 15, 36, 0.25); /* Ombre avec couleur bordeaux du logo */
 }
 
+/* Effet hover sur le bouton principal */
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 25px rgba(169, 64, 100, 0.35);
+  box-shadow: 0 6px 25px rgba(90, 15, 36, 0.35); /* Ombre plus prononcée au survol */
 }
 
 .btn-secondary {
@@ -328,9 +371,10 @@ body {
   overflow: hidden;
 }
 
+/* Effet hover sur les cartes de service */
 .service-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 40px rgba(169, 64, 100, 0.15);
+  box-shadow: 0 12px 40px rgba(90, 15, 36, 0.15); /* Ombre avec couleur bordeaux du logo */
   border-color: var(--secondary-orange);
 }
 
@@ -353,10 +397,12 @@ body {
   transform: scale(1.1);
 }
 
+/* Icône de service avec fond gradient utilisant les couleurs du logo */
 .service-icon {
   width: 70px;
   height: 70px;
-  background: linear-gradient(135deg, rgba(169, 64, 100, 0.1), rgba(255, 154, 139, 0.1));
+  /* Gradient bordeaux/orange du logo (sans rose) */
+  background: linear-gradient(135deg, rgba(90, 15, 36, 0.1), rgba(255, 140, 0, 0.1));
   border-radius: 16px;
   display: flex;
   align-items: center;
@@ -469,13 +515,13 @@ body {
   background: var(--white);
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(169, 64, 100, 0.08);
+  box-shadow: 0 4px 20px rgba(90, 15, 36, 0.08); /* Ombre avec couleur bordeaux du logo */
   transition: all 0.3s ease;
 }
 
 .menu-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 30px rgba(169, 64, 100, 0.15);
+  box-shadow: 0 8px 30px rgba(90, 15, 36, 0.15); /* Ombre avec couleur bordeaux du logo */
 }
 
 .menu-item-image {
@@ -553,7 +599,7 @@ body {
   display: flex;
   align-items: center;
   gap: 6px;
-  color: #ffa500;
+  color: var(--secondary-orange);
   font-size: 14px;
   font-weight: 600;
 }
@@ -561,7 +607,7 @@ body {
 /* Piscine Styles */
 .piscine-hero {
   padding: 140px 0 80px;
-  background: linear-gradient(135deg, #0ea5e9, #06b6d4);
+  background: linear-gradient(135deg, var(--primary-bordeaux), var(--secondary-orange));
   color: var(--white);
   text-align: center;
   position: relative;
@@ -592,7 +638,7 @@ body {
 }
 
 .feature-card {
-  background: linear-gradient(135deg, #0ea5e910, #06b6d410);
+  background: linear-gradient(135deg, rgba(125, 25, 53, 0.05), rgba(255, 107, 107, 0.05));
   padding: 32px;
   border-radius: 16px;
   text-align: center;
@@ -602,14 +648,14 @@ body {
 
 .feature-card:hover {
   transform: translateY(-5px);
-  border-color: #0ea5e9;
-  box-shadow: 0 8px 30px rgba(14, 165, 233, 0.15);
+  border-color: var(--primary-bordeaux);
+  box-shadow: 0 8px 30px rgba(125, 25, 53, 0.15);
 }
 
 .feature-icon {
   width: 80px;
   height: 80px;
-  background: linear-gradient(135deg, #0ea5e9, #06b6d4);
+  background: linear-gradient(135deg, var(--primary-bordeaux), var(--secondary-orange));
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -621,7 +667,7 @@ body {
 .feature-title {
   font-size: 20px;
   font-weight: 700;
-  color: #0ea5e9;
+  color: var(--primary-bordeaux);
   margin-bottom: 12px;
 }
 
@@ -647,19 +693,19 @@ body {
   padding: 40px 32px;
   border-radius: 16px;
   text-align: center;
-  box-shadow: 0 4px 20px rgba(14, 165, 233, 0.08);
+  box-shadow: 0 4px 20px rgba(125, 25, 53, 0.08);
   transition: all 0.3s ease;
   border: 2px solid transparent;
 }
 
 .tarif-card:hover {
   transform: translateY(-5px);
-  border-color: #0ea5e9;
-  box-shadow: 0 8px 30px rgba(14, 165, 233, 0.15);
+  border-color: var(--primary-bordeaux);
+  box-shadow: 0 8px 30px rgba(125, 25, 53, 0.15);
 }
 
 .tarif-card.featured {
-  background: linear-gradient(135deg, #0ea5e9, #06b6d4);
+  background: linear-gradient(135deg, var(--primary-bordeaux), var(--secondary-orange));
   color: var(--white);
   transform: scale(1.05);
 }
@@ -684,7 +730,7 @@ body {
   font-size: 48px;
   font-weight: 800;
   margin-bottom: 8px;
-  color: #0ea5e9;
+  color: var(--primary-bordeaux);
 }
 
 .tarif-card.featured .tarif-price {
@@ -730,21 +776,21 @@ body {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  border: 2px solid #0ea5e9;
+  border: 2px solid var(--primary-bordeaux);
   background: var(--white);
-  color: #0ea5e9;
+  color: var(--primary-bordeaux);
   font-family: inherit;
 }
 
 .tarif-btn:hover {
-  background: #0ea5e9;
+  background: var(--primary-bordeaux);
   color: var(--white);
   transform: translateY(-2px);
 }
 
 .tarif-card.featured .tarif-btn {
   background: var(--white);
-  color: #0ea5e9;
+  color: var(--primary-bordeaux);
   border-color: var(--white);
 }
 
@@ -792,7 +838,11 @@ body {
   height: 100%;
 }
 
-/* Footer */
+/* ============================================
+   FOOTER - Pied de page de l'application
+   ============================================ */
+
+/* Conteneur principal du footer */
 .footer {
   background: linear-gradient(135deg, var(--primary-bordeaux), var(--dark-bordeaux));
   color: var(--white);
@@ -813,10 +863,12 @@ body {
   margin-bottom: 20px;
 }
 
+/* Icône du logo dans le footer */
 .footer-logo-icon {
   width: 40px;
   height: 40px;
-  background: linear-gradient(135deg, var(--secondary-orange), var(--accent-rose));
+  /* Gradient utilisant uniquement les couleurs du logo (bordeaux/orange) */
+  background: linear-gradient(135deg, var(--secondary-orange), var(--primary-bordeaux));
   border-radius: 10px;
   display: flex;
   align-items: center;

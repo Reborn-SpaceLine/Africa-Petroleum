@@ -69,10 +69,11 @@
   transition: all 0.3s ease;
 }
 
+/* Effet hover sur les éléments de fonctionnalité */
 .feature-item:hover {
   border-color: var(--secondary-orange);
   transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(169, 64, 100, 0.1);
+  box-shadow: 0 8px 25px rgba(90, 15, 36, 0.1); /* Ombre avec couleur bordeaux du logo */
 }
 
 .feature-icon-wrapper {
@@ -92,10 +93,12 @@
   line-height: 1;
 }
 
+/* Icône de fonctionnalité avec fond gradient utilisant les couleurs du logo */
 .feature-icon {
   width: 50px;
   height: 50px;
-  background: linear-gradient(135deg, rgba(169, 64, 100, 0.1), rgba(255, 154, 139, 0.1));
+  /* Gradient bordeaux/orange du logo (sans rose) */
+  background: linear-gradient(135deg, rgba(90, 15, 36, 0.1), rgba(255, 140, 0, 0.1));
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -124,11 +127,12 @@
 }
 
 /* Image */
+/* Image de la section About */
 .about-image {
   margin-top: 40px;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 8px 30px rgba(169, 64, 100, 0.1);
+  box-shadow: 0 8px 30px rgba(90, 15, 36, 0.1); /* Ombre avec couleur bordeaux du logo */
 }
 
 .about-image img {
@@ -158,9 +162,10 @@
   transition: all 0.3s ease;
 }
 
+/* Effet hover sur les highlights */
 .highlight:hover {
   background: var(--white);
-  box-shadow: 0 4px 15px rgba(169, 64, 100, 0.08);
+  box-shadow: 0 4px 15px rgba(90, 15, 36, 0.08); /* Ombre avec couleur bordeaux du logo */
   transform: translateY(-3px);
 }
 
