@@ -237,25 +237,35 @@
   }
 
   .hero-showcase {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
-    gap: 1rem;
+    align-items: flex-start;
+    gap: 1.5rem;
+    max-width: 100%;
+    align-content: flex-start;
   }
 
   .showcase-item {
-    flex: 1 1 calc(50% - 0.5rem);
-    min-width: calc(50% - 0.5rem);
-    max-width: calc(50% - 0.5rem);
-    padding: 0.45rem;
+    display: block;
+    flex: 1 1 calc(50% - 1.125rem);
+    min-width: 180px;
+    max-width: 100%;
+    padding: 0.3rem;
+  }
+
+  /* Si un élément est seul sur une ligne (dernier élément avec index impair), il prend toute la largeur */
+  .showcase-item:last-child:nth-child(odd) {
+    flex: 1 1 100%;
   }
 
   .showcase-icon {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .showcase-item h3 {
-    font-size: 1rem;
+    font-size: 0.85rem;
   }
 
   .showcase-item p {
@@ -285,28 +295,38 @@
   }
 
   .hero-showcase {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
-    gap: 0.75rem;
+    align-items: flex-start;
+    gap: 1.5rem;
+    max-width: 100%;
+    align-content: flex-start;
   }
 
   .showcase-item {
-    flex: 1 1 100%;
-    min-width: 100%;
+    display: block;
+    flex: 1 1 calc(50% - 1.125rem);
+    min-width: 180px;
     max-width: 100%;
-    padding: 0.4rem;
+    padding: 0.3rem;
+  }
+
+  /* Si un élément est seul sur une ligne (dernier élément avec index impair), il prend toute la largeur */
+  .showcase-item:last-child:nth-child(odd) {
+    flex: 1 1 100%;
   }
 
   .showcase-icon {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 
   .showcase-item h3 {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
   }
 
   .showcase-item p {
-    font-size: 0.65rem;
+    font-size: 0.7rem;
   }
 }
