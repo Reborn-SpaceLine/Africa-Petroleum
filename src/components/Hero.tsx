@@ -13,6 +13,7 @@ export default function Hero() {
         <div className="hero-text">
           <h1 className="hero-title">
             Africa Petroleum
+            <br />
             <span className="hero-subtitle"> Votre Station-Service de Confiance</span>
           </h1>
           <p className="hero-description">

@@ -1,4 +1,4 @@
-import { Fuel, Droplets, Wrench, Wind, ShoppingBag, Zap, Sparkles, ArrowRight } from 'lucide-react';
+import { Fuel, Droplets, Wrench, Wind, ShoppingBag, Zap, Sparkles } from 'lucide-react';
 import '../styles/Services.css';
 
 export default function Services() {
@@ -63,11 +63,15 @@ export default function Services() {
                   <img src={service.image} alt={service.title} />
                 </div>
               )}
-              <div className="service-icon">
-                <service.Icon size={28} />
+              <div className="service-header">
+                <div className="service-icon">
+                  <service.Icon size={28} />
+                </div>
+                <div className="service-content">
+                  <h3 className="service-title">{service.title}</h3>
+                  <p className="service-description">{service.description}</p>
+                </div>
               </div>
-              <h3 className="service-title">{service.title}</h3>
-              <p className="service-description">{service.description}</p>
             </div>
           ))}
         </div>
