@@ -110,7 +110,8 @@
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
   border-radius: 20px;
-  border: 2px solid rgba(90, 15, 36, 0.1);
+  /* border: 2px solid rgba(90, 15, 36, 0.1); */
+  border: 2px solid var(--primary-bordeaux) !important;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;

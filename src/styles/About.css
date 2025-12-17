@@ -61,12 +61,14 @@
 
 .feature-item {
   display: flex;
+  flex-direction: row; /* Toujours en ligne, même sur mobile */
   gap: 24px;
   padding: 32px;
   background: var(--white);
   border: 2px solid var(--border-color);
   border-radius: 16px;
   transition: all 0.3s ease;
+  align-items: flex-start; /* Alignement en haut */
 }
 
 /* Effet hover sur les éléments de fonctionnalité */
@@ -81,7 +83,8 @@
   flex-direction: column;
   align-items: center;
   gap: 12px;
-  flex-shrink: 0;
+  flex-shrink: 0; /* Ne pas rétrécir */
+  min-width: 100px; /* Largeur minimale pour garder l'espace */
 }
 
 .feature-number {
@@ -111,6 +114,11 @@
   background: linear-gradient(135deg, var(--primary-bordeaux), var(--secondary-orange));
   color: var(--white);
   transform: scale(1.1);
+}
+
+.feature-content {
+  flex: 1; /* Prend l'espace restant */
+  min-width: 0; /* Permet au contenu de se rétrécir si nécessaire */
 }
 
 .feature-title {
@@ -236,22 +244,42 @@
     font-size: 15px;
   }
 
+  /* Les éléments feature-icon-wrapper et feature-content restent toujours sur la même ligne */
   .feature-item {
-    flex-direction: column;
+    flex-direction: row; /* Garde la direction row même sur mobile */
     gap: 16px;
-    padding: 24px;
+    padding: 20px;
+    align-items: flex-start; /* Alignement en haut pour éviter les problèmes de hauteur */
+  }
+
+  /* Réduire la taille des éléments pour qu'ils rentrent mieux */
+  .feature-icon-wrapper {
+    flex-shrink: 0; /* Empêche le wrapper de rétrécir */
+    min-width: 80px; /* Largeur minimale pour garder l'espace */
   }
 
   .feature-number {
-    font-size: 36px;
+    font-size: 32px; /* Réduire un peu la taille du numéro */
+  }
+
+  .feature-icon {
+    width: 40px; /* Réduire la taille de l'icône */
+    height: 40px;
+  }
+
+  .feature-content {
+    flex: 1; /* Prend l'espace restant */
+    min-width: 0; /* Permet au contenu de se rétrécir si nécessaire */
   }
 
   .feature-title {
-    font-size: 18px;
+    font-size: 16px; /* Réduire la taille du titre */
+    margin-bottom: 6px;
   }
 
   .feature-description {
-    font-size: 14px;
+    font-size: 13px; /* Réduire la taille de la description */
+    line-height: 1.5;
   }
 
   .highlight-text strong {

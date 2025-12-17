@@ -185,6 +185,8 @@ export default function App() {
       requestAnimationFrame(() => {
         setTimeout(() => {
           window.scrollTo({ top: 0, behavior: 'smooth' });
+          // Forcer un resize pour les composants qui en ont besoin (comme la carte)
+          window.dispatchEvent(new Event('resize'));
         }, 150);
       });
     }
@@ -218,7 +220,6 @@ export default function App() {
       case 'career':
         return <Career />;
       case 'map':
-        console.log('Rendering Map component');
         return <Map />;
       default:
         console.log('Default case, currentPage:', currentPage);

@@ -176,6 +176,17 @@ export default function Header({
               </div>
             </div>
 
+            {/* BOUTON NOS STATIONS (visible sur mobile, à gauche du menu) */}
+            <button 
+              className="nav-link nav-link-cta mobile-stations-btn" 
+              onClick={handleMapNavigation}
+              onMouseDown={(e) => e.preventDefault()}
+              type="button"
+              aria-label="Voir nos stations"
+            >
+              Nos stations
+            </button>
+
             {/* HAMBURGER */}
             <button
               className={`mobile-menu-toggle ${isMobileMenuOpen ? 'active' : ''}`}
@@ -248,9 +259,9 @@ export default function Header({
               </button>
 
               <button 
-                className="nav-link nav-link-cta" 
+                className="nav-link nav-link-cta desktop-stations-btn" 
                 onClick={handleMapNavigation}
-                onMouseDown={(e) => e.preventDefault()} // Empêcher le focus qui peut causer des problèmes
+                onMouseDown={(e) => e.preventDefault()}
                 type="button"
                 aria-label="Voir nos stations sur la carte"
               >

@@ -1,155 +1,187 @@
 /* ============================================
-   STYLES DE LA PAGE MAP - Localisation des stations
-   Utilise les couleurs du thème : bordeaux et orange
+   MAP - Styles de la page de liste des stations
+   Design moderne avec les couleurs du logo
    ============================================ */
 
-/* Page principale */
 .map-page {
   min-height: 100vh;
   padding: 120px 0 60px;
-  background: var(--light-bg);
+  background: linear-gradient(135deg, 
+    rgba(90, 15, 36, 0.02) 0%, 
+    rgba(255, 140, 0, 0.02) 50%, 
+    rgba(90, 15, 36, 0.01) 100%
+  );
+  position: relative;
+  overflow: hidden;
 }
 
 /* En-tête de la page */
 .map-page-header {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
-/* Le style du badge est maintenant dans App.css pour uniformité */
-
 .map-page-header .section-title {
-  font-size: 2.5rem;
+  font-size: 48px;
   font-weight: 800;
-  color: var(--text-dark);
-  margin-bottom: 16px;
+  color: var(--primary-bordeaux);
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, var(--primary-bordeaux), var(--secondary-orange));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
 }
 
 .map-page-header .section-description {
-  font-size: 1.1rem;
+  font-size: 18px;
   color: var(--text-light);
   max-width: 600px;
   margin: 0 auto;
+  line-height: 1.8;
 }
 
-/* Conteneur principal : sidebar + carte */
-.map-content {
-  display: grid;
-  grid-template-columns: 400px 1fr;
-  gap: 30px;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* ============================================
-   SIDEBAR - Liste des stations
-   ============================================ */
-.stations-sidebar {
-  background: var(--white);
-  border-radius: 20px;
-  padding: 24px;
-  box-shadow: 0 10px 40px rgba(125, 25, 53, 0.1);
-  max-height: calc(100vh - 200px);
-  overflow-y: auto;
-}
-
-/* Scrollbar personnalisée */
-.stations-sidebar::-webkit-scrollbar {
-  width: 8px;
-}
-
-.stations-sidebar::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 10px;
-}
-
-.stations-sidebar::-webkit-scrollbar-thumb {
-  background: var(--primary-bordeaux);
-  border-radius: 10px;
-}
-
-.stations-sidebar::-webkit-scrollbar-thumb:hover {
-  background: var(--dark-bordeaux);
-}
-
-/* Contrôles de localisation */
-.location-controls {
-  margin-bottom: 24px;
-  padding-bottom: 24px;
-  border-bottom: 2px solid var(--border-color);
-}
-
-.btn-locate {
-  width: 100%;
+/* Filtres par ville */
+.station-filters {
   display: flex;
-  align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding: 12px 20px;
-  background: linear-gradient(135deg, var(--primary-bordeaux), var(--dark-bordeaux));
-  color: var(--white);
-  border: none;
-  border-radius: 12px;
-  font-size: 1rem;
+  gap: 16px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 12px 28px;
+  border-radius: 30px;
+  border: 2px solid rgba(90, 15, 36, 0.2);
+  background: var(--white);
+  color: var(--text-dark);
+  font-size: 16px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(125, 25, 53, 0.3);
+  font-family: inherit;
 }
 
-.btn-locate:hover {
+.filter-btn:hover {
+  border-color: var(--secondary-orange);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(125, 25, 53, 0.4);
-  background: linear-gradient(135deg, var(--dark-bordeaux), var(--primary-bordeaux));
+  box-shadow: 0 4px 12px rgba(90, 15, 36, 0.1);
 }
 
-/* Liste des stations */
-.stations-list {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+.filter-btn.active {
+  background: linear-gradient(135deg, var(--primary-bordeaux), var(--secondary-orange));
+  color: var(--white);
+  border-color: transparent;
+  box-shadow: 0 4px 15px rgba(90, 15, 36, 0.25);
+}
+
+/* Grille de stations */
+.stations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
 }
 
 /* Carte de station */
 .station-card {
-  background: var(--light-bg);
-  border: 2px solid var(--border-color);
-  border-radius: 16px;
-  padding: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(90, 15, 36, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid rgba(90, 15, 36, 0.1);
   cursor: pointer;
-  transition: all 0.3s ease;
+  position: relative;
+}
+
+.station-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(135deg, var(--primary-bordeaux), var(--secondary-orange));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.station-card:hover::before {
+  transform: scaleX(1);
 }
 
 .station-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 25px rgba(125, 25, 53, 0.1);
-  border-color: var(--primary-bordeaux);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(90, 15, 36, 0.15);
+  border-color: var(--secondary-orange);
 }
 
-.station-card.active {
-  background: linear-gradient(135deg, #fef5f7, #ffe5e9);
-  border-color: var(--primary-bordeaux);
-  box-shadow: 0 8px 25px rgba(125, 25, 53, 0.2);
+/* Image de la station */
+.station-image {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
 }
 
-/* En-tête de la carte station */
+.station-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.station-card:hover .station-image img {
+  transform: scale(1.1);
+}
+
+.station-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: linear-gradient(135deg, var(--primary-bordeaux), var(--secondary-orange));
+  color: var(--white);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: 0 2px 10px rgba(90, 15, 36, 0.3);
+}
+
+/* Contenu de la station */
+.station-content {
+  padding: 28px;
+}
+
 .station-header {
   display: flex;
   gap: 16px;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 
 .station-icon {
-  width: 48px;
-  height: 48px;
-  background: linear-gradient(135deg, var(--primary-bordeaux), var(--secondary-orange));
-  border-radius: 12px;
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, rgba(90, 15, 36, 0.15), rgba(255, 140, 0, 0.15));
+  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--white);
+  color: var(--primary-bordeaux);
   flex-shrink: 0;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(90, 15, 36, 0.1);
+}
+
+.station-card:hover .station-icon {
+  background: linear-gradient(135deg, var(--primary-bordeaux), var(--secondary-orange));
+  color: var(--white);
+  transform: scale(1.1) rotate(5deg);
+  border-color: transparent;
 }
 
 .station-info {
@@ -157,40 +189,33 @@
 }
 
 .station-name {
-  font-size: 1.1rem;
+  font-size: 22px;
   font-weight: 700;
   color: var(--text-dark);
   margin-bottom: 6px;
 }
 
 .station-address {
-  font-size: 0.9rem;
+  font-size: 15px;
   color: var(--text-light);
-  margin-bottom: 4px;
-}
-
-.station-distance {
-  font-size: 0.85rem;
-  color: var(--primary-bordeaux);
-  font-weight: 600;
-  margin-top: 4px;
+  line-height: 1.5;
 }
 
 /* Détails de la station */
 .station-details {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  margin-bottom: 16px;
-  padding-top: 16px;
-  border-top: 1px solid var(--border-color);
+  gap: 12px;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(90, 15, 36, 0.1);
 }
 
 .station-detail-item {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 0.9rem;
+  gap: 12px;
+  font-size: 14px;
   color: var(--text-light);
 }
 
@@ -199,219 +224,94 @@
   flex-shrink: 0;
 }
 
-/* Actions de la station */
-.station-actions {
-  display: flex;
-  gap: 10px;
+/* Services disponibles */
+.station-services {
+  margin-top: 20px;
 }
 
-.btn-route {
-  flex: 1;
+.services-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+}
+
+.services-list {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-wrap: wrap;
   gap: 8px;
-  padding: 10px 16px;
-  border-radius: 10px;
-  font-size: 0.9rem;
+}
+
+.service-tag {
+  background: linear-gradient(135deg, rgba(90, 15, 36, 0.1), rgba(255, 140, 0, 0.1));
+  color: var(--primary-bordeaux);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
   font-weight: 600;
-  text-decoration: none;
+  border: 1px solid rgba(90, 15, 36, 0.2);
   transition: all 0.3s ease;
-  border: none;
-  cursor: pointer;
-  background: linear-gradient(135deg, var(--primary-bordeaux), var(--dark-bordeaux));
+}
+
+.station-card:hover .service-tag {
+  background: linear-gradient(135deg, var(--primary-bordeaux), var(--secondary-orange));
   color: var(--white);
-  box-shadow: 0 4px 15px rgba(125, 25, 53, 0.3);
-}
-
-.btn-route:hover:not(:disabled) {
+  border-color: transparent;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(125, 25, 53, 0.4);
-  background: linear-gradient(135deg, var(--dark-bordeaux), var(--primary-bordeaux));
 }
 
-.btn-route:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
+/* Section d'information */
+.stations-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 60px;
 }
 
-/* ============================================
-   CONTAINER DE LA CARTE
-   ============================================ */
-.map-container {
-  background: var(--white);
+.info-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 32px;
   border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 10px 40px rgba(125, 25, 53, 0.1);
-  height: calc(100vh - 200px);
-  min-height: 600px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-}
-
-/* S'assurer que le conteneur Leaflet prend toute la place */
-.map-container > div {
-  flex: 1;
-  min-height: 0;
-}
-
-.map-container .leaflet-container {
-  height: 100% !important;
-  width: 100% !important;
-  border-radius: 20px;
-  position: relative;
-  z-index: 0;
-}
-
-/* S'assurer que les tuiles Leaflet s'affichent */
-.map-container .leaflet-tile-container {
-  visibility: visible !important;
-}
-
-/* S'assurer que le panneau de contrôle Leaflet est visible */
-.map-container .leaflet-control-container {
-  z-index: 1000;
-}
-
-/* Icône personnalisée pour les stations */
-.custom-station-icon {
-  background: transparent !important;
-  border: none !important;
-}
-
-/* Popup de station sur la carte */
-.station-popup {
   text-align: center;
-  min-width: 200px;
-}
-
-.station-popup h3 {
-  font-size: 1.1rem;
-  color: var(--primary-bordeaux);
-  margin-bottom: 8px;
-  font-weight: 700;
-}
-
-.station-popup p {
-  font-size: 0.9rem;
-  color: var(--text-light);
-  margin: 4px 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-}
-
-.btn-popup-route {
-  margin-top: 12px;
-  padding: 8px 16px;
-  background: linear-gradient(135deg, var(--primary-bordeaux), var(--dark-bordeaux));
-  color: var(--white);
-  border: none;
-  border-radius: 8px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  cursor: pointer;
   transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  margin-left: auto;
-  margin-right: auto;
+  border: 2px solid rgba(90, 15, 36, 0.1);
+  box-shadow: 0 4px 20px rgba(90, 15, 36, 0.06);
 }
 
-.btn-popup-route:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(125, 25, 53, 0.3);
+.info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(90, 15, 36, 0.12);
+  border-color: var(--secondary-orange);
 }
 
-/* Panneau de contrôle du routage */
-.route-control-panel {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  z-index: 1000;
-  background: var(--white);
-  padding: 16px 20px;
+.info-card svg {
+  width: 48px;
+  height: 48px;
+  color: var(--primary-bordeaux);
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, rgba(90, 15, 36, 0.1), rgba(255, 140, 0, 0.1));
+  padding: 12px;
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(125, 25, 53, 0.2);
-  display: flex;
-  align-items: center;
-  gap: 16px;
 }
 
-.route-info {
-  flex: 1;
-}
-
-.route-info h4 {
-  font-size: 0.9rem;
-  color: var(--primary-bordeaux);
-  margin-bottom: 4px;
+.info-card h3 {
+  font-size: 20px;
   font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 12px;
 }
 
-.route-info p {
-  font-size: 0.85rem;
+.info-card p {
+  font-size: 14px;
   color: var(--text-light);
-  margin: 0;
+  line-height: 1.6;
 }
 
-.btn-close-route {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 16px;
-  background: linear-gradient(135deg, var(--primary-bordeaux), var(--dark-bordeaux));
-  color: var(--white);
-  border: none;
-  border-radius: 8px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.btn-close-route:hover {
-  background: linear-gradient(135deg, var(--dark-bordeaux), var(--primary-bordeaux));
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(125, 25, 53, 0.3);
-}
-
-/* Styles pour Leaflet Routing Machine */
-.leaflet-routing-container {
-  background: var(--white) !important;
-  border-radius: 12px !important;
-  box-shadow: 0 4px 20px rgba(125, 25, 53, 0.2) !important;
-}
-
-.leaflet-routing-alt {
-  max-height: 300px;
-  overflow-y: auto;
-}
-
-.leaflet-routing-alt::-webkit-scrollbar {
-  width: 6px;
-}
-
-.leaflet-routing-alt::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 10px;
-}
-
-.leaflet-routing-alt::-webkit-scrollbar-thumb {
-  background: var(--primary-bordeaux);
-  border-radius: 10px;
-}
-
-/* ============================================
-   RESPONSIVE DESIGN
-   ============================================ */
+/* Responsive */
 @media (max-width: 1024px) {
-  .map-content {
-    grid-template-columns: 350px 1fr;
-    gap: 20px;
+  .stations-grid {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   }
 }
 
@@ -421,60 +321,42 @@
   }
 
   .map-page-header .section-title {
-    font-size: 2rem;
+    font-size: 32px;
   }
 
-  .map-content {
+  .stations-grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
 
-  .stations-sidebar {
-    max-height: 400px;
-    order: 2;
+  .station-filters {
+    gap: 10px;
   }
 
-  .map-container {
-    height: 500px;
-    min-height: 500px;
-    order: 1;
+  .filter-btn {
+    padding: 10px 20px;
+    font-size: 14px;
   }
 
-  .station-actions {
-    flex-direction: column;
-  }
-
-  .btn-route {
-    width: 100%;
-  }
-
-  .route-control-panel {
-    top: 10px;
-    right: 10px;
-    left: 10px;
-    flex-direction: column;
-    align-items: flex-start;
+  .stations-info {
+    grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 480px) {
   .map-page-header .section-title {
-    font-size: 1.75rem;
+    font-size: 28px;
   }
 
   .map-page-header .section-description {
-    font-size: 1rem;
+    font-size: 16px;
   }
 
-  .stations-sidebar {
-    padding: 16px;
-  }
-
-  .station-card {
-    padding: 16px;
+  .station-content {
+    padding: 20px;
   }
 
   .station-name {
-    font-size: 1rem;
+    font-size: 18px;
   }
 }
