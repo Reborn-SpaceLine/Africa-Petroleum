@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { MapPin, Phone, Mail, Clock, Send, Facebook, Instagram, MessageCircle } from 'lucide-react';
+import { useState } from 'react';
+import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
 import '../styles/Contact.css';
 
 export default function Contact() {
@@ -45,7 +45,7 @@ export default function Contact() {
               </div>
               <div className="info-content">
                 <h3 className="info-title">Adresse</h3>
-                <p className="info-text">Marché B, Yaoundé<br />Cameroun</p>
+                <p className="info-text">Bafoussam, Douala, Yaoundé<br />Cameroun</p>
               </div>
             </div>
 
@@ -55,7 +55,7 @@ export default function Contact() {
               </div>
               <div className="info-content">
                 <h3 className="info-title">Téléphone</h3>
-                <p className="info-text">+237 6 XX XX XX XX<br />+237 6 YY YY YY YY</p>
+                <p className="info-text">+237 6 96 44 99 08<br />+237 6 YY YY YY YY</p>
               </div>
             </div>
 
@@ -65,7 +65,7 @@ export default function Contact() {
               </div>
               <div className="info-content">
                 <h3 className="info-title">Email</h3>
-                <p className="info-text">contact@stationmarcheb.cm<br />info@stationmarcheb.cm</p>
+                <p className="info-text">contact@africapetroleum.cm<br />info@africapetroleum.cm</p>
               </div>
             </div>
 

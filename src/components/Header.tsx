@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { ChevronDown } from 'lucide-react';
+import logoImage from '../assets/logo.webp';
 import '../styles/Header.css';
 
 interface HeaderProps {
@@ -91,7 +92,7 @@ export default function Header({
             {/* LOGO */}
             <div className="logo">
               <img
-                src="/src/assets/logo.webp"
+                src={logoImage}
                 alt="Africa Petroleum"
                 className="logo-img"
               />

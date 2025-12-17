@@ -1,4 +1,4 @@
-import  { useState } from 'react';
+import { useState } from 'react';
 import { ChefHat, Coffee, Pizza, Utensils, Sparkles, Clock, Star } from 'lucide-react';
 import '../styles/Restaurant.css';
 

@@ -1,5 +1,5 @@
-import React from 'react';
-import { Fuel, MapPin, Phone, Mail, Clock, Send, Facebook, Instagram, MessageCircle } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Facebook, Instagram, MessageCircle } from 'lucide-react';
+import logoImage from '../assets/logo.webp';
 import '../styles/Footer.css';
 
 export default function Footer() {
@@ -7,12 +7,11 @@ export default function Footer() {
 
   return (
     <footer className="footer">
-      <div className="container">
-        <div className="footer-content">
+      <div className="footer-content">
           <div className="footer-section">
             <div className="logo">
               <img
-                src="/src/assets/logo.webp"
+                src={logoImage}
                 alt="Africa Petroleum"
                 className="logo-img"
               />
@@ -22,17 +21,17 @@ export default function Footer() {
               </div>
             </div>
             <p className="footer-description">
-              Votre station-service de confiance au cœur de vos activite. 
+              Votre station-service de confiance au cœur de vos activités. 
               Carburants de qualité et service professionnel depuis plus de 12 ans.
             </p>
-            <div className="social-links">
-                <a href="#" className="social-link" aria-label="Facebook">
+            <div className="footer-social-links">
+                <a href="#" className="footer-social-link" aria-label="Facebook">
                     <Facebook size={20} />
                 </a>
-                <a href="#" className="social-link" aria-label="WhatsApp">
+                <a href="#" className="footer-social-link" aria-label="WhatsApp">
                     <MessageCircle size={20} />
                 </a>
-                <a href="#" className="social-link" aria-label="Instagram">
+                <a href="#" className="footer-social-link" aria-label="Instagram">
                     <Instagram size={20} />
                 </a>
               </div>
@@ -60,37 +59,33 @@ export default function Footer() {
 
           <div className="footer-section">
             <h4 className="footer-title">Contact</h4>
-            <ul className="footer-contact">
-              <li>
-                <MapPin size={16} className="contact-icon-svg" />
-                <span>Bafoussam, Douala, Yaoundé</span>
-              </li>
-              <li>
-                <Phone size={16} className="contact-icon-svg" />
-                <span>+237 6 96 44 99 08</span>
-              </li>
-              <li>
-                <Mail size={16} className="contact-icon-svg" />
-                <span>contact@stationmarcheb.cm</span>
-              </li>
-              <li>
-                <Clock size={16} className="contact-icon-svg" />
-                <span>Ouvert 24h/24 - 7j/7</span>
-              </li>
-            </ul>
+            <div className="contact-info-footer">
+              <MapPin size={16} className="contact-icon-svg" />
+              <span>Bafoussam, Douala, Yaoundé</span>
+            </div>
+            <div className="contact-info-footer">
+              <Phone size={16} className="contact-icon-svg" />
+              <span>+237 6 96 44 99 08</span>
+            </div>
+            <div className="contact-info-footer">
+              <Mail size={16} className="contact-icon-svg" />
+              <span>contact@africapetroleum.cm</span>
+            </div>
+            <div className="contact-info-footer">
+              <Clock size={16} className="contact-icon-svg" />
+              <span>Ouvert 24h/24 - 7j/7</span>
+            </div>
           </div>
-        </div>
-
-        <div className="footer-bottom">
-          <p className="footer-copyright">
-            © {currentYear} OIC. Tous droits réservés.
-          </p>
-          <div className="footer-bottom-links">
-            <a href="#">Politique de Confidentialité</a>
-            <span className="separator">•</span>
-            <a href="#">Conditions d'Utilisation</a>
-          </div>
-        </div>
+      </div>
+      
+      <div className="footer-copyright">
+        <p>
+           
+          <a href="https://www.oicpole.com" target="_blank" rel="noopener noreferrer"> © {currentYear} Ocean Innovation Center (OIC). Tous droits réservés.</a> | 
+          {/* <a href="https://www.oicpole.com" target="_blank" rel="noopener noreferrer"> OIC</a> |  */}
+          <a href="#" target="_blank" rel="noopener noreferrer"> Politique de Confidentialité</a> | 
+          <a href="#" target="_blank" rel="noopener noreferrer"> Conditions d'Utilisation</a>
+        </p>
       </div>
     </footer>
   );

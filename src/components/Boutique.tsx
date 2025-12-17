@@ -1,4 +1,3 @@
-import React from 'react';
 import { ShoppingBag, Package, Car, Wrench, Coffee, Gift } from 'lucide-react';
 import '../styles/Boutique.css';
 
