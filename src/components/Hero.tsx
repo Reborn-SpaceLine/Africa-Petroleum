@@ -38,35 +38,35 @@ export default function Hero() {
             <div className="showcase-item">
               <Fuel className="showcase-icon" />
               <div className="showcase-text">
-                <h3>Carburants Premium</h3>
+                <h2>Carburants Premium</h2>
                 <p>Essence et gasoil de qualité supérieure</p>
               </div>
             </div>
             <div className="showcase-item">
               <Car className="showcase-icon" />
               <div className="showcase-text">
-                <h3>Service Auto</h3>
+                <h2>Service Auto</h2>
                 <p>Entretien et réparation automobile</p>
               </div>
             </div>
             <div className="showcase-item">
               <Clock className="showcase-icon" />
               <div className="showcase-text">
-                <h3>Ouvert 24/7</h3>
+                <h2>Ouvert 24/7</h2>
                 <p>Service continu pour votre confort</p>
               </div>
             </div>
             <div className="showcase-item">
               <ShoppingCart className="showcase-icon" />
               <div className="showcase-text">
-                <h3>Boutique</h3>
+                <h2>Boutique</h2>
                 <p>Produits et accessoires pour votre véhicule</p>
               </div>
             </div>
             <div className="showcase-item">
               <ShieldCheck className="showcase-icon" />
               <div className="showcase-text">
-                <h3>Sécurisés</h3>
+                <h2>Sécurisés</h2>
                 <p>Espace sécurisés pour votre confort et votre sécurité</p>
               </div>
             </div>
