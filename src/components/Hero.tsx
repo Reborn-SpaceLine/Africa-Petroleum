@@ -1,4 +1,4 @@
-import { ArrowRight, Fuel, Car, Clock, ShoppingCart } from 'lucide-react';
+import { ArrowRight, Fuel, Car, Clock, ShoppingCart, ShieldCheck } from 'lucide-react';
 import '../styles/Hero.css';
 
 export default function Hero() {
@@ -54,6 +54,11 @@ export default function Hero() {
               <ShoppingCart className="showcase-icon" />
               <h3>Boutique</h3>
               <p>Produits et accessoires pour votre véhicule</p>
+            </div>
+            <div className="showcase-item">
+              <ShieldCheck className="showcase-icon" />
+              <h3>Sécurisés</h3>
+              <p>Espace sécurisés pour votre confort et votre sécurité</p>
             </div>
           </div>
         </div>
