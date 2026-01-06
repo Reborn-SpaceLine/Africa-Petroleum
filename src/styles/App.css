@@ -15,10 +15,20 @@
    Basées sur les couleurs du logo AP Africa Petroleum
    ============================================ */
 :root {
-  /* Couleurs principales du logo */
-  --primary-bordeaux: #5a0f24; /* Bordeaux foncé du logo (dark purple/maroon) - Couleur principale */
-  --secondary-orange: #FF8C00; /* Orange vif du logo (bright orange de la carte de l'Afrique) */
-  --dark-bordeaux: #3d0a18; /* Bordeaux encore plus foncé pour les variantes et effets hover */
+  /* Couleurs principales - 35% bleu (couleur dominante) */
+  --primary-blue: #2563eb; /* Bleu vif principal */
+  --secondary-blue: #1e40af; /* Bleu foncé */
+  --light-blue: #3b82f6; /* Bleu moyen */
+  --dark-blue: #1e3a8a; /* Bleu très foncé */
+  
+  /* Couleurs principales - 35% orange (couleur dominante) */
+  --primary-orange: #FF8C00; /* Orange vif principal */
+  --secondary-orange: #ff9500; /* Orange clair */
+  --dark-orange: #e67e00; /* Orange foncé */
+  
+  /* Variables de compatibilité (remplacées par bleu/orange) */
+  --primary-bordeaux: var(--primary-blue); /* Remplacé par bleu */
+  --dark-bordeaux: var(--dark-blue); /* Remplacé par bleu foncé */
   
   /* Couleurs d'accent du logo */
   --accent-green: #2d5016; /* Vert foncé du liquide sur la carte (optionnel) */
@@ -74,7 +84,7 @@ body {
   left: 0;
   right: 0;
   /* Fond avec dégradé utilisant les couleurs du logo */
-  background: linear-gradient(135deg, var(--primary-bordeaux), var(--dark-bordeaux));
+  background: var(--primary-orange);
   z-index: 1000;
   transition: all 0.3s ease;
   border-bottom: 1px solid transparent;
@@ -82,7 +92,7 @@ body {
 
 /* Style du header quand on scroll (avec ombre) */
 .header.scrolled {
-  box-shadow: 0 2px 20px rgba(90, 15, 36, 0.08); /* Ombre avec couleur bordeaux du logo */
+  box-shadow: 0 2px 20px rgba(37, 99, 235, 0.08); /* Ombre avec couleur bleue */
   border-bottom-color: var(--border-color);
 }
 
@@ -103,7 +113,7 @@ body {
 .logo-icon {
   width: 45px;
   height: 45px;
-  background: linear-gradient(135deg, var(--primary-bordeaux), var(--secondary-orange));
+  background: linear-gradient(135deg, var(--primary-blue), var(--primary-orange));
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -119,7 +129,7 @@ body {
 .logo-name {
   font-size: 20px;
   font-weight: 700;
-  color: var(--white); /* Texte blanc pour contraste sur fond bordeaux */
+  color: var(--white); /* Texte blanc pour contraste sur fond orange */
 }
 
 .logo-tagline {
@@ -148,21 +158,21 @@ body {
 }
 
 .nav-link:hover {
-  color: var(--primary-bordeaux);
+  color: var(--primary-blue);
   background: var(--light-bg);
 }
 
 .nav-link-cta {
-  background: linear-gradient(135deg, var(--primary-bordeaux), var(--secondary-orange));
+  background: linear-gradient(135deg, var(--primary-blue), var(--primary-orange));
   color: var(--white);
   padding: 10px 24px;
 }
 
 /* Effet hover sur le bouton CTA */
 .nav-link-cta:hover {
-  background: linear-gradient(135deg, var(--dark-bordeaux), var(--primary-bordeaux));
+  background: linear-gradient(135deg, var(--dark-blue), var(--primary-blue));
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(90, 15, 36, 0.25); /* Ombre avec couleur bordeaux du logo */
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25); /* Ombre avec couleur bordeaux du logo */
 }
 
 /* ============================================
@@ -186,11 +196,11 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  /* Dégradé subtil utilisant les couleurs du logo (bordeaux et orange) */
+  /* Dégradé subtil utilisant les couleurs du logo (bleu et orange) */
   background: linear-gradient(135deg, 
-    rgba(90, 15, 36, 0.02) 0%, 
+    rgba(37, 99, 235, 0.02) 0%, 
     rgba(255, 140, 0, 0.02) 50%, 
-    rgba(90, 15, 36, 0.01) 100%
+    rgba(37, 99, 235, 0.01) 100%
   );
 }
 
@@ -213,8 +223,8 @@ body {
   border-radius: 50px;
   font-size: 14px;
   font-weight: 500;
-  color: var(--primary-bordeaux);
-  box-shadow: 0 4px 15px rgba(90, 15, 36, 0.1); /* Ombre avec couleur bordeaux du logo */
+  color: var(--primary-blue);
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.1); /* Ombre avec couleur bordeaux du logo */
   margin-bottom: 24px;
 }
 
@@ -222,7 +232,7 @@ body {
   font-size: 52px;
   font-weight: 800;
   line-height: 1.15;
-  color: var(--primary-bordeaux);
+  color: var(--primary-blue);
   margin-bottom: 24px;
 }
 
@@ -249,27 +259,27 @@ body {
   font-family: inherit;
 }
 
-/* Bouton principal avec gradient bordeaux/orange du logo */
+/* Bouton principal avec gradient bleu/orange du logo */
 .btn-primary {
-  background: linear-gradient(135deg, var(--primary-bordeaux), var(--secondary-orange));
+  background: linear-gradient(135deg, var(--primary-blue), var(--primary-orange));
   color: var(--white);
-  box-shadow: 0 4px 15px rgba(90, 15, 36, 0.25); /* Ombre avec couleur bordeaux du logo */
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.25); /* Ombre avec couleur bordeaux du logo */
 }
 
 /* Effet hover sur le bouton principal */
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 25px rgba(90, 15, 36, 0.35); /* Ombre plus prononcée au survol */
+  box-shadow: 0 6px 25px rgba(37, 99, 235, 0.35); /* Ombre plus prononcée au survol */
 }
 
 .btn-secondary {
   background: var(--white);
-  color: var(--primary-bordeaux);
-  border: 2px solid var(--primary-bordeaux);
+  color: var(--primary-blue);
+  border: 2px solid var(--primary-blue);
 }
 
 .btn-secondary:hover {
-  background: var(--primary-bordeaux);
+  background: var(--primary-blue);
   color: var(--white);
   transform: translateY(-2px);
 }
@@ -297,7 +307,7 @@ body {
   font-size: 14px;
   /* font-weight: 500; */
   font-weight: 600;
-  color: var(--primary-bordeaux);
+  color: var(--primary-blue);
   margin-bottom: 16px;
   box-shadow: 0 2px 10px rgba(125, 25, 53, 0.1);
   transition: all 0.3s ease;
@@ -311,7 +321,7 @@ body {
 
 .section-badge svg {
   flex-shrink: 0;
-  color: var(--primary-bordeaux);
+  color: var(--primary-blue);
 }
 
 .section-badge .badge-icon {
@@ -344,7 +354,7 @@ body {
 .section-title {
   font-size: 42px;
   font-weight: 800;
-  color: var(--primary-bordeaux);
+  color: var(--primary-blue);
   margin-bottom: 16px;
 }
 
@@ -374,7 +384,7 @@ body {
 /* Effet hover sur les cartes de service */
 .service-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 40px rgba(90, 15, 36, 0.15); /* Ombre avec couleur bordeaux du logo */
+  box-shadow: 0 12px 40px rgba(37, 99, 235, 0.15); /* Ombre avec couleur bordeaux du logo */
   border-color: var(--secondary-orange);
 }
 
@@ -401,27 +411,27 @@ body {
 .service-icon {
   width: 70px;
   height: 70px;
-  /* Gradient bordeaux/orange du logo (sans rose) */
-  background: linear-gradient(135deg, rgba(90, 15, 36, 0.1), rgba(255, 140, 0, 0.1));
+  /* Gradient bleu/orange du logo */
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(255, 140, 0, 0.1));
   border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 24px;
-  color: var(--primary-bordeaux);
+  color: var(--primary-blue);
   transition: all 0.3s ease;
 }
 
 .service-card:hover .service-icon {
   transform: scale(1.1) rotate(5deg);
-  background: linear-gradient(135deg, var(--primary-bordeaux), var(--secondary-orange));
+  background: linear-gradient(135deg, var(--primary-blue), var(--primary-orange));
   color: var(--white);
 }
 
 .service-title {
   font-size: 22px;
   font-weight: 700;
-  color: var(--primary-bordeaux);
+  color: var(--primary-blue);
   margin-bottom: 12px;
 }
 
@@ -434,7 +444,7 @@ body {
 /* Restaurant Styles */
 .restaurant-hero {
   padding: 140px 0 80px;
-  background: linear-gradient(135deg, var(--primary-bordeaux), var(--dark-bordeaux));
+  background: var(--primary-orange);
   color: var(--white);
   text-align: center;
   position: relative;
@@ -499,7 +509,7 @@ body {
 
 .category-btn:hover,
 .category-btn.active {
-  background: linear-gradient(135deg, var(--primary-bordeaux), var(--secondary-orange));
+  background: linear-gradient(135deg, var(--primary-blue), var(--primary-orange));
   color: var(--white);
   border-color: transparent;
   transform: translateY(-2px);
@@ -515,13 +525,13 @@ body {
   background: var(--white);
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(90, 15, 36, 0.08); /* Ombre avec couleur bordeaux du logo */
+  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.08); /* Ombre avec couleur bordeaux du logo */
   transition: all 0.3s ease;
 }
 
 .menu-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 30px rgba(90, 15, 36, 0.15); /* Ombre avec couleur bordeaux du logo */
+  box-shadow: 0 8px 30px rgba(37, 99, 235, 0.15); /* Ombre avec couleur bordeaux du logo */
 }
 
 .menu-item-image {
@@ -546,7 +556,7 @@ body {
   position: absolute;
   top: 16px;
   right: 16px;
-  background: linear-gradient(135deg, var(--primary-bordeaux), var(--secondary-orange));
+  background: linear-gradient(135deg, var(--primary-blue), var(--primary-orange));
   color: var(--white);
   padding: 6px 14px;
   border-radius: 20px;
@@ -568,13 +578,13 @@ body {
 .menu-item-title {
   font-size: 22px;
   font-weight: 700;
-  color: var(--primary-bordeaux);
+  color: var(--primary-blue);
 }
 
 .menu-item-price {
   font-size: 24px;
   font-weight: 800;
-  background: linear-gradient(135deg, var(--primary-bordeaux), var(--secondary-orange));
+  background: linear-gradient(135deg, var(--primary-blue), var(--primary-orange));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -607,7 +617,7 @@ body {
 /* Piscine Styles */
 .piscine-hero {
   padding: 140px 0 80px;
-  background: linear-gradient(135deg, var(--primary-bordeaux), var(--secondary-orange));
+  background: linear-gradient(135deg, var(--primary-blue), var(--primary-orange));
   color: var(--white);
   text-align: center;
   position: relative;
@@ -648,14 +658,14 @@ body {
 
 .feature-card:hover {
   transform: translateY(-5px);
-  border-color: var(--primary-bordeaux);
+  border-color: var(--primary-blue);
   box-shadow: 0 8px 30px rgba(125, 25, 53, 0.15);
 }
 
 .feature-icon {
   width: 80px;
   height: 80px;
-  background: linear-gradient(135deg, var(--primary-bordeaux), var(--secondary-orange));
+  background: linear-gradient(135deg, var(--primary-blue), var(--primary-orange));
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -667,7 +677,7 @@ body {
 .feature-title {
   font-size: 20px;
   font-weight: 700;
-  color: var(--primary-bordeaux);
+  color: var(--primary-blue);
   margin-bottom: 12px;
 }
 
@@ -700,12 +710,12 @@ body {
 
 .tarif-card:hover {
   transform: translateY(-5px);
-  border-color: var(--primary-bordeaux);
+  border-color: var(--primary-blue);
   box-shadow: 0 8px 30px rgba(125, 25, 53, 0.15);
 }
 
 .tarif-card.featured {
-  background: linear-gradient(135deg, var(--primary-bordeaux), var(--secondary-orange));
+  background: linear-gradient(135deg, var(--primary-blue), var(--primary-orange));
   color: var(--white);
   transform: scale(1.05);
 }
@@ -730,7 +740,7 @@ body {
   font-size: 48px;
   font-weight: 800;
   margin-bottom: 8px;
-  color: var(--primary-bordeaux);
+  color: var(--primary-blue);
 }
 
 .tarif-card.featured .tarif-price {
@@ -776,21 +786,21 @@ body {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  border: 2px solid var(--primary-bordeaux);
+  border: 2px solid var(--primary-blue);
   background: var(--white);
-  color: var(--primary-bordeaux);
+  color: var(--primary-blue);
   font-family: inherit;
 }
 
 .tarif-btn:hover {
-  background: var(--primary-bordeaux);
+  background: var(--primary-blue);
   color: var(--white);
   transform: translateY(-2px);
 }
 
 .tarif-card.featured .tarif-btn {
   background: var(--white);
-  color: var(--primary-bordeaux);
+  color: var(--primary-blue);
   border-color: var(--white);
 }
 
@@ -817,7 +827,7 @@ body {
   gap: 8px;
   padding: 12px 24px;
   background: var(--white);
-  color: var(--primary-bordeaux);
+  color: var(--primary-blue);
   border: none;
   border-radius: 12px;
   font-size: 16px;
@@ -844,7 +854,7 @@ body {
 
 /* Conteneur principal du footer */
 .footer {
-  background: linear-gradient(135deg, var(--primary-bordeaux), var(--dark-bordeaux));
+  background: var(--primary-orange);
   color: var(--white);
   padding: 60px 0 30px;
 }
@@ -867,7 +877,7 @@ body {
 .footer-logo-icon {
   width: 40px;
   height: 40px;
-  /* Gradient utilisant uniquement les couleurs du logo (bordeaux/orange) */
+  /* Gradient utilisant uniquement les couleurs du logo (bleu/orange) */
   background: linear-gradient(135deg, var(--secondary-orange), var(--primary-bordeaux));
   border-radius: 10px;
   display: flex;
@@ -1015,7 +1025,7 @@ body {
   right: 30px;
   width: 50px;
   height: 50px;
-  background: linear-gradient(135deg, var(--primary-bordeaux), var(--secondary-orange));
+  background: linear-gradient(135deg, var(--primary-blue), var(--primary-orange));
   border: none;
   border-radius: 50%;
   color: white;
@@ -1103,7 +1113,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--primary-bordeaux);
+  color: var(--primary-blue);
   transition: all 0.3s ease;
   z-index: 2001;
 }

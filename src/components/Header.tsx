@@ -178,7 +178,7 @@ export default function Header({
 
             {/* BOUTON NOS STATIONS (visible sur mobile, à gauche du menu) */}
             <button 
-              className="nav-link nav-link-cta mobile-stations-btn" 
+              className="mobile-stations-btn" 
               onClick={handleMapNavigation}
               onMouseDown={(e) => e.preventDefault()}
               type="button"
@@ -223,7 +223,7 @@ export default function Header({
                   onClick={() => setIsServicesOpen(prev => !prev)}
                 >
                   Services
-                  <ChevronDown size={16} className={`dropdown-arrow ${isServicesOpen ? 'rotated' : ''}`} />
+                  <ChevronDown className={`dropdown-arrow ${isServicesOpen ? 'rotated' : ''}`} />
                 </button>
 
                 {isServicesOpen && (
@@ -281,7 +281,7 @@ export default function Header({
       </header>
 
       {/* OVERLAY MOBILE */}
-      {isMobileMenuOpen && <div className="mobile-overlay" onClick={closeAll} />}
+      {isMobileMenuOpen && <div className={`mobile-overlay ${isMobileMenuOpen ? 'active' : ''}`} onClick={closeAll} />}
     </>
   );
 }

@@ -7,9 +7,9 @@
   padding: 120px 0;
   /* Fond avec dégradé subtil utilisant les couleurs du logo */
   background: linear-gradient(135deg, 
-    rgba(90, 15, 36, 0.03) 0%, 
+    rgba(37, 99, 235, 0.03) 0%, 
     rgba(255, 140, 0, 0.03) 50%, 
-    rgba(90, 15, 36, 0.02) 100%
+    rgba(37, 99, 235, 0.02) 100%
   );
   position: relative;
   overflow: hidden;
@@ -23,7 +23,7 @@
   right: -10%;
   width: 700px;
   height: 700px;
-  background: radial-gradient(circle, rgba(90, 15, 36, 0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.08) 0%, transparent 70%);
   border-radius: 50%;
   z-index: 0;
   animation: float 20s ease-in-out infinite;
@@ -67,9 +67,9 @@
 .contact .section-title {
   font-size: 48px;
   font-weight: 800;
-  color: var(--primary-bordeaux);
+  color: var(--primary-blue);
   margin-bottom: 20px;
-  background: linear-gradient(135deg, var(--primary-bordeaux), var(--secondary-orange));
+  background: linear-gradient(135deg, var(--primary-blue), var(--primary-orange));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -110,12 +110,12 @@
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
   border-radius: 20px;
-  /* border: 2px solid rgba(90, 15, 36, 0.1); */
-  border: 2px solid var(--primary-bordeaux) !important;
+  /* border: 2px solid rgba(37, 99, 235, 0.1); */
+  border: 2px solid var(--primary-blue) !important;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(90, 15, 36, 0.06);
+  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.06);
   animation: fadeInUp 0.6s ease-out backwards;
 }
 
@@ -145,7 +145,7 @@
   left: 0;
   right: 0;
   height: 5px;
-  background: linear-gradient(135deg, var(--primary-bordeaux), var(--secondary-orange));
+  background: linear-gradient(135deg, var(--primary-blue), var(--primary-orange));
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -172,7 +172,7 @@
 .info-card:hover {
   border-color: var(--secondary-orange);
   transform: translateX(10px) translateY(-6px) scale(1.02);
-  box-shadow: 0 12px 40px rgba(90, 15, 36, 0.15), 
+  box-shadow: 0 12px 40px rgba(37, 99, 235, 0.15), 
               0 0 0 1px rgba(255, 140, 0, 0.1);
   background: var(--white);
 }
@@ -186,26 +186,26 @@
 .info-icon {
   width: 64px;
   height: 64px;
-  /* Gradient bordeaux/orange du logo avec plus de profondeur */
+  /* Gradient bleu/orange du logo avec plus de profondeur */
   background: linear-gradient(135deg, 
-    rgba(90, 15, 36, 0.2) 0%, 
-    rgba(90, 15, 36, 0.15) 50%,
+    rgba(37, 99, 235, 0.2) 0%, 
+    rgba(37, 99, 235, 0.15) 50%,
     rgba(255, 140, 0, 0.2) 100%);
   border-radius: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--primary-bordeaux);
+  color: var(--primary-blue);
   flex-shrink: 0;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 2.5px solid rgba(90, 15, 36, 0.2);
+  border: 2.5px solid rgba(37, 99, 235, 0.2);
   position: relative;
   overflow: hidden;
   box-shadow: 
-    0 4px 12px rgba(90, 15, 36, 0.15),
+    0 4px 12px rgba(37, 99, 235, 0.15),
     0 0 0 1px rgba(255, 140, 0, 0.1) inset,
     0 2px 4px rgba(0, 0, 0, 0.05);
-  filter: drop-shadow(0 2px 4px rgba(90, 15, 36, 0.1));
+  filter: drop-shadow(0 2px 4px rgba(37, 99, 235, 0.1));
 }
 
 /* Effet de brillance amélioré sur l'icône */
@@ -242,7 +242,7 @@
   height: 120%;
   background: radial-gradient(circle, 
     rgba(255, 140, 0, 0.2) 0%, 
-    rgba(90, 15, 36, 0.1) 50%,
+    rgba(37, 99, 235, 0.1) 50%,
     transparent 100%);
   border-radius: 50%;
   opacity: 0;
@@ -284,19 +284,19 @@
 /* Effet hover sur l'icône avec rotation et élévation améliorés */
 .info-card:hover .info-icon {
   background: linear-gradient(135deg, 
-    var(--primary-bordeaux) 0%,
-    rgba(90, 15, 36, 0.9) 30%,
+    var(--primary-blue) 0%,
+    rgba(37, 99, 235, 0.9) 30%,
     var(--secondary-orange) 70%,
     rgba(255, 140, 0, 0.9) 100%);
   color: var(--white);
   transform: scale(1.2) rotate(12deg);
   box-shadow: 
-    0 12px 32px rgba(90, 15, 36, 0.4),
+    0 12px 32px rgba(37, 99, 235, 0.4),
     0 0 0 4px rgba(255, 140, 0, 0.2),
     0 0 20px rgba(255, 140, 0, 0.3),
     inset 0 2px 4px rgba(255, 255, 255, 0.2);
   border-color: rgba(255, 140, 0, 0.5);
-  filter: drop-shadow(0 4px 8px rgba(90, 15, 36, 0.3));
+  filter: drop-shadow(0 4px 8px rgba(37, 99, 235, 0.3));
 }
 
 /* Animation de l'icône SVG au survol */
@@ -324,7 +324,7 @@
 .info-title {
   font-size: 17px;
   font-weight: 700;
-  color: var(--primary-bordeaux);
+  color: var(--primary-blue);
   margin-bottom: 4px;
   transition: color 0.3s ease;
 }
@@ -361,13 +361,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--primary-bordeaux);
+  color: var(--primary-blue);
   transition: all 0.3s ease;
   text-decoration: none;
 }
 
 .social-link:hover {
-  background: linear-gradient(135deg, var(--primary-bordeaux), var(--secondary-orange));
+  background: linear-gradient(135deg, var(--primary-blue), var(--primary-orange));
   color: var(--white);
   border-color: transparent;
   transform: translateY(-3px);
@@ -379,9 +379,9 @@
   backdrop-filter: blur(20px);
   padding: 52px;
   border-radius: 28px;
-  box-shadow: 0 20px 60px rgba(90, 15, 36, 0.12),
-              0 0 0 1px rgba(90, 15, 36, 0.05);
-  border: 2px solid rgba(90, 15, 36, 0.1);
+  box-shadow: 0 20px 60px rgba(37, 99, 235, 0.12),
+              0 0 0 1px rgba(37, 99, 235, 0.05);
+  border: 2px solid rgba(37, 99, 235, 0.1);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
@@ -396,7 +396,7 @@
   left: 0;
   right: 0;
   height: 6px;
-  background: linear-gradient(135deg, var(--primary-bordeaux), var(--secondary-orange));
+  background: linear-gradient(135deg, var(--primary-blue), var(--primary-orange));
   box-shadow: 0 2px 15px rgba(255, 140, 0, 0.4);
 }
 
@@ -424,7 +424,7 @@
 
 /* Effet hover sur le formulaire avec élévation */
 .contact-form:hover {
-  box-shadow: 0 25px 70px rgba(90, 15, 36, 0.18),
+  box-shadow: 0 25px 70px rgba(37, 99, 235, 0.18),
               0 0 0 1px rgba(255, 140, 0, 0.2);
   border-color: rgba(255, 140, 0, 0.3);
   transform: translateY(-4px);
@@ -439,7 +439,7 @@
   display: block;
   font-size: 14px;
   font-weight: 600;
-  color: var(--primary-bordeaux);
+  color: var(--primary-blue);
   margin-bottom: 10px;
   transition: color 0.3s ease;
 }
@@ -453,7 +453,7 @@
 .form-textarea {
   width: 100%;
   padding: 18px 20px;
-  border: 2px solid rgba(90, 15, 36, 0.15);
+  border: 2px solid rgba(37, 99, 235, 0.15);
   border-radius: 14px;
   font-size: 15px;
   font-family: inherit;
@@ -461,7 +461,7 @@
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(10px);
-  box-shadow: 0 2px 8px rgba(90, 15, 36, 0.04);
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.04);
 }
 
 /* État focus amélioré avec animation */
@@ -470,7 +470,7 @@
   outline: none;
   border-color: var(--secondary-orange);
   box-shadow: 0 0 0 5px rgba(255, 140, 0, 0.15), 
-              0 8px 20px rgba(90, 15, 36, 0.12),
+              0 8px 20px rgba(37, 99, 235, 0.12),
               inset 0 2px 4px rgba(255, 140, 0, 0.05);
   transform: translateY(-3px) scale(1.01);
   background: var(--white);
@@ -492,7 +492,7 @@
 .form-submit {
   width: 100%;
   padding: 18px 36px;
-  background: linear-gradient(135deg, var(--primary-bordeaux), var(--secondary-orange));
+  background: linear-gradient(135deg, var(--primary-blue), var(--primary-orange));
   color: var(--white);
   border: none;
   border-radius: 14px;
@@ -507,7 +507,7 @@
   font-family: inherit;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(90, 15, 36, 0.2);
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.2);
 }
 
 /* Effet de brillance sur le bouton */
@@ -530,7 +530,7 @@
 
 .form-submit:hover {
   transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 10px 35px rgba(90, 15, 36, 0.35),
+  box-shadow: 0 10px 35px rgba(37, 99, 235, 0.35),
               0 0 0 4px rgba(255, 140, 0, 0.2);
 }
 

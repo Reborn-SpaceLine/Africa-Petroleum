@@ -169,7 +169,7 @@
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(135deg, var(--primary-bordeaux), var(--secondary-orange));
+  background: linear-gradient(135deg, var(--primary-blue), var(--primary-orange));
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -220,10 +220,10 @@
   transform: translateY(-6px);
   border-color: rgba(255, 140, 0, 0.4);
   box-shadow: 
-    0 12px 32px rgba(90, 15, 36, 0.15),
+    0 12px 32px rgba(37, 99, 235, 0.15),
     0 0 0 2px rgba(255, 140, 0, 0.2) inset,
     0 4px 12px rgba(0, 0, 0, 0.08);
-  filter: drop-shadow(0 4px 8px rgba(90, 15, 36, 0.1));
+  filter: drop-shadow(0 4px 8px rgba(37, 99, 235, 0.1));
 }
 
 .showcase-item:hover::before {
@@ -240,17 +240,17 @@
   min-width: 32px;
   flex-shrink: 0;
   background: linear-gradient(135deg, 
-    rgba(90, 15, 36, 0.15) 0%,
-    rgba(90, 15, 36, 0.1) 50%,
+    rgba(37, 99, 235, 0.15) 0%,
+    rgba(37, 99, 235, 0.1) 50%,
     rgba(255, 140, 0, 0.15) 100%);
   border-radius: 10px;
-  color: var(--primary-bordeaux);
+  color: var(--primary-blue);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 2px solid rgba(90, 15, 36, 0.15);
+  border: 2px solid rgba(37, 99, 235, 0.15);
   position: relative;
   overflow: hidden;
   box-shadow: 
-    0 2px 8px rgba(90, 15, 36, 0.1),
+    0 2px 8px rgba(37, 99, 235, 0.1),
     0 0 0 1px rgba(255, 140, 0, 0.05) inset;
   filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.05));
 }
@@ -287,7 +287,7 @@
   height: 150%;
   background: radial-gradient(circle, 
     rgba(255, 140, 0, 0.15) 0%, 
-    rgba(90, 15, 36, 0.1) 50%,
+    rgba(37, 99, 235, 0.1) 50%,
     transparent 100%);
   border-radius: 50%;
   opacity: 0;
@@ -314,19 +314,19 @@
 
 .showcase-item:hover .showcase-icon {
   background: linear-gradient(135deg, 
-    var(--primary-bordeaux) 0%,
-    rgba(90, 15, 36, 0.9) 30%,
+    var(--primary-blue) 0%,
+    rgba(37, 99, 235, 0.9) 30%,
     var(--secondary-orange) 70%,
     rgba(255, 140, 0, 0.9) 100%);
   color: var(--white);
   transform: scale(1.15);
   border-color: rgba(255, 140, 0, 0.3);
   box-shadow: 
-    0 4px 16px rgba(90, 15, 36, 0.3),
+    0 4px 16px rgba(37, 99, 235, 0.3),
     0 0 0 2px rgba(255, 140, 0, 0.2),
     0 0 12px rgba(255, 140, 0, 0.2),
     inset 0 1px 2px rgba(255, 255, 255, 0.2);
-  filter: drop-shadow(0 2px 4px rgba(90, 15, 36, 0.2));
+  filter: drop-shadow(0 2px 4px rgba(37, 99, 235, 0.2));
 }
 
 /* Animation de l'icône SVG au survol */
@@ -369,8 +369,8 @@
 }
 
 .showcase-item:hover h3 {
-  color: var(--primary-bordeaux);
-  background: linear-gradient(135deg, var(--primary-bordeaux), var(--secondary-orange));
+  color: var(--primary-blue);
+  background: linear-gradient(135deg, var(--primary-blue), var(--primary-orange));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

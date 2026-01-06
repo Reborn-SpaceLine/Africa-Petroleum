@@ -3,7 +3,7 @@
    ============================================ */
 
 .footer {
-  background: linear-gradient(135deg, var(--primary-bordeaux), var(--dark-bordeaux));
+  background: var(--primary-blue);
   color: var(--white);
   padding: 60px 0 30px;
   position: relative;
@@ -104,7 +104,7 @@
   /* background: rgba(255, 255, 255, 0.1); */
   background: var(--white);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  color: var(--primary-bordeaux);
+  color: var(--primary-blue);
   border-radius: 8px;
   display: flex;
   align-items: center;
