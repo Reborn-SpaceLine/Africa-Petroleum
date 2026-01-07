@@ -7,13 +7,43 @@
       "type": "CDI - Temps plein",
       "salary": "À discuter",
       "department": "Technique",
-      "description": "Assurer la qualité du carburant, la maintenance des équipements et le service client à la station. Vous serez responsable du bon fonctionnement des pompes et de la satisfaction des clients.",
+      "description": "Rejoignez notre équipe en tant que Technicien Carburant et participez au bon fonctionnement de notre station-service. Vous serez au cœur de nos opérations, garantissant la qualité de nos services et la satisfaction de nos clients. Ce poste offre une opportunité unique de développer vos compétences techniques dans un environnement dynamique et en constante évolution. Vous travaillerez avec des équipements modernes et serez formé aux dernières technologies du secteur pétrolier.",
+      "image": "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=1200&q=80",
+      "missions": [
+        "Assurer la qualité et le contrôle du carburant distribué",
+        "Effectuer la maintenance préventive et corrective des pompes à essence",
+        "Vérifier et entretenir les équipements de mesure et de sécurité",
+        "Accueillir et conseiller les clients sur les produits et services",
+        "Gérer les stocks de carburant et signaler les anomalies",
+        "Respecter et faire respecter les normes de sécurité et d'hygiène",
+        "Rédiger les rapports techniques et de maintenance",
+        "Participer aux formations et mises à jour réglementaires"
+      ],
       "requirements": [
-        "Diplôme technique ou expérience équivalente",
-        "Minimum 2 ans d'expérience dans le secteur pétrolier",
-        "Bonne connaissance des équipements de station-service",
-        "Sens du service client et de la sécurité"
-      ]
+        "Diplôme technique (BTS, DUT) ou expérience équivalente dans le secteur pétrolier",
+        "Minimum 2 ans d'expérience dans la maintenance d'équipements pétroliers",
+        "Bonne connaissance des équipements de station-service et des normes de sécurité",
+        "Sens du service client et capacité à travailler en équipe",
+        "Rigueur, autonomie et réactivité",
+        "Permis de conduire valide"
+      ],
+      "skills": [
+        "Maintenance industrielle",
+        "Contrôle qualité",
+        "Service client",
+        "Gestion de stock",
+        "Sécurité au travail"
+      ],
+      "benefits": [
+        "Salaire compétitif selon expérience",
+        "Formation continue et développement professionnel",
+        "Assurance santé et mutuelle",
+        "Prime de performance",
+        "Horaires flexibles",
+        "Environnement de travail moderne et sécurisé"
+      ],
+      "schedule": "Horaires de jour, rotation week-end possible",
+      "experience": "2-5 ans d'expérience requise"
     },
     {
       "id": 2,
@@ -22,13 +52,44 @@
       "type": "CDI - Temps plein",
       "salary": "À discuter",
       "department": "Vente",
-      "description": "Gestion des paiements, suivi des transactions et accueil des clients. Vous serez le premier point de contact avec nos clients et contribuerez à leur expérience positive.",
+      "description": "En tant que Caissier/Caissière, vous êtes le visage de notre entreprise et le premier point de contact avec nos clients. Vous jouerez un rôle essentiel dans la création d'une expérience client exceptionnelle. Vous serez responsable de la gestion des transactions, de l'accueil chaleureux des clients et de la promotion de nos produits et services. Ce poste offre une excellente opportunité de développer vos compétences en vente et en service client dans un environnement stimulant.",
+      "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&q=80",
+      "missions": [
+        "Gérer les encaissements et les transactions quotidiennes",
+        "Accueillir et conseiller les clients avec professionnalisme",
+        "Promouvoir les produits et services de la station",
+        "Gérer la boutique et les produits complémentaires",
+        "Assurer la propreté et l'organisation de l'espace de vente",
+        "Effectuer l'inventaire et la gestion des stocks",
+        "Respecter les procédures de sécurité et de caisse",
+        "Traiter les réclamations clients avec courtoisie"
+      ],
       "requirements": [
-        "Niveau Bac minimum",
-        "Expérience en caisse appréciée",
-        "Maîtrise des outils informatiques",
-        "Excellente présentation et sens du service"
-      ]
+        "Niveau Bac minimum (Bac+2 en commerce apprécié)",
+        "Expérience en caisse ou vente de 1 à 3 ans",
+        "Maîtrise des outils informatiques et systèmes de caisse",
+        "Excellente présentation et sens du service client",
+        "Capacité à travailler sous pression et en équipe",
+        "Bonne communication et aisance relationnelle",
+        "Disponibilité pour travailler en horaires décalés"
+      ],
+      "skills": [
+        "Gestion de caisse",
+        "Service client",
+        "Vente et merchandising",
+        "Gestion de stock",
+        "Communication"
+      ],
+      "benefits": [
+        "Salaire de base + commissions sur ventes",
+        "Formation continue en vente et service client",
+        "Assurance santé et mutuelle",
+        "Prime de performance mensuelle",
+        "Horaires flexibles avec planning prévisible",
+        "Avantages employés sur les produits de la station"
+      ],
+      "schedule": "Horaires variables, travail week-end et jours fériés",
+      "experience": "1-3 ans d'expérience en vente/caisse"
     },
     {
       "id": 3,
@@ -37,13 +98,44 @@
       "type": "CDI - Temps plein",
       "salary": "À discuter",
       "department": "Technique",
-      "description": "Maintenance préventive et corrective des installations et équipements de la station. Assurer la disponibilité et le bon fonctionnement de tous les équipements.",
+      "description": "En tant qu'Agent de Maintenance, vous êtes responsable de la maintenance préventive et corrective de tous les équipements de la station. Votre expertise technique garantit la continuité de nos services et la sécurité de nos installations. Vous travaillerez avec une équipe dédiée et aurez accès aux dernières technologies de maintenance. Ce poste offre une opportunité de développement technique dans un secteur en pleine évolution.",
+      "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1200&q=80",
+      "missions": [
+        "Effectuer la maintenance préventive selon le planning établi",
+        "Diagnostiquer et réparer les pannes des équipements",
+        "Maintenir les pompes à essence, compresseurs et systèmes électroniques",
+        "Contrôler et entretenir les systèmes de sécurité et d'incendie",
+        "Gérer les stocks de pièces détachées et consommables",
+        "Rédiger les rapports de maintenance et tenir à jour la documentation technique",
+        "Assurer la conformité aux normes de sécurité et environnementales",
+        "Former et assister les équipes sur les bonnes pratiques de maintenance"
+      ],
       "requirements": [
-        "Formation technique en maintenance industrielle",
-        "Expérience en maintenance d'équipements pétroliers",
-        "Capacité à travailler en autonomie",
-        "Rigueur et sens de la sécurité"
-      ]
+        "Formation technique (BTS, DUT) en maintenance industrielle ou électromécanique",
+        "Minimum 3 ans d'expérience en maintenance d'équipements pétroliers ou industriels",
+        "Connaissance des systèmes hydrauliques, pneumatiques et électroniques",
+        "Capacité à travailler en autonomie et à prendre des initiatives",
+        "Rigueur, sens de la sécurité et respect des procédures",
+        "Permis de conduire et véhicule personnel appréciés",
+        "Disponibilité pour interventions d'urgence"
+      ],
+      "skills": [
+        "Maintenance préventive et corrective",
+        "Diagnostic technique",
+        "Électricité et électronique",
+        "Hydraulique et pneumatique",
+        "Gestion de maintenance assistée par ordinateur (GMAO)"
+      ],
+      "benefits": [
+        "Salaire compétitif avec prime d'astreinte",
+        "Formation continue et certifications techniques",
+        "Assurance santé, mutuelle et prévoyance",
+        "Prime de performance et 13ème mois",
+        "Équipements de protection individuelle fournis",
+        "Possibilité d'évolution vers responsable maintenance"
+      ],
+      "schedule": "Horaires de jour, astreintes week-end et jours fériés",
+      "experience": "3-7 ans d'expérience en maintenance industrielle"
     },
     {
       "id": 4,
@@ -52,13 +144,46 @@
       "type": "CDI - Temps plein",
       "salary": "À discuter",
       "department": "Marketing",
-      "description": "Développer la visibilité de la marque, gérer les campagnes promotionnelles et les relations clients. Vous serez responsable de la stratégie marketing et de la communication.",
+      "description": "En tant que Responsable Marketing, vous serez le pilote de notre stratégie de communication et de développement de la marque. Vous aurez la responsabilité de concevoir et mettre en œuvre des campagnes marketing innovantes pour accroître notre visibilité et notre notoriété. Vous travaillerez en étroite collaboration avec les équipes commerciales et managériales pour développer notre présence sur le marché. Ce poste offre une opportunité unique de façonner l'image de marque d'une entreprise en pleine croissance.",
+      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80",
+      "missions": [
+        "Définir et mettre en œuvre la stratégie marketing annuelle",
+        "Créer et gérer les campagnes publicitaires (print, digital, radio)",
+        "Développer et animer la présence sur les réseaux sociaux",
+        "Organiser les événements promotionnels et partenariats",
+        "Analyser les performances marketing et proposer des optimisations",
+        "Gérer le budget marketing et suivre le ROI des campagnes",
+        "Créer les supports de communication (brochures, flyers, bannières)",
+        "Superviser la création de contenu pour le site web et les réseaux sociaux",
+        "Développer les programmes de fidélisation clients"
+      ],
       "requirements": [
-        "Bac+3 minimum en Marketing ou Communication",
-        "Minimum 3 ans d'expérience en marketing",
-        "Maîtrise des réseaux sociaux et outils digitaux",
-        "Créativité et sens de l'analyse"
-      ]
+        "Bac+3 minimum (Bac+5 apprécié) en Marketing, Communication ou Commerce",
+        "Minimum 3 ans d'expérience en marketing, idéalement dans le secteur pétrolier ou retail",
+        "Maîtrise avancée des réseaux sociaux et outils digitaux (Facebook Ads, Google Ads)",
+        "Créativité, sens de l'analyse et capacité à travailler en équipe",
+        "Excellente maîtrise des outils de design (Photoshop, Canva, etc.)",
+        "Bonne connaissance du marché camerounais",
+        "Anglais courant apprécié"
+      ],
+      "skills": [
+        "Stratégie marketing",
+        "Communication digitale",
+        "Gestion de campagnes publicitaires",
+        "Community management",
+        "Analyse de données et reporting"
+      ],
+      "benefits": [
+        "Salaire compétitif selon profil et expérience",
+        "Formation continue et développement professionnel",
+        "Assurance santé, mutuelle et prévoyance",
+        "Prime de performance et 13ème mois",
+        "Budget formation et certifications",
+        "Télétravail partiel possible",
+        "Ordinateur portable et équipements fournis"
+      ],
+      "schedule": "Horaires de bureau, flexibilité selon événements",
+      "experience": "3-5 ans d'expérience en marketing"
     },
     {
       "id": 5,
@@ -67,13 +192,48 @@
       "type": "CDI - Temps plein",
       "salary": "À discuter",
       "department": "Management",
-      "description": "Supervision de l'équipe, gestion des stocks, contrôle qualité et optimisation des performances de la station. Leadership et gestion opérationnelle requise.",
+      "description": "En tant que Gestionnaire de Station, vous êtes le responsable opérationnel de notre point de vente. Vous dirigez une équipe dynamique et êtes garant de la performance commerciale, de la qualité de service et de la satisfaction client. Vous aurez une vision globale de l'activité et serez en charge de l'optimisation des résultats. Ce poste à responsabilités offre une excellente opportunité de développement managérial dans un environnement stimulant.",
+      "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80",
+      "missions": [
+        "Superviser et coordonner l'équipe de la station (planning, formation, évaluation)",
+        "Gérer les stocks de carburant et produits de la boutique",
+        "Optimiser les ventes et développer le chiffre d'affaires",
+        "Assurer le respect des normes de qualité, sécurité et environnementales",
+        "Gérer la relation client et traiter les réclamations",
+        "Contrôler les opérations de caisse et la comptabilité quotidienne",
+        "Analyser les performances et proposer des actions d'amélioration",
+        "Maintenir les relations avec les fournisseurs et partenaires",
+        "Assurer la maintenance préventive des équipements",
+        "Représenter l'entreprise auprès des autorités locales"
+      ],
       "requirements": [
-        "Bac+2 minimum en Gestion ou équivalent",
-        "Minimum 5 ans d'expérience en management",
-        "Leadership et capacité de gestion d'équipe",
-        "Connaissance du secteur pétrolier"
-      ]
+        "Bac+2 minimum (Bac+3/4 en Gestion, Commerce ou Management apprécié)",
+        "Minimum 5 ans d'expérience en management, idéalement dans le secteur pétrolier ou retail",
+        "Leadership avéré et capacité à motiver une équipe",
+        "Excellentes compétences en gestion commerciale et financière",
+        "Connaissance approfondie du secteur pétrolier et des réglementations",
+        "Maîtrise des outils informatiques et de gestion",
+        "Capacité d'analyse et prise de décision",
+        "Disponibilité et flexibilité horaire"
+      ],
+      "skills": [
+        "Management d'équipe",
+        "Gestion commerciale",
+        "Gestion de stocks",
+        "Analyse financière",
+        "Leadership et communication"
+      ],
+      "benefits": [
+        "Salaire attractif avec variable selon performance",
+        "Formation continue en management et leadership",
+        "Assurance santé, mutuelle et prévoyance complètes",
+        "Prime de performance trimestrielle",
+        "13ème mois et prime d'ancienneté",
+        "Véhicule de fonction possible",
+        "Perspectives d'évolution vers directeur régional"
+      ],
+      "schedule": "Horaires variables selon besoins, disponibilité week-end",
+      "experience": "5-10 ans d'expérience en management"
     },
     {
       "id": 6,
@@ -82,13 +242,46 @@
       "type": "CDI - Temps plein",
       "salary": "À discuter",
       "department": "Sécurité",
-      "description": "Assurer la sécurité des installations, du personnel et des clients. Surveillance et prévention des risques. Poste de nuit disponible.",
+      "description": "En tant qu'Agent de Sécurité, vous êtes le garant de la sécurité de nos installations, de notre personnel et de nos clients. Votre vigilance et votre professionnalisme contribuent à créer un environnement sécurisé et rassurant. Vous serez formé aux procédures de sécurité spécifiques au secteur pétrolier et travaillerez avec des équipements de surveillance modernes. Ce poste offre une stabilité et des horaires adaptés à votre situation.",
+      "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1200&q=80",
+      "missions": [
+        "Surveiller les installations et les équipements de la station",
+        "Contrôler les accès et vérifier l'identité des visiteurs si nécessaire",
+        "Effectuer des rondes de sécurité régulières",
+        "Intervenir en cas d'incident ou d'urgence",
+        "Assurer la sécurité des clients et du personnel",
+        "Respecter et faire respecter les consignes de sécurité",
+        "Tenir le registre de sécurité et rédiger les rapports d'incidents",
+        "Coopérer avec les forces de l'ordre en cas de besoin",
+        "Vérifier le bon fonctionnement des systèmes d'alarme et de vidéosurveillance"
+      ],
       "requirements": [
-        "Formation en sécurité ou expérience équivalente",
-        "Certificat d'aptitude à la sécurité",
-        "Bonne condition physique",
-        "Vigilance et sens des responsabilités"
-      ]
+        "Formation en sécurité ou expérience équivalente (minimum 2 ans)",
+        "Certificat d'aptitude à la sécurité (CASP) ou équivalent",
+        "Bonne condition physique et capacité à rester debout de longues heures",
+        "Vigilance, sens des responsabilités et réactivité",
+        "Capacité à travailler de nuit et en horaires décalés",
+        "Respect des procédures et discrétion",
+        "Permis de conduire apprécié"
+      ],
+      "skills": [
+        "Surveillance et prévention",
+        "Gestion des situations d'urgence",
+        "Rapport d'incident",
+        "Utilisation d'équipements de sécurité",
+        "Communication et relation client"
+      ],
+      "benefits": [
+        "Salaire de base + prime de nuit et week-end",
+        "Formation continue en sécurité et secourisme",
+        "Assurance santé, mutuelle et prévoyance",
+        "Équipements de sécurité fournis (uniforme, radio, etc.)",
+        "Prime de performance",
+        "Horaires fixes avec planning prévisible",
+        "Possibilité de poste de jour ou de nuit selon disponibilité"
+      ],
+      "schedule": "Horaires variables, postes de jour et de nuit disponibles",
+      "experience": "2-5 ans d'expérience en sécurité"
     }
   ]
 }

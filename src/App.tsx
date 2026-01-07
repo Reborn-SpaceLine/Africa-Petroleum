@@ -14,6 +14,7 @@ import News from './components/News';
 import Career from './components/Career';
 import Boutique from './components/Boutique';
 import Map from './components/Map';
+import JobDetail from './components/JobDetail';
 
 type Page =
   | 'home'
@@ -101,6 +102,8 @@ export default function App() {
     return page;
   });
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const [selectedJobId, setSelectedJobId] = useState<number | null>(null);
+  const [showApplicationForm, setShowApplicationForm] = useState(false);
 
   // Écouter les changements de hash dans l'URL (navigation via URL)
   useEffect(() => {
@@ -194,7 +197,35 @@ export default function App() {
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
+  const handleJobDetail = (jobId: number) => {
+    setSelectedJobId(jobId);
+    setCurrentPage('career');
+    setShowApplicationForm(false);
+  };
+
+  const handleBackToCareer = () => {
+    setSelectedJobId(null);
+    setShowApplicationForm(false);
+  };
+
+  const handleApplyFromDetail = (job: any) => {
+    setShowApplicationForm(true);
+    setSelectedJobId(job.id);
+  };
+
   const renderPage = () => {
+    // Si une offre est sélectionnée, afficher la page de détails
+    if (selectedJobId !== null && currentPage === 'career' && !showApplicationForm) {
+      return (
+        <JobDetail 
+          jobId={selectedJobId} 
+          onBack={handleBackToCareer}
+          onApply={handleApplyFromDetail}
+          onOpenForm={handleApplyFromDetail}
+        />
+      );
+    }
+
     switch (currentPage) {
       case 'home':
         return (
@@ -218,7 +249,16 @@ export default function App() {
       case 'prix':
         return <FuelPrices />;
       case 'career':
-        return <Career />;
+        return (
+          <Career 
+            onJobClick={handleJobDetail} 
+            selectedJobIdForForm={showApplicationForm ? selectedJobId : null}
+            onCloseForm={() => {
+              setShowApplicationForm(false);
+              setSelectedJobId(null);
+            }}
+          />
+        );
       case 'map':
         return <Map />;
       default:

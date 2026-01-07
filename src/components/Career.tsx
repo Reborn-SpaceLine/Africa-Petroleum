@@ -19,7 +19,13 @@ interface Job {
   department: string;
 }
 
-export default function Career() {
+interface CareerProps {
+  onJobClick?: (jobId: number) => void;
+  selectedJobIdForForm?: number | null;
+  onCloseForm?: () => void;
+}
+
+export default function Career({ onJobClick, selectedJobIdForForm, onCloseForm }: CareerProps) {
   const [selectedJob, setSelectedJob] = useState<Job | null>(null);
   const [jobs, setJobs] = useState<Job[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -57,6 +63,15 @@ export default function Career() {
     }
   }, []);
 
+  const handleViewDetails = (job: Job) => {
+    if (onJobClick) {
+      onJobClick(job.id);
+    } else {
+      // Fallback si onJobClick n'est pas fourni
+      handleApply(job);
+    }
+  };
+
   const handleApply = (job: Job) => {
     setSelectedJob(job);
     setApplicationForm({
@@ -72,6 +87,16 @@ export default function Career() {
       other: null
     });
   };
+
+  // Si un jobId est fourni pour le formulaire, ouvrir le formulaire
+  useEffect(() => {
+    if (selectedJobIdForForm) {
+      const job = jobs.find(j => j.id === selectedJobIdForForm);
+      if (job) {
+        handleApply(job);
+      }
+    }
+  }, [selectedJobIdForForm, jobs]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -106,6 +131,9 @@ export default function Career() {
         cv: null,
         other: null
       });
+      if (onCloseForm) {
+        onCloseForm();
+      }
     }
   };
 
@@ -227,10 +255,10 @@ export default function Career() {
 
                 <button 
                   className="apply-btn"
-                  onClick={() => handleApply(job)}
+                  onClick={() => handleViewDetails(job)}
                 >
                   <Send size={16} />
-                  Postuler maintenant
+                  Voir les détails
                 </button>
               </div>
             ))}
@@ -240,11 +268,21 @@ export default function Career() {
 
       {/* Modal de candidature */}
       {selectedJob && (
-        <div className="application-modal-overlay" onClick={() => setSelectedJob(null)}>
+        <div className="application-modal-overlay" onClick={() => {
+          setSelectedJob(null);
+          if (onCloseForm) {
+            onCloseForm();
+          }
+        }}>
           <div className="application-modal" onClick={(e) => e.stopPropagation()}>
             <button 
               className="modal-close-btn"
-              onClick={() => setSelectedJob(null)}
+              onClick={() => {
+                setSelectedJob(null);
+                if (onCloseForm) {
+                  onCloseForm();
+                }
+              }}
               aria-label="Fermer"
             >
               <X size={24} />
@@ -486,7 +524,12 @@ export default function Career() {
               </div>
 
               <div className="form-actions">
-                <button type="button" className="btn-cancel" onClick={() => setSelectedJob(null)}>
+                <button type="button" className="btn-cancel" onClick={() => {
+                  setSelectedJob(null);
+                  if (onCloseForm) {
+                    onCloseForm();
+                  }
+                }}>
                   Annuler
                 </button>
                 <button type="submit" className="btn-submit">
