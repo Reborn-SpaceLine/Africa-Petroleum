@@ -25,20 +25,35 @@ interface Job {
 }
 
 interface JobDetailProps {
-  jobId: number;
+  jobSlug: string;
   onBack: () => void;
   onApply: (job: Job) => void;
   onOpenForm?: (job: Job) => void;
 }
 
-export default function JobDetail({ jobId, onBack, onApply, onOpenForm }: JobDetailProps) {
+/**
+ * Fonction pour créer un slug à partir d'un titre
+ */
+const createSlug = (title: string): string => {
+  return title
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '') // Supprimer les accents
+    .replace(/[^a-z0-9\s-]/g, '') // Supprimer les caractères spéciaux
+    .trim()
+    .replace(/\s+/g, '-') // Remplacer les espaces par des tirets
+    .replace(/-+/g, '-'); // Remplacer les tirets multiples par un seul
+};
+
+export default function JobDetail({ jobSlug, onBack, onApply, onOpenForm }: JobDetailProps) {
   const [job, setJob] = useState<Job | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     try {
       const loadedJobs = (jobsData as { jobs: Job[] }).jobs;
-      const foundJob = loadedJobs.find(j => j.id === jobId);
+      // Trouver le job par son slug (généré à partir du titre)
+      const foundJob = loadedJobs.find(j => createSlug(j.title) === jobSlug);
       setJob(foundJob || null);
       setIsLoading(false);
     } catch (error) {
@@ -46,7 +61,7 @@ export default function JobDetail({ jobId, onBack, onApply, onOpenForm }: JobDet
       setIsLoading(false);
       setJob(null);
     }
-  }, [jobId]);
+  }, [jobSlug]);
 
   if (isLoading) {
     return (
@@ -83,14 +98,7 @@ export default function JobDetail({ jobId, onBack, onApply, onOpenForm }: JobDet
     <section className="job-detail-page">
       <div className="container">
         {/* Bouton retour */}
-        <button className="back-btn" onClick={() => {
-          if (onOpenForm && job) {
-            // Si on vient du formulaire, on revient au formulaire
-            onOpenForm(job);
-          } else {
-            onBack();
-          }
-        }}>
+        <button className="back-btn" onClick={onBack}>
           <ArrowLeft size={18} />
           Retour aux offres
         </button>

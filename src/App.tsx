@@ -25,7 +25,8 @@ type Page =
   | 'career'
   | 'boutique'
   | 'exchangeRates'
-  | 'map';
+  | 'map'
+  | 'jobDetail';
 
 /**
  * Système de routing basé sur le hash de l'URL
@@ -34,11 +35,31 @@ type Page =
  */
 
 /**
+ * Fonction pour créer un slug à partir d'un titre
+ */
+const createSlug = (title: string): string => {
+  return title
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '') // Supprimer les accents
+    .replace(/[^a-z0-9\s-]/g, '') // Supprimer les caractères spéciaux
+    .trim()
+    .replace(/\s+/g, '-') // Remplacer les espaces par des tirets
+    .replace(/-+/g, '-'); // Remplacer les tirets multiples par un seul
+};
+
+/**
  * Fonction utilitaire pour obtenir la page depuis le hash de l'URL
  * Supporte plusieurs alias pour chaque page pour plus de flexibilité
  */
-const getPageFromHash = (): Page => {
+const getPageFromHash = (): { page: Page; jobSlug?: string } => {
   const hash = window.location.hash.replace('#', '');
+  
+  // Vérifier si c'est une route job-detail avec un slug
+  const jobDetailMatch = hash.match(/^job-detail\/(.+)$/);
+  if (jobDetailMatch) {
+    return { page: 'jobDetail', jobSlug: jobDetailMatch[1] };
+  }
   
   // Mapping des hash vers les pages
   const hashToPage: Record<string, Page> = {
@@ -64,13 +85,13 @@ const getPageFromHash = (): Page => {
     'nos-stations': 'map'
   };
   
-  return hashToPage[hash] || 'home';
+  return { page: hashToPage[hash] || 'home' };
 };
 
 /**
  * Fonction pour mettre à jour l'URL avec le hash correspondant à la page
  */
-const updateUrlHash = (page: Page) => {
+const updateUrlHash = (page: Page, jobSlug?: string) => {
   const pageToHash: Record<Page, string> = {
     'home': '',
     'restaurant': 'restaurant',
@@ -80,7 +101,8 @@ const updateUrlHash = (page: Page) => {
     'prix': 'prix',
     'career': 'career',
     'exchangeRates': 'exchangeRates',
-    'map': 'map'
+    'map': 'map',
+    'jobDetail': jobSlug ? `job-detail/${jobSlug}` : 'career'
   };
   
   const hash = pageToHash[page] || '';
@@ -97,26 +119,39 @@ const updateUrlHash = (page: Page) => {
 export default function App() {
   // Initialiser la page depuis l'URL au chargement
   const [currentPage, setCurrentPage] = useState<Page>(() => {
-    const page = getPageFromHash();
+    const { page } = getPageFromHash();
     console.log('Initial page from URL:', page, 'Hash:', window.location.hash);
     return page;
   });
-  const [showScrollTop, setShowScrollTop] = useState(false);
+  const [selectedJobSlug, setSelectedJobSlug] = useState<string | null>(() => {
+    const { jobSlug } = getPageFromHash();
+    return jobSlug || null;
+  });
   const [selectedJobId, setSelectedJobId] = useState<number | null>(null);
+  const [showScrollTop, setShowScrollTop] = useState(false);
   const [showApplicationForm, setShowApplicationForm] = useState(false);
 
   // Écouter les changements de hash dans l'URL (navigation via URL)
   useEffect(() => {
     const handleHashChange = () => {
       const hash = window.location.hash.replace('#', '');
-      const pageFromUrl = getPageFromHash();
-      console.log('Hash changed:', hash, 'Page:', pageFromUrl);
+      const { page: pageFromUrl, jobSlug: jobSlugFromUrl } = getPageFromHash();
+      console.log('Hash changed:', hash, 'Page:', pageFromUrl, 'JobSlug:', jobSlugFromUrl);
       
       // Si c'est une page différente, changer de page
       if (pageFromUrl !== currentPage) {
         console.log('Changing page to:', pageFromUrl);
         setCurrentPage(pageFromUrl);
+        if (jobSlugFromUrl) {
+          setSelectedJobSlug(jobSlugFromUrl);
+        } else if (pageFromUrl !== 'jobDetail') {
+          setSelectedJobSlug(null);
+        }
       } 
+      // Si on change juste le slug du job dans jobDetail
+      else if (pageFromUrl === 'jobDetail' && jobSlugFromUrl && jobSlugFromUrl !== selectedJobSlug) {
+        setSelectedJobSlug(jobSlugFromUrl);
+      }
       // Si on est sur home et que le hash correspond à une section, scroller vers cette section
       else if (pageFromUrl === 'home' && hash) {
         const sections = ['accueil', 'apropos', 'services', 'contact'];
@@ -142,11 +177,14 @@ export default function App() {
     
     // Vérifier aussi au chargement initial avec un délai pour s'assurer que le DOM est prêt
     setTimeout(() => {
-      const initialPage = getPageFromHash();
-      console.log('Checking initial page on mount:', initialPage, 'Current:', currentPage);
+      const { page: initialPage, jobSlug: initialJobSlug } = getPageFromHash();
+      console.log('Checking initial page on mount:', initialPage, 'Current:', currentPage, 'JobSlug:', initialJobSlug);
       if (initialPage !== currentPage) {
         console.log('Setting initial page to:', initialPage);
         setCurrentPage(initialPage);
+        if (initialJobSlug) {
+          setSelectedJobSlug(initialJobSlug);
+        }
       } else if (initialPage === 'home') {
         // Si on est sur home, vérifier s'il y a un hash de section
         const hash = window.location.hash.replace('#', '');
@@ -197,35 +235,32 @@ export default function App() {
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
-  const handleJobDetail = (jobId: number) => {
+  const handleJobDetail = (jobId: number, jobTitle: string) => {
+    const jobSlug = createSlug(jobTitle);
+    setSelectedJobSlug(jobSlug);
     setSelectedJobId(jobId);
-    setCurrentPage('career');
+    setCurrentPage('jobDetail');
     setShowApplicationForm(false);
+    updateUrlHash('jobDetail', jobSlug);
   };
 
   const handleBackToCareer = () => {
+    setSelectedJobSlug(null);
     setSelectedJobId(null);
     setShowApplicationForm(false);
+    setCurrentPage('career');
+    updateUrlHash('career');
   };
 
   const handleApplyFromDetail = (job: any) => {
     setShowApplicationForm(true);
     setSelectedJobId(job.id);
+    setSelectedJobSlug(null);
+    setCurrentPage('career');
+    updateUrlHash('career');
   };
 
   const renderPage = () => {
-    // Si une offre est sélectionnée, afficher la page de détails
-    if (selectedJobId !== null && currentPage === 'career' && !showApplicationForm) {
-      return (
-        <JobDetail 
-          jobId={selectedJobId} 
-          onBack={handleBackToCareer}
-          onApply={handleApplyFromDetail}
-          onOpenForm={handleApplyFromDetail}
-        />
-      );
-    }
-
     switch (currentPage) {
       case 'home':
         return (
@@ -259,6 +294,19 @@ export default function App() {
             }}
           />
         );
+      case 'jobDetail':
+        if (selectedJobSlug) {
+          return (
+            <JobDetail 
+              jobSlug={selectedJobSlug} 
+              onBack={handleBackToCareer}
+              onApply={handleApplyFromDetail}
+              onOpenForm={handleApplyFromDetail}
+            />
+          );
+        }
+        // Si pas de jobSlug, rediriger vers career
+        return <Career onJobClick={handleJobDetail} />;
       case 'map':
         return <Map />;
       default:

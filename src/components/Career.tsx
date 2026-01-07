@@ -20,7 +20,7 @@ interface Job {
 }
 
 interface CareerProps {
-  onJobClick?: (jobId: number) => void;
+  onJobClick?: (jobId: number, jobTitle: string) => void;
   selectedJobIdForForm?: number | null;
   onCloseForm?: () => void;
 }
@@ -65,7 +65,7 @@ export default function Career({ onJobClick, selectedJobIdForForm, onCloseForm }
 
   const handleViewDetails = (job: Job) => {
     if (onJobClick) {
-      onJobClick(job.id);
+      onJobClick(job.id, job.title);
     } else {
       // Fallback si onJobClick n'est pas fourni
       handleApply(job);
