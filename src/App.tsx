@@ -248,7 +248,7 @@ export default function App() {
         onMapClick={() => navigateToPage('map')}
       />
 
-      <main>{renderPage()}</main>
+      <main className="page">{renderPage()}</main>
 
       <Footer />
 

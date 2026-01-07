@@ -10,6 +10,8 @@
     var(--light-bg) 100%);
   position: relative;
   overflow: hidden;
+
+  
 }
 
 .news-page::before {
