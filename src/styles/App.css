@@ -1015,7 +1015,7 @@ body {
 /* Page Wrapper */
 /* Styles pour les pages */
 .page {
-  margin-top: 20px;
+  margin-top: 30px;
   margin-bottom: 80px;
   min-height: calc(100vh - 200px);
   animation: fadeInUp 0.6s ease-out;
