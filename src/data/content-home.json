@@ -1,0 +1,129 @@
+{
+  "hero": {
+    "title": "Africa Petroleum",
+    "subtitle": "Votre Réseau de Stations-Service de Confiance au Cameroun",
+    "description": "Découvrez notre réseau de stations-service modernes réparties dans les principales villes du Cameroun. Carburants de qualité supérieure, services complets et disponibilité 24h/24 pour répondre à tous vos besoins.",
+    "cta": {
+      "primary": {
+        "text": "Trouver une station",
+        "action": "Voir la carte"
+      },
+      "secondary": {
+        "text": "Découvrir nos services",
+        "action": "En savoir plus"
+      }
+    }
+  },
+  "about": {
+    "title": "Africa Petroleum",
+    "subtitle": "Votre Partenaire Énergétique de Confiance",
+    "paragraphs": [
+      "Africa Petroleum est une entreprise camerounaise spécialisée dans la distribution de produits pétroliers. Depuis notre création, nous nous engageons à fournir des carburants de la plus haute qualité, conformes aux normes internationales, tout en offrant un service client irréprochable.",
+      "Notre réseau de plus de 7 stations réparties dans les villes de Douala, Yaoundé et Bafoussam témoigne de notre engagement à être toujours plus proches de nos clients. Chaque station est équipée d'infrastructures modernes et d'un personnel qualifié pour garantir votre satisfaction.",
+      "Nous croyons fermement que la qualité, la sécurité et la proximité sont les piliers d'une expérience client exceptionnelle. C'est pourquoi nous investissons continuellement dans la formation de nos équipes, la modernisation de nos équipements et l'amélioration de nos services."
+    ]
+  },
+  "values": [
+    {
+      "name": "Qualité",
+      "description": "Nous garantissons des produits et services de la plus haute qualité, conformes aux normes internationales les plus strictes. Chaque litre de carburant est contrôlé pour assurer sa pureté et son efficacité."
+    },
+    {
+      "name": "Sécurité",
+      "description": "La sécurité de nos clients, employés et communautés est notre priorité absolue. Nos stations respectent les protocoles de sécurité les plus rigoureux et nos équipes sont régulièrement formées aux meilleures pratiques."
+    },
+    {
+      "name": "Proximité Client",
+      "description": "Nous sommes toujours à l'écoute de nos clients et nous adaptons nos services à leurs besoins. Notre réseau étendu garantit que vous trouverez toujours une station Africa Petroleum près de chez vous."
+    },
+    {
+      "name": "Intégrité",
+      "description": "Nous agissons avec transparence, honnêteté et respect dans toutes nos relations. Nos prix sont clairs et compétitifs, sans frais cachés ni surprises."
+    },
+    {
+      "name": "Innovation",
+      "description": "Nous innovons constamment pour améliorer l'expérience client et nos processus opérationnels. De nouvelles technologies et services sont régulièrement intégrés dans nos stations."
+    }
+  ],
+  "services": [
+    {
+      "name": "Carburants Premium",
+      "description": "Essence, diesel et super de qualité supérieure, conformes aux normes internationales. Disponibles 24h/24 dans toutes nos stations."
+    },
+    {
+      "name": "Lubrifiants & Produits Auto",
+      "description": "Gamme complète d'huiles moteur, liquides de refroidissement et produits d'entretien automobile de grandes marques."
+    },
+    {
+      "name": "Boutiques",
+      "description": "Boutiques modernes proposant boissons, snacks, produits d'hygiène, accessoires auto et bien plus encore pour votre confort."
+    },
+    {
+      "name": "Restaurants",
+      "description": "Restaurants intégrés dans certaines de nos stations, offrant une cuisine locale et internationale pour vos pauses repas."
+    },
+    {
+      "name": "Piscines",
+      "description": "Espaces de détente avec piscines dans nos stations premium, parfaits pour se rafraîchir pendant vos trajets."
+    },
+    {
+      "name": "Lavage Auto",
+      "description": "Services de lavage automobile professionnels pour maintenir votre véhicule en parfait état."
+    }
+  ],
+  "statistics": {
+    "stations": {
+      "value": "7+",
+      "label": "Stations"
+    },
+    "cities": {
+      "value": "3",
+      "label": "Villes"
+    },
+    "hours": {
+      "value": "24/7",
+      "label": "Disponibilité"
+    },
+    "customers": {
+      "value": "10 000+",
+      "label": "Clients satisfaits"
+    }
+  },
+  "why_choose_us": [
+    {
+      "title": "Réseau Étendu",
+      "description": "Plus de 7 stations stratégiquement réparties dans les principales villes du Cameroun pour être toujours près de vous."
+    },
+    {
+      "title": "Qualité Garantie",
+      "description": "Tous nos produits respectent les normes internationales de qualité et sont régulièrement contrôlés pour garantir leur excellence."
+    },
+    {
+      "title": "Service 24h/24",
+      "description": "Nos stations sont ouvertes 24h/24 et 7j/7 pour répondre à vos besoins à tout moment, même en dehors des heures normales."
+    },
+    {
+      "title": "Prix Compétitifs",
+      "description": "Des prix transparents et compétitifs sur tous nos produits, sans frais cachés ni surprises à la pompe."
+    },
+    {
+      "title": "Services Complets",
+      "description": "Au-delà du carburant, nos stations offrent une gamme complète de services pour votre confort et votre bien-être."
+    }
+  ],
+  "final_cta": {
+    "title": "Prêt à découvrir Africa Petroleum ?",
+    "description": "Trouvez la station la plus proche de chez vous ou contactez-nous pour plus d'informations.",
+    "buttons": [
+      {
+        "text": "Voir nos stations",
+        "action": "Carte interactive"
+      },
+      {
+        "text": "Nous contacter",
+        "action": "Formulaire de contact"
+      }
+    ]
+  }
+}
+

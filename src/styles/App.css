@@ -40,6 +40,15 @@
   --text-dark: #2c2c2c; /* Texte principal */
   --text-light: #666666; /* Texte secondaire */
   --border-color: #e0e0e0; /* Bordures et séparateurs */
+  
+  /* Standards pour les icônes */
+  --icon-size-small: 16px;
+  --icon-size-medium: 20px;
+  --icon-size-large: 24px;
+  --icon-size-xlarge: 32px;
+  --icon-color-primary: var(--primary-blue);
+  --icon-color-secondary: var(--secondary-orange);
+  --icon-color-white: #ffffff;
 }
 
 /* Styles de base pour le body */
@@ -113,7 +122,7 @@ body {
 .logo-icon {
   width: 45px;
   height: 45px;
-  background: linear-gradient(135deg, var(--primary-blue), var(--primary-orange));
+  background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -163,7 +172,7 @@ body {
 }
 
 .nav-link-cta {
-  background: linear-gradient(135deg, var(--primary-blue), var(--primary-orange));
+  background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
   color: var(--white);
   padding: 10px 24px;
 }
@@ -261,7 +270,7 @@ body {
 
 /* Bouton principal avec gradient bleu/orange du logo */
 .btn-primary {
-  background: linear-gradient(135deg, var(--primary-blue), var(--primary-orange));
+  background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
   color: var(--white);
   box-shadow: 0 4px 15px rgba(37, 99, 235, 0.25); /* Ombre avec couleur bordeaux du logo */
 }
@@ -424,7 +433,7 @@ body {
 
 .service-card:hover .service-icon {
   transform: scale(1.1) rotate(5deg);
-  background: linear-gradient(135deg, var(--primary-blue), var(--primary-orange));
+  background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
   color: var(--white);
 }
 
@@ -509,7 +518,7 @@ body {
 
 .category-btn:hover,
 .category-btn.active {
-  background: linear-gradient(135deg, var(--primary-blue), var(--primary-orange));
+  background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
   color: var(--white);
   border-color: transparent;
   transform: translateY(-2px);
@@ -556,7 +565,7 @@ body {
   position: absolute;
   top: 16px;
   right: 16px;
-  background: linear-gradient(135deg, var(--primary-blue), var(--primary-orange));
+  background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
   color: var(--white);
   padding: 6px 14px;
   border-radius: 20px;
@@ -584,7 +593,7 @@ body {
 .menu-item-price {
   font-size: 24px;
   font-weight: 800;
-  background: linear-gradient(135deg, var(--primary-blue), var(--primary-orange));
+  background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -617,7 +626,7 @@ body {
 /* Piscine Styles */
 .piscine-hero {
   padding: 140px 0 80px;
-  background: linear-gradient(135deg, var(--primary-blue), var(--primary-orange));
+  background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
   color: var(--white);
   text-align: center;
   position: relative;
@@ -665,7 +674,7 @@ body {
 .feature-icon {
   width: 80px;
   height: 80px;
-  background: linear-gradient(135deg, var(--primary-blue), var(--primary-orange));
+  background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -715,7 +724,7 @@ body {
 }
 
 .tarif-card.featured {
-  background: linear-gradient(135deg, var(--primary-blue), var(--primary-orange));
+  background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
   color: var(--white);
   transform: scale(1.05);
 }
@@ -1021,14 +1030,22 @@ body {
   animation: fadeInUp 0.6s ease-out;
 }
 
-/* Scroll to Top Button */
-.scroll-to-top {
+/* Floating Buttons Container */
+.floating-buttons {
   position: fixed;
   bottom: 30px;
   right: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 1000;
+}
+
+/* Scroll to Top Button */
+.scroll-to-top {
+  position: relative;
   width: 50px;
   height: 50px;
-  background: linear-gradient(135deg, var(--primary-blue), var(--primary-orange));
   background: linear-gradient(135deg, var(--primary-orange));
   border: none;
   border-radius: 50%;
@@ -1039,7 +1056,6 @@ body {
   justify-content: center;
   box-shadow: 0 4px 20px rgba(125, 25, 53, 0.3);
   transition: all 0.3s ease;
-  z-index: 1000;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 0.3s ease forwards;
@@ -1058,6 +1074,38 @@ body {
   transform: translateY(-2px);
 }
 
+/* Newsletter Button Floating */
+.newsletter-button-floating {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, var(--secondary-orange), var(--dark-orange));
+  border: none;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(255, 140, 0, 0.3);
+  transition: all 0.3s ease;
+  opacity: 1;
+  animation: fadeInUp 0.3s ease forwards 0.1s;
+}
+
+.newsletter-button-floating:hover {
+  transform: translateY(-2px) scale(1.1);
+  box-shadow: 0 6px 25px rgba(255, 140, 0, 0.4);
+  background: linear-gradient(135deg, var(--dark-orange), var(--secondary-orange));
+}
+
+.newsletter-button-floating svg {
+  transition: transform 0.3s ease;
+}
+
+.newsletter-button-floating:hover svg {
+  transform: scale(1.1);
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -1070,11 +1118,58 @@ body {
 }
 
 @media (max-width: 768px) {
-  .scroll-to-top {
+  .floating-buttons {
     bottom: 20px;
     right: 20px;
+    gap: 10px;
+  }
+
+  .scroll-to-top {
     width: 45px;
     height: 45px;
+  }
+
+  .newsletter-button-floating {
+    width: 45px;
+    height: 45px;
+  }
+
+  .scroll-to-top svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .newsletter-button-floating svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .floating-buttons {
+    bottom: 15px;
+    right: 15px;
+    gap: 8px;
+  }
+
+  .scroll-to-top {
+    width: 42px;
+    height: 42px;
+  }
+
+  .newsletter-button-floating {
+    width: 42px;
+    height: 42px;
+  }
+
+  .scroll-to-top svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .newsletter-button-floating svg {
+    width: 18px;
+    height: 18px;
   }
 }
 /* Modal Styles */

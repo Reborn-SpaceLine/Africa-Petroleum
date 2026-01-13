@@ -74,8 +74,11 @@ export default function Boutique() {
         </div>
 
         <div className="boutique-categories">
-          {categories.map(category => (
-            <button key={category} className="category-btn">
+          {categories.map((category, index) => (
+            <button 
+              key={category} 
+              className={`category-btn ${index === 0 ? 'active' : ''}`}
+            >
               {category}
             </button>
           ))}
@@ -102,17 +105,23 @@ export default function Boutique() {
 
         <div className="boutique-info">
           <div className="info-card">
-            <ShoppingBag size={24} />
+            <div className="info-icon">
+              <ShoppingBag size={48} strokeWidth={2.5} />
+            </div>
             <h3>Large Choix</h3>
             <p>Une gamme complète de produits pour votre véhicule</p>
           </div>
           <div className="info-card">
-            <Package size={24} />
+            <div className="info-icon">
+              <Package size={48} strokeWidth={2.5} />
+            </div>
             <h3>Qualité Garantie</h3>
             <p>Produits de marques reconnues et de qualité supérieure</p>
           </div>
           <div className="info-card">
-            <Coffee size={24} />
+            <div className="info-icon">
+              <Coffee size={48} strokeWidth={2.5} />
+            </div>
             <h3>Service Rapide</h3>
             <p>Disponible pendant les heures d'ouverture de la station</p>
           </div>

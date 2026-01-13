@@ -28,7 +28,7 @@
   font-weight: 800;
   color: var(--primary-blue);
   margin-bottom: 20px;
-  background: linear-gradient(135deg, var(--primary-blue), var(--primary-orange));
+  background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -72,7 +72,7 @@
 }
 
 .filter-btn.active {
-  background: linear-gradient(135deg, var(--primary-blue), var(--primary-orange));
+  background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
   color: var(--white);
   border-color: transparent;
   box-shadow: 0 4px 15px rgba(37, 99, 235, 0.25);
@@ -106,7 +106,7 @@
   left: 0;
   right: 0;
   height: 5px;
-  background: linear-gradient(135deg, var(--primary-blue), var(--primary-orange));
+  background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.4s ease;
@@ -145,7 +145,7 @@
   position: absolute;
   top: 16px;
   right: 16px;
-  background: linear-gradient(135deg, var(--primary-blue), var(--primary-orange));
+  background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
   color: var(--white);
   padding: 8px 16px;
   border-radius: 20px;
@@ -168,19 +168,20 @@
 .station-icon {
   width: 56px;
   height: 56px;
-  background: linear-gradient(135deg, rgba(37, 99, 235, 0.15), rgba(255, 140, 0, 0.15));
-  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(30, 58, 138, 0.1));
+  border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--primary-blue);
   flex-shrink: 0;
   transition: all 0.3s ease;
-  border: 2px solid rgba(37, 99, 235, 0.1);
+  border: 1px solid rgba(37, 99, 235, 0.1);
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.1);
 }
 
 .station-card:hover .station-icon {
-  background: linear-gradient(135deg, var(--primary-blue), var(--primary-orange));
+  background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
   color: var(--white);
   transform: scale(1.1) rotate(5deg);
   border-color: transparent;
@@ -256,7 +257,7 @@
 }
 
 .station-card:hover .service-tag {
-  background: linear-gradient(135deg, var(--primary-blue), var(--primary-orange));
+  background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
   color: var(--white);
   border-color: transparent;
   transform: translateY(-2px);

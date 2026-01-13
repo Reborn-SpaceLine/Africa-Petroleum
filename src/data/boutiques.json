@@ -1,0 +1,169 @@
+{
+  "boutiques": {
+    "description": "Les boutiques Africa Petroleum offrent une large gamme de produits et services pour répondre à tous vos besoins lors de vos déplacements.",
+    "products": [
+      {
+        "category": "Boissons",
+        "items": [
+          "Eau minérale",
+          "Boissons gazeuses",
+          "Jus de fruits",
+          "Boissons énergisantes",
+          "Café et thé"
+        ]
+      },
+      {
+        "category": "Snacks & Alimentation",
+        "items": [
+          "Sandwiches",
+          "Chips et snacks",
+          "Biscuits",
+          "Chocolats",
+          "Fruits secs",
+          "Produits locaux"
+        ]
+      },
+      {
+        "category": "Lubrifiants & Produits Auto",
+        "items": [
+          "Huiles moteur (toutes viscosités)",
+          "Lubrifiants spécialisés",
+          "Liquide de refroidissement",
+          "Liquide de frein",
+          "Additifs carburant"
+        ]
+      },
+      {
+        "category": "Accessoires Auto",
+        "items": [
+          "Essuie-glaces",
+          "Ampoules",
+          "Fusibles",
+          "Câbles de démarrage",
+          "Gants de travail",
+          "Tapis de voiture"
+        ]
+      },
+      {
+        "category": "Hygiène & Bien-être",
+        "items": [
+          "Savons et gels douche",
+          "Shampoings",
+          "Dentifrices",
+          "Déodorants",
+          "Crèmes solaires",
+          "Mouchoirs"
+        ]
+      },
+      {
+        "category": "Divers",
+        "items": [
+          "Cartes téléphoniques",
+          "Chargeurs téléphone",
+          "Cigarettes",
+          "Allumettes",
+          "Briquets",
+          "Journaux et magazines"
+        ]
+      }
+    ],
+    "services": [
+      {
+        "name": "Service Express",
+        "description": "Achat rapide pour les clients pressés"
+      },
+      {
+        "name": "Réservation de produits",
+        "description": "Possibilité de réserver des produits en avance"
+      },
+      {
+        "name": "Livraison sur demande",
+        "description": "Pour les commandes importantes (sur certaines stations)"
+      }
+    ],
+    "payment_methods": [
+      {
+        "method": "Espèces",
+        "available": true,
+        "description": "Paiement en espèces accepté"
+      },
+      {
+        "method": "Mobile Money",
+        "available": true,
+        "description": "Orange Money, MTN Mobile Money"
+      },
+      {
+        "method": "Carte bancaire",
+        "available": true,
+        "description": "Cartes Visa, Mastercard"
+      },
+      {
+        "method": "Chèque",
+        "available": false,
+        "description": "Non accepté pour les petits montants"
+      }
+    ],
+    "stations_with_boutique": [
+      {
+        "station_id": 1,
+        "station_name": "Station Bafoussam Centre",
+        "boutique_type": "Standard",
+        "opening_hours": "24h/24 - 7j/7"
+      },
+      {
+        "station_id": 2,
+        "station_name": "Station Bafoussam Ouest",
+        "boutique_type": "Standard",
+        "opening_hours": "24h/24 - 7j/7"
+      },
+      {
+        "station_id": 3,
+        "station_name": "Station Bafoussam Est",
+        "boutique_type": "Compacte",
+        "opening_hours": "24h/24 - 7j/7"
+      },
+      {
+        "station_id": 4,
+        "station_name": "Station Douala Centre",
+        "boutique_type": "Premium",
+        "opening_hours": "24h/24 - 7j/7",
+        "special_features": [
+          "Gamme de produits premium",
+          "Espace détente",
+          "Service client dédié"
+        ]
+      },
+      {
+        "station_id": 5,
+        "station_name": "Station Douala Port",
+        "boutique_type": "Standard",
+        "opening_hours": "24h/24 - 7j/7"
+      },
+      {
+        "station_id": 6,
+        "station_name": "Station Yaoundé Centre",
+        "boutique_type": "Standard",
+        "opening_hours": "24h/24 - 7j/7"
+      },
+      {
+        "station_id": 7,
+        "station_name": "Station Yaoundé Nord",
+        "boutique_type": "Standard",
+        "opening_hours": "24h/24 - 7j/7"
+      }
+    ],
+    "promotions": [
+      {
+        "title": "Offre spéciale boissons",
+        "description": "Achetez 2 boissons, obtenez la 3ème à moitié prix",
+        "valid_until": "2025-02-28"
+      },
+      {
+        "title": "Réduction sur les lubrifiants",
+        "description": "10% de réduction sur tous les lubrifiants",
+        "valid_until": "2025-02-15"
+      }
+    ]
+  }
+}
+

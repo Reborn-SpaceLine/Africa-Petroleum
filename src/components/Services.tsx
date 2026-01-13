@@ -64,8 +64,11 @@ export default function Services() {
                 </div>
               )}
               <div className="service-header">
-                <div className="service-icon">
-                  <service.Icon size={28} />
+                <div className="service-icon" aria-hidden="true">
+                  <service.Icon 
+                    size={32} 
+                    strokeWidth={2.5}
+                  />
                 </div>
                 <div className="service-content">
                   <h3 className="service-title">{service.title}</h3>

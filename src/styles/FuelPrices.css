@@ -51,7 +51,7 @@
   left: 0;
   right: 0;
   height: 5px;
-  background: linear-gradient(135deg, var(--primary-blue), var(--primary-orange));
+  background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }
@@ -118,7 +118,7 @@
 .price-value {
   font-size: 38px;
   font-weight: 800;
-  background: linear-gradient(135deg, var(--primary-blue), var(--primary-orange));
+  background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -181,7 +181,7 @@
 .feature-icon {
   width: 40px;
   height: 40px;
-  background: linear-gradient(135deg, var(--primary-blue), var(--primary-orange));
+  background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
   color: var(--white);
   border-radius: 10px;
   display: flex;

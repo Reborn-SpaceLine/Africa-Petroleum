@@ -1,0 +1,77 @@
+{
+  "introduction": {
+    "title": "Notre Réseau de Stations-Service",
+    "paragraphs": [
+      "Africa Petroleum dispose d'un réseau de stations-service moderne et étendu, réparti dans les principales villes du Cameroun. Chaque station est conçue pour offrir une expérience client exceptionnelle, avec des équipements de dernière génération et un personnel qualifié.",
+      "Que vous soyez en ville ou sur la route, vous trouverez toujours une station Africa Petroleum près de chez vous. Nos stations sont stratégiquement positionnées pour être facilement accessibles et offrir tous les services dont vous avez besoin."
+    ]
+  },
+  "interactive_map": {
+    "title": "Carte Interactive",
+    "description": "Utilisez notre carte interactive pour localiser rapidement la station Africa Petroleum la plus proche de votre position. La carte affiche toutes nos stations avec leurs informations essentielles : adresse, horaires, services disponibles et coordonnées GPS. Cliquez sur un marqueur pour obtenir plus de détails ou pour obtenir l'itinéraire depuis votre position actuelle."
+  },
+  "filters": {
+    "title": "Filtres par Ville",
+    "description": "Filtrez nos stations par ville pour trouver rapidement celle qui vous convient. Vous pouvez également utiliser la recherche pour trouver une station spécifique par son nom ou son adresse."
+  },
+  "cities": [
+    {
+      "city": "Douala",
+      "stations_count": 2,
+      "highlights": [
+        "Capitale économique du Cameroun",
+        "Stations stratégiquement positionnées",
+        "Services premium disponibles"
+      ],
+      "description": "Nos stations à Douala sont situées dans des emplacements stratégiques pour servir à la fois les résidents et les voyageurs. La station Douala Centre offre des services premium complets, tandis que la station Douala Port est spécialisée pour le secteur portuaire et les entreprises de transport."
+    },
+    {
+      "city": "Yaoundé",
+      "stations_count": 2,
+      "highlights": [
+        "Capitale politique du Cameroun",
+        "Accès facile depuis l'aéroport",
+        "Services complets disponibles"
+      ],
+      "description": "Nos stations à Yaoundé sont idéalement situées pour servir la capitale et ses environs. La station Yaoundé Centre est au cœur de la ville, tandis que la station Yaoundé Nord est parfaite pour les voyageurs en route vers l'aéroport de Nsimalen."
+    },
+    {
+      "city": "Bafoussam",
+      "stations_count": 3,
+      "highlights": [
+        "Région de l'Ouest",
+        "Réseau dense pour meilleure accessibilité",
+        "Services adaptés aux besoins locaux"
+      ],
+      "description": "Bafoussam accueille trois de nos stations, offrant une couverture complète de la ville et de ses environs. Nos stations sont réparties dans différents quartiers pour garantir une accessibilité optimale à tous nos clients de la région de l'Ouest."
+    }
+  ],
+  "common_services": {
+    "title": "Services Disponibles dans Toutes nos Stations",
+    "services": [
+      "Carburants de qualité (Essence, Diesel, Super)",
+      "Lubrifiants et produits d'entretien automobile",
+      "Boutiques avec produits de première nécessité",
+      "Paiement par espèces, carte bancaire et Mobile Money",
+      "Parking sécurisé",
+      "Toilettes propres et entretenues",
+      "Éclairage 24/7 pour votre sécurité"
+    ]
+  },
+  "how_to_find": {
+    "title": "Comment Nous Trouver",
+    "instructions": [
+      "Utilisez la carte interactive ci-dessus pour voir toutes nos stations sur une carte",
+      "Cliquez sur un marqueur de station pour voir ses détails complets",
+      "Utilisez le bouton 'Itinéraire' pour obtenir les directions depuis votre position actuelle",
+      "Filtrez par ville pour affiner votre recherche",
+      "Consultez les horaires et services de chaque station avant de vous y rendre"
+    ]
+  },
+  "opening_hours": {
+    "title": "Horaires d'Ouverture",
+    "description": "Toutes nos stations sont ouvertes 24h/24 et 7j/7 pour votre commodité. Que vous ayez besoin de carburant tôt le matin, tard le soir, ou même pendant les jours fériés, nos stations sont toujours là pour vous servir.",
+    "note": "Certains services comme les restaurants peuvent avoir des horaires spécifiques. Consultez les détails de chaque station pour plus d'informations."
+  }
+}
+

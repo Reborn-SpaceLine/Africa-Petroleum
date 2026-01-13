@@ -46,6 +46,21 @@ export default function PiscinePage() {
     }
   ];
 
+  const heroFeatures = [
+    {
+      Icon: Waves,
+      text: '25 mètres, 6 couloirs'
+    },
+    {
+      Icon: Users,
+      text: 'Zone enfants sécurisée'
+    },
+    {
+      Icon: Clock,
+      text: 'Ouvert 24/7'
+    }
+  ];
+
   const facilities = [
     {
       Icon: Waves,
@@ -86,22 +101,23 @@ export default function PiscinePage() {
             <h2>Une Expérience Aquatique Unique</h2>
             <p>Profitez d'une piscine olympique de qualité avec des services haut de gamme pour toute la famille.</p>
             <div className="hero-features">
-              <div className="feature-item">
-                <Waves size={20} />
-                <span>25 mètres, 6 couloirs</span>
-              </div>
-              <div className="feature-item">
-                <Users size={20} />
-                <span>Zone enfants sécurisée</span>
-              </div>
-              <div className="feature-item">
-                <Clock size={20} />
-                <span>Ouvert 24/7</span>
-              </div>
+              {heroFeatures.map((feature, index) => {
+                const IconComponent = feature.Icon;
+                return (
+                  <div key={index} className="feature-item">
+                    <IconComponent size={20} aria-hidden="true" />
+                    <span>{feature.text}</span>
+                  </div>
+                );
+              })}
             </div>
           </div>
           <div className="hero-image">
-            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800" alt="Piscine" />
+            <img 
+              src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800" 
+              alt="Piscine olympique moderne avec eau cristalline" 
+              loading="lazy"
+            />
           </div>
         </div>
 
@@ -138,7 +154,7 @@ export default function PiscinePage() {
             {facilities.map((facility, i) => (
               <div key={i} className="facility-card">
                 <div className="facility-icon">
-                  <facility.Icon size={32} />
+                  <facility.Icon size={32} strokeWidth={2.5} />
                 </div>
                 <h3 className="facility-title">{facility.title}</h3>
                 <p className="facility-description">{facility.description}</p>
@@ -152,21 +168,21 @@ export default function PiscinePage() {
             <h3>Informations Pratiques</h3>
             <div className="info-grid">
               <div className="info-item">
-                <Calendar size={20} />
+                <Calendar size={48} strokeWidth={2.5} />
                 <div>
                   <strong>Horaires</strong>
                   <p>6h00 - 22h00</p>
                 </div>
               </div>
               <div className="info-item">
-                <MapPin size={20} />
+                <MapPin size={48} strokeWidth={2.5} />
                 <div>
                   <strong>Localisation</strong>
                   <p>À côté de la station-service</p>
                 </div>
               </div>
               <div className="info-item">
-                <Users size={20} />
+                <Users size={48} strokeWidth={2.5} />
                 <div>
                   <strong>Capacité</strong>
                   <p>Jusqu'à 100 personnes</p>

@@ -5,6 +5,30 @@ import '../styles/Footer.css';
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
+  // Fonction de navigation vers une page
+  const navigateToPage = (page: string) => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.location.hash = page;
+    // Déclencher un événement hashchange pour que l'app réagisse
+    window.dispatchEvent(new HashChangeEvent('hashchange'));
+  };
+
+  // Navigation vers la section contact sur la page d'accueil
+  const navigateToContact = () => {
+    if (window.location.hash === '' || window.location.hash === '#home' || window.location.hash === '#accueil') {
+      // Si on est déjà sur la page d'accueil, scroll vers contact
+      setTimeout(() => {
+        document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    } else {
+      // Sinon, aller à la page d'accueil puis scroll vers contact
+      navigateToPage('');
+      setTimeout(() => {
+        document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+      }, 300);
+    }
+  };
+
   return (
     <footer className="footer">
       <div className="footer-content">
@@ -25,13 +49,13 @@ export default function Footer() {
               Carburants de qualité et service professionnel depuis plus de 12 ans.
             </p>
             <div className="footer-social-links">
-                <a href="#" className="footer-social-link" aria-label="Facebook">
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="footer-social-link" aria-label="Facebook">
                     <Facebook size={20} />
                 </a>
-                <a href="#" className="footer-social-link" aria-label="WhatsApp">
+                <a href="https://wa.me/237696449908" target="_blank" rel="noopener noreferrer" className="footer-social-link" aria-label="WhatsApp">
                     <MessageCircle size={20} />
                 </a>
-                <a href="#" className="footer-social-link" aria-label="Instagram">
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="footer-social-link" aria-label="Instagram">
                     <Instagram size={20} />
                 </a>
               </div>
@@ -40,39 +64,40 @@ export default function Footer() {
           <div className="footer-section">
             <h4 className="footer-title">Navigation</h4>
             <ul className="footer-links">
-              <li><button onClick={() => document.getElementById('accueil')?.scrollIntoView({ behavior: 'smooth' })}>Accueil</button></li>
-              <li><button onClick={() => document.getElementById('prix')?.scrollIntoView({ behavior: 'smooth' })}>Prix Carburants</button></li>
-              <li><button onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>Services</button></li>
-              <li><button onClick={() => document.getElementById('apropos')?.scrollIntoView({ behavior: 'smooth' })}>À Propos</button></li>
+              <li><button onClick={() => navigateToPage('')}>Accueil</button></li>
+              <li><button onClick={() => navigateToPage('prix')}>Prix Carburants</button></li>
+              <li><button onClick={() => navigateToPage('map')}>Nos Stations</button></li>
+              <li><button onClick={() => navigateToPage('career')}>Offres d'Emploi</button></li>
+              <li><button onClick={navigateToContact}>Contact</button></li>
             </ul>
           </div>
 
           <div className="footer-section">
             <h4 className="footer-title">Services</h4>
             <ul className="footer-links">
-              <li><a href="#">Vente de Carburants</a></li>
-              <li><a href="#">Lavage Auto</a></li>
-              <li><a href="#">Vidange Express</a></li>
-              <li><a href="#">Boutique Station</a></li>
+              <li><button onClick={() => navigateToPage('prix')}>Vente de Carburants</button></li>
+              <li><button onClick={() => navigateToPage('restaurant')}>Restaurant</button></li>
+              <li><button onClick={() => navigateToPage('piscine')}>Piscine</button></li>
+              <li><button onClick={() => navigateToPage('boutique')}>Boutique</button></li>
             </ul>
           </div>
 
           <div className="footer-section">
             <h4 className="footer-title">Contact</h4>
             <div className="contact-info-footer">
-              <MapPin size={16} className="contact-icon-svg" />
+              <MapPin size={20} strokeWidth={2.5} className="contact-icon-svg" />
               <span>Bafoussam, Douala, Yaoundé</span>
             </div>
             <div className="contact-info-footer">
-              <Phone size={16} className="contact-icon-svg" />
-              <span>+237 6 96 44 99 08</span>
+              <Phone size={20} strokeWidth={2.5} className="contact-icon-svg" />
+              <a href="tel:+237696449908" className="contact-link">+237 6 96 44 99 08</a>
             </div>
             <div className="contact-info-footer">
-              <Mail size={16} className="contact-icon-svg" />
-              <span>contact@africapetroleum.cm</span>
+              <Mail size={20} strokeWidth={2.5} className="contact-icon-svg" />
+              <a href="mailto:contact@africapetroleum.cm" className="contact-link">contact@africapetroleum.cm</a>
             </div>
             <div className="contact-info-footer">
-              <Clock size={16} className="contact-icon-svg" />
+              <Clock size={20} strokeWidth={2.5} className="contact-icon-svg" />
               <span>Ouvert 24h/24 - 7j/7</span>
             </div>
           </div>
@@ -80,11 +105,10 @@ export default function Footer() {
       
       <div className="footer-copyright">
         <p>
-           
           <a href="https://www.oicpole.com" target="_blank" rel="noopener noreferrer"> © {currentYear} Ocean Innovation Center (OIC). Tous droits réservés.</a> | 
-          {/* <a href="https://www.oicpole.com" target="_blank" rel="noopener noreferrer"> OIC</a> |  */}
-          <a href="#" target="_blank" rel="noopener noreferrer"> Politique de Confidentialité</a> | 
-          <a href="#" target="_blank" rel="noopener noreferrer"> Conditions d'Utilisation</a>
+          <button onClick={() => navigateToPage('mentions-legales')} className="footer-link-btn"> Mentions Légales</button> | 
+          <button onClick={() => navigateToPage('politique-de-confidentialite')} className="footer-link-btn"> Politique de Confidentialité</button> | 
+          <button onClick={() => navigateToPage('cgu')} className="footer-link-btn"> Conditions d'Utilisation</button>
         </p>
       </div>
     </footer>

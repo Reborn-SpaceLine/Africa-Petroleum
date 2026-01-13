@@ -58,17 +58,15 @@ export default function About() {
         <div className="about-content">
           <div className="about-text">
             <h1 className="section-title">Africa Petroleum</h1>
-            <h2 className="section-subtitle">Votre Station-Service de Référence</h2>
+            <h2 className="section-subtitle">Votre Partenaire Énergétique de Confiance</h2>
             <p className="about-description">
-              Implantée au cœur de vos activités depuis plus de 12 ans, notre station-service
-              est devenue la référence pour des milliers d'automobilistes qui recherchent
-              qualité, rapidité et professionnalisme.
+              Africa Petroleum est une entreprise camerounaise spécialisée dans la distribution de produits pétroliers. Depuis notre création, nous nous engageons à fournir des carburants de la plus haute qualité, conformes aux normes internationales, tout en offrant un service client irréprochable.
             </p>
             <p className="about-description">
-              Nous nous engageons à fournir des carburants de la plus haute qualité,
-              conformes aux standards internationaux, tout en offrant un service client
-              irréprochable et des prix compétitifs. Notre équipe dévouée est disponible
-              24h/24 pour répondre à tous vos besoins.
+              Notre réseau de plus de 7 stations réparties dans les villes de Douala, Yaoundé et Bafoussam témoigne de notre engagement à être toujours plus proches de nos clients. Chaque station est équipée d'infrastructures modernes et d'un personnel qualifié pour garantir votre satisfaction.
+            </p>
+            <p className="about-description">
+              Nous croyons fermement que la qualité, la sécurité et la proximité sont les piliers d'une expérience client exceptionnelle. C'est pourquoi nous investissons continuellement dans la formation de nos équipes, la modernisation de nos équipements et l'amélioration de nos services.
             </p>
             
             <div className="about-image">

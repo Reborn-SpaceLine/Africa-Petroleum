@@ -1,0 +1,99 @@
+{
+  "marketing": {
+    "tone": "professionnel et rassurant",
+    "target_audience": [
+      "Conducteurs particuliers",
+      "Entreprises de transport",
+      "Fleets (flottes de véhicules)",
+      "Partenaires commerciaux",
+      "Communautés locales"
+    ],
+    "key_messages": [
+      {
+        "message": "Votre station de confiance",
+        "description": "Africa Petroleum est votre partenaire de confiance pour tous vos besoins en carburant et services."
+      },
+      {
+        "message": "Qualité et sécurité au quotidien",
+        "description": "Nous garantissons des produits de qualité supérieure et des normes de sécurité strictes."
+      },
+      {
+        "message": "Toujours plus proche de vous",
+        "description": "Notre réseau de stations s'étend pour être toujours plus accessible à nos clients."
+      },
+      {
+        "message": "Service 24/7",
+        "description": "Nos stations sont ouvertes 24h/24 et 7j/7 pour votre commodité."
+      },
+      {
+        "message": "Engagement environnemental",
+        "description": "Nous nous engageons pour un avenir énergétique plus durable."
+      }
+    ],
+    "value_propositions": [
+      {
+        "title": "Qualité Garantie",
+        "description": "Tous nos produits respectent les normes internationales de qualité."
+      },
+      {
+        "title": "Réseau Étendu",
+        "description": "Plus de 7 stations réparties dans les principales villes du Cameroun."
+      },
+      {
+        "title": "Services Complets",
+        "description": "Carburant, boutique, restaurant, piscine et bien plus encore."
+      },
+      {
+        "title": "Accessibilité",
+        "description": "Stations accessibles 24h/24, 7j/7, avec plusieurs modes de paiement."
+      },
+      {
+        "title": "Prix Compétitifs",
+        "description": "Des prix transparents et compétitifs sur tous nos produits."
+      }
+    ],
+    "call_to_actions": [
+      {
+        "text": "Trouver une station",
+        "action": "Voir la carte",
+        "link": "#stations"
+      },
+      {
+        "text": "Nous contacter",
+        "action": "Formulaire de contact",
+        "link": "#contact"
+      },
+      {
+        "text": "Découvrir nos services",
+        "action": "En savoir plus",
+        "link": "#services"
+      },
+      {
+        "text": "Voir les promotions",
+        "action": "Actualités",
+        "link": "#news"
+      }
+    ],
+    "testimonials": [
+      {
+        "author": "Client régulier",
+        "location": "Douala",
+        "text": "Je fais toujours confiance à Africa Petroleum pour la qualité de leurs produits et leur service client exceptionnel.",
+        "rating": 5
+      },
+      {
+        "author": "Entreprise de transport",
+        "location": "Yaoundé",
+        "text": "Notre partenariat avec Africa Petroleum nous permet d'avoir accès à des carburants de qualité à des prix compétitifs.",
+        "rating": 5
+      }
+    ],
+    "social_proof": {
+      "total_customers": "Plus de 10 000 clients satisfaits",
+      "stations_count": "7+ stations",
+      "cities_covered": "3 villes principales",
+      "years_experience": "5+ années d'expérience"
+    }
+  }
+}
+

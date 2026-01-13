@@ -1,0 +1,158 @@
+{
+  "introduction": {
+    "title": "Nos Boutiques",
+    "paragraphs": [
+      "Les boutiques Africa Petroleum offrent une large gamme de produits et services pour répondre à tous vos besoins lors de vos déplacements. Que vous ayez besoin d'une boisson fraîche, d'un en-cas, de produits d'entretien pour votre véhicule ou d'articles de première nécessité, nos boutiques sont là pour vous.",
+      "Disponibles dans toutes nos stations, nos boutiques sont ouvertes 24h/24 et 7j/7, vous garantissant un accès permanent aux produits essentiels. Notre sélection est régulièrement renouvelée pour vous offrir les meilleurs produits aux meilleurs prix."
+    ]
+  },
+  "products": {
+    "title": "Nos Produits",
+    "categories": [
+      {
+        "name": "Boissons",
+        "description": "Rafraîchissez-vous avec notre sélection de boissons : eau minérale, boissons gazeuses, jus de fruits naturels, boissons énergisantes, café et thé. Tous nos produits sont conservés dans des conditions optimales pour garantir leur fraîcheur.",
+        "items": [
+          "Eau minérale (toutes marques)",
+          "Boissons gazeuses (Coca-Cola, Fanta, Sprite, etc.)",
+          "Jus de fruits (locaux et importés)",
+          "Boissons énergisantes",
+          "Café et thé (chauds et froids)"
+        ]
+      },
+      {
+        "name": "Snacks & Alimentation",
+        "description": "Satisfaites votre faim avec notre gamme de snacks et produits alimentaires. Des sandwiches frais aux chips en passant par les biscuits et chocolats, trouvez ce qui vous convient.",
+        "items": [
+          "Sandwiches frais (préparés quotidiennement)",
+          "Chips et snacks salés",
+          "Biscuits et gâteaux",
+          "Chocolats et confiseries",
+          "Fruits secs",
+          "Produits locaux (beignets, etc.)"
+        ]
+      },
+      {
+        "name": "Lubrifiants & Produits Auto",
+        "description": "Prenez soin de votre véhicule avec notre sélection complète de lubrifiants et produits d'entretien automobile. Toutes les grandes marques sont disponibles.",
+        "items": [
+          "Huiles moteur (toutes viscosités et marques)",
+          "Lubrifiants spécialisés (transmission, direction, etc.)",
+          "Liquide de refroidissement",
+          "Liquide de frein",
+          "Additifs carburant",
+          "Nettoyants et dégraissants"
+        ]
+      },
+      {
+        "name": "Accessoires Auto",
+        "description": "Trouvez tous les accessoires dont vous pourriez avoir besoin pour votre véhicule : essuie-glaces, ampoules, fusibles, câbles de démarrage et bien plus encore.",
+        "items": [
+          "Essuie-glaces (toutes tailles)",
+          "Ampoules (phares, clignotants, etc.)",
+          "Fusibles",
+          "Câbles de démarrage",
+          "Gants de travail",
+          "Tapis de voiture",
+          "Coussins et accessoires intérieurs"
+        ]
+      },
+      {
+        "name": "Hygiène & Bien-être",
+        "description": "Prenez soin de vous avec notre sélection de produits d'hygiène et de bien-être. Parfaits pour vos déplacements et vos pauses.",
+        "items": [
+          "Savons et gels douche",
+          "Shampoings et après-shampoings",
+          "Dentifrices et brosses à dents",
+          "Déodorants",
+          "Crèmes solaires",
+          "Mouchoirs et serviettes",
+          "Produits de première nécessité"
+        ]
+      },
+      {
+        "name": "Divers",
+        "description": "Une sélection variée d'articles utiles pour vos déplacements et votre quotidien.",
+        "items": [
+          "Cartes téléphoniques (tous opérateurs)",
+          "Chargeurs téléphone et câbles",
+          "Cigarettes (pour fumeurs)",
+          "Allumettes et briquets",
+          "Journaux et magazines",
+          "Articles de papeterie"
+        ]
+      }
+    ]
+  },
+  "services": {
+    "title": "Services Complémentaires",
+    "services": [
+      {
+        "name": "Service Express",
+        "description": "Pour les clients pressés, notre service express permet un achat rapide et efficace. Nos caisses sont optimisées pour réduire les temps d'attente."
+      },
+      {
+        "name": "Réservation de Produits",
+        "description": "Besoin d'un produit spécifique ? Contactez votre station pour réserver le produit en avance et le récupérer à votre convenance."
+      },
+      {
+        "name": "Livraison sur Demande",
+        "description": "Pour les commandes importantes (sur certaines stations), nous proposons un service de livraison. Contactez la station pour plus d'informations."
+      }
+    ]
+  },
+  "payment_methods": {
+    "title": "Modes de Paiement",
+    "description": "Nous acceptons plusieurs modes de paiement pour votre commodité :",
+    "methods": [
+      {
+        "method": "Espèces",
+        "available": true,
+        "description": "Paiement en espèces accepté dans toutes nos boutiques"
+      },
+      {
+        "method": "Mobile Money",
+        "available": true,
+        "description": "Orange Money et MTN Mobile Money acceptés pour un paiement rapide et sécurisé"
+      },
+      {
+        "method": "Carte Bancaire",
+        "available": true,
+        "description": "Cartes Visa et Mastercard acceptées dans toutes nos boutiques"
+      }
+    ]
+  },
+  "premium_boutique": {
+    "title": "Boutique Premium - Station Douala Centre",
+    "description": "Notre station Douala Centre dispose d'une boutique premium offrant une expérience d'achat exceptionnelle :",
+    "features": [
+      "Gamme de produits premium étendue",
+      "Espace détente pour les clients",
+      "Service client dédié",
+      "Produits importés de qualité",
+      "Ambiance moderne et accueillante"
+    ]
+  },
+  "promotions": {
+    "title": "Promotions en Cours",
+    "description": "Découvrez nos promotions spéciales disponibles dans toutes nos boutiques :",
+    "current_promotions": [
+      {
+        "title": "Offre Spéciale Boissons",
+        "description": "Achetez 2 boissons, obtenez la 3ème à moitié prix",
+        "valid_until": "28 Février 2025"
+      },
+      {
+        "title": "Réduction sur les Lubrifiants",
+        "description": "10% de réduction sur tous les lubrifiants",
+        "valid_until": "15 Février 2025"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Où Nous Trouver",
+    "description": "Nos boutiques sont disponibles dans toutes nos stations. Consultez notre carte pour trouver la station la plus proche de chez vous.",
+    "button": "Voir nos stations"
+  }
+}
+

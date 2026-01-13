@@ -1,0 +1,355 @@
+{
+  "stations": [
+    {
+      "id": 1,
+      "slug": "bafoussam-centre",
+      "name": "Station Bafoussam Centre",
+      "city": "Bafoussam",
+      "region": "Ouest",
+      "address": "Avenue de l'Indépendance",
+      "full_address": "Avenue de l'Indépendance, Bafoussam, Cameroun",
+      "phone": "+237 6 96 44 99 08",
+      "email": "bafoussam.centre@africapetroleum.cm",
+      "gps_coordinates": {
+        "lat": 5.4770,
+        "lng": 10.4176
+      },
+      "opening_hours": {
+        "monday": "24h/24",
+        "tuesday": "24h/24",
+        "wednesday": "24h/24",
+        "thursday": "24h/24",
+        "friday": "24h/24",
+        "saturday": "24h/24",
+        "sunday": "24h/24",
+        "summary": "24h/24 - 7j/7"
+      },
+      "services": [
+        "Carburant (Essence, Diesel, Super)",
+        "Lubrifiants",
+        "Boutique",
+        "Restaurant",
+        "Piscine",
+        "Lavage auto"
+      ],
+      "payment_methods": [
+        "Espèces",
+        "Carte bancaire",
+        "Mobile Money",
+        "Chèque"
+      ],
+      "features": [
+        "Station moderne",
+        "Parking sécurisé",
+        "Toilettes propres",
+        "Éclairage 24/7"
+      ],
+      "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800",
+      "description": "Station-service moderne située au cœur de Bafoussam, offrant tous les services essentiels et plus encore.",
+      "manager": {
+        "name": "Nom du gérant",
+        "phone": "+237 XXX XXX XXX"
+      }
+    },
+    {
+      "id": 2,
+      "slug": "bafoussam-ouest",
+      "name": "Station Bafoussam Ouest",
+      "city": "Bafoussam",
+      "region": "Ouest",
+      "address": "Route de Douala",
+      "full_address": "Route de Douala, Bafoussam, Cameroun",
+      "phone": "+237 6 96 44 99 09",
+      "email": "bafoussam.ouest@africapetroleum.cm",
+      "gps_coordinates": {
+        "lat": 5.4800,
+        "lng": 10.4000
+      },
+      "opening_hours": {
+        "monday": "24h/24",
+        "tuesday": "24h/24",
+        "wednesday": "24h/24",
+        "thursday": "24h/24",
+        "friday": "24h/24",
+        "saturday": "24h/24",
+        "sunday": "24h/24",
+        "summary": "24h/24 - 7j/7"
+      },
+      "services": [
+        "Carburant (Essence, Diesel, Super)",
+        "Lubrifiants",
+        "Boutique",
+        "Restaurant"
+      ],
+      "payment_methods": [
+        "Espèces",
+        "Carte bancaire",
+        "Mobile Money"
+      ],
+      "features": [
+        "Station moderne",
+        "Parking sécurisé",
+        "Toilettes propres"
+      ],
+      "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800",
+      "description": "Station-service stratégiquement située sur la route de Douala, idéale pour les voyageurs.",
+      "manager": {
+        "name": "Nom du gérant",
+        "phone": "+237 XXX XXX XXX"
+      }
+    },
+    {
+      "id": 3,
+      "slug": "bafoussam-est",
+      "name": "Station Bafoussam Est",
+      "city": "Bafoussam",
+      "region": "Ouest",
+      "address": "Boulevard Principal",
+      "full_address": "Boulevard Principal, Bafoussam, Cameroun",
+      "phone": "+237 6 96 44 99 10",
+      "email": "bafoussam.est@africapetroleum.cm",
+      "gps_coordinates": {
+        "lat": 5.4750,
+        "lng": 10.4200
+      },
+      "opening_hours": {
+        "monday": "24h/24",
+        "tuesday": "24h/24",
+        "wednesday": "24h/24",
+        "thursday": "24h/24",
+        "friday": "24h/24",
+        "saturday": "24h/24",
+        "sunday": "24h/24",
+        "summary": "24h/24 - 7j/7"
+      },
+      "services": [
+        "Carburant (Essence, Diesel, Super)",
+        "Lubrifiants",
+        "Boutique"
+      ],
+      "payment_methods": [
+        "Espèces",
+        "Mobile Money"
+      ],
+      "features": [
+        "Station moderne",
+        "Parking sécurisé"
+      ],
+      "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800",
+      "description": "Station-service compacte et efficace dans le quartier Est de Bafoussam.",
+      "manager": {
+        "name": "Nom du gérant",
+        "phone": "+237 XXX XXX XXX"
+      }
+    },
+    {
+      "id": 4,
+      "slug": "douala-centre",
+      "name": "Station Douala Centre",
+      "city": "Douala",
+      "region": "Littoral",
+      "address": "Boulevard de la Liberté",
+      "full_address": "Boulevard de la Liberté, Douala, Cameroun",
+      "phone": "+237 6 96 44 99 11",
+      "email": "douala.centre@africapetroleum.cm",
+      "gps_coordinates": {
+        "lat": 4.0511,
+        "lng": 9.7679
+      },
+      "opening_hours": {
+        "monday": "24h/24",
+        "tuesday": "24h/24",
+        "wednesday": "24h/24",
+        "thursday": "24h/24",
+        "friday": "24h/24",
+        "saturday": "24h/24",
+        "sunday": "24h/24",
+        "summary": "24h/24 - 7j/7"
+      },
+      "services": [
+        "Carburant (Essence, Diesel, Super)",
+        "Lubrifiants",
+        "Boutique Premium",
+        "Restaurant",
+        "Piscine",
+        "Lavage auto"
+      ],
+      "payment_methods": [
+        "Espèces",
+        "Carte bancaire",
+        "Mobile Money",
+        "Chèque",
+        "Carte de fidélité"
+      ],
+      "features": [
+        "Station premium",
+        "Parking sécurisé",
+        "Toilettes propres",
+        "Éclairage 24/7",
+        "Wi-Fi gratuit",
+        "Espace détente"
+      ],
+      "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800",
+      "description": "Notre station phare au cœur de Douala, offrant une expérience premium avec tous les services.",
+      "manager": {
+        "name": "Nom du gérant",
+        "phone": "+237 XXX XXX XXX"
+      }
+    },
+    {
+      "id": 5,
+      "slug": "douala-port",
+      "name": "Station Douala Port",
+      "city": "Douala",
+      "region": "Littoral",
+      "address": "Zone Portuaire",
+      "full_address": "Zone Portuaire, Douala, Cameroun",
+      "phone": "+237 6 96 44 99 12",
+      "email": "douala.port@africapetroleum.cm",
+      "gps_coordinates": {
+        "lat": 4.0600,
+        "lng": 9.7000
+      },
+      "opening_hours": {
+        "monday": "24h/24",
+        "tuesday": "24h/24",
+        "wednesday": "24h/24",
+        "thursday": "24h/24",
+        "friday": "24h/24",
+        "saturday": "24h/24",
+        "sunday": "24h/24",
+        "summary": "24h/24 - 7j/7"
+      },
+      "services": [
+        "Carburant (Essence, Diesel, Super)",
+        "Lubrifiants",
+        "Boutique",
+        "Soutes Maritimes",
+        "Service aux entreprises"
+      ],
+      "payment_methods": [
+        "Espèces",
+        "Carte bancaire",
+        "Mobile Money",
+        "Facturation entreprise"
+      ],
+      "features": [
+        "Station portuaire",
+        "Service aux navires",
+        "Parking poids lourds",
+        "Toilettes propres"
+      ],
+      "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800",
+      "description": "Station spécialisée pour le secteur portuaire et les entreprises de transport.",
+      "manager": {
+        "name": "Nom du gérant",
+        "phone": "+237 XXX XXX XXX"
+      }
+    },
+    {
+      "id": 6,
+      "slug": "yaounde-centre",
+      "name": "Station Yaoundé Centre",
+      "city": "Yaoundé",
+      "region": "Centre",
+      "address": "Avenue Kennedy",
+      "full_address": "Avenue Kennedy, Yaoundé, Cameroun",
+      "phone": "+237 6 96 44 99 13",
+      "email": "yaounde.centre@africapetroleum.cm",
+      "gps_coordinates": {
+        "lat": 3.8480,
+        "lng": 11.5021
+      },
+      "opening_hours": {
+        "monday": "24h/24",
+        "tuesday": "24h/24",
+        "wednesday": "24h/24",
+        "thursday": "24h/24",
+        "friday": "24h/24",
+        "saturday": "24h/24",
+        "sunday": "24h/24",
+        "summary": "24h/24 - 7j/7"
+      },
+      "services": [
+        "Carburant (Essence, Diesel, Super)",
+        "Lubrifiants",
+        "Boutique",
+        "Restaurant",
+        "Piscine",
+        "Lavage auto"
+      ],
+      "payment_methods": [
+        "Espèces",
+        "Carte bancaire",
+        "Mobile Money",
+        "Chèque"
+      ],
+      "features": [
+        "Station moderne",
+        "Parking sécurisé",
+        "Toilettes propres",
+        "Éclairage 24/7"
+      ],
+      "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800",
+      "description": "Station-service moderne au cœur de la capitale, offrant tous les services essentiels.",
+      "manager": {
+        "name": "Nom du gérant",
+        "phone": "+237 XXX XXX XXX"
+      }
+    },
+    {
+      "id": 7,
+      "slug": "yaounde-nord",
+      "name": "Station Yaoundé Nord",
+      "city": "Yaoundé",
+      "region": "Centre",
+      "address": "Route de Nsimalen",
+      "full_address": "Route de Nsimalen, Yaoundé, Cameroun",
+      "phone": "+237 6 96 44 99 14",
+      "email": "yaounde.nord@africapetroleum.cm",
+      "gps_coordinates": {
+        "lat": 3.8600,
+        "lng": 11.5200
+      },
+      "opening_hours": {
+        "monday": "24h/24",
+        "tuesday": "24h/24",
+        "wednesday": "24h/24",
+        "thursday": "24h/24",
+        "friday": "24h/24",
+        "saturday": "24h/24",
+        "sunday": "24h/24",
+        "summary": "24h/24 - 7j/7"
+      },
+      "services": [
+        "Carburant (Essence, Diesel, Super)",
+        "Lubrifiants",
+        "Boutique",
+        "Restaurant"
+      ],
+      "payment_methods": [
+        "Espèces",
+        "Carte bancaire",
+        "Mobile Money"
+      ],
+      "features": [
+        "Station moderne",
+        "Parking sécurisé",
+        "Toilettes propres"
+      ],
+      "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800",
+      "description": "Station-service stratégiquement située sur la route de l'aéroport, idéale pour les voyageurs.",
+      "manager": {
+        "name": "Nom du gérant",
+        "phone": "+237 XXX XXX XXX"
+      }
+    }
+  ],
+  "metadata": {
+    "total_stations": 7,
+    "cities": ["Bafoussam", "Douala", "Yaoundé"],
+    "regions": ["Ouest", "Littoral", "Centre"],
+    "last_updated": "2025-01-27"
+  }
+}
+

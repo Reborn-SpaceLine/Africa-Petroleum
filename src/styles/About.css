@@ -1,7 +1,8 @@
 /* Container général */
 .about {
-  padding: 100px 20px;
-  background: var(--white);
+  padding: 100px 20px 80px;
+  background: linear-gradient(180deg, var(--light-bg) 0%, rgba(37, 99, 235, 0.02) 100%);
+  min-height: 100vh;
 }
 
 .container {
@@ -25,30 +26,43 @@
 
 /* Titres */
 .section-title {
-  font-size: 36px;
-  font-weight: 700;
-  color: var(--primary-blue);
-  margin-bottom: 8px;
+  font-size: 2.75rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
 }
 
 .section-subtitle {
-  font-size: 24px;
-  font-weight: 500;
+  font-size: 1.5rem;
+  font-weight: 600;
   color: var(--text-dark);
-  margin-bottom: 20px;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
 }
 
 /* Description */
 .about-description {
-  font-size: 16px;
+  font-size: 1.05rem;
   line-height: 1.8;
   color: var(--text-light);
-  margin-bottom: 20px;
-  transition: color 0.3s ease;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+  border-left: 4px solid transparent;
 }
 
 .about-description:hover {
-  color: var(--primary-blue);
+  color: var(--text-dark);
+  background: rgba(255, 255, 255, 0.8);
+  border-left-color: var(--primary-blue);
+  transform: translateX(5px);
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.1);
 }
 
 /* Features */
@@ -63,19 +77,40 @@
   display: flex;
   flex-direction: row; /* Toujours en ligne, même sur mobile */
   gap: 24px;
-  padding: 32px;
-  background: var(--white);
-  border: 2px solid var(--border-color);
-  border-radius: 16px;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(37, 99, 235, 0.02));
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(37, 99, 235, 0.1);
+  border-radius: 20px;
   transition: all 0.3s ease;
   align-items: flex-start; /* Alignement en haut */
+  box-shadow: 0 8px 30px rgba(37, 99, 235, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--primary-blue), var(--dark-blue));
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
 }
 
 /* Effet hover sur les éléments de fonctionnalité */
 .feature-item:hover {
-  border-color: var(--secondary-orange);
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.1); /* Ombre avec couleur bleue */
+  border-color: var(--primary-blue);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 50px rgba(37, 99, 235, 0.2);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(37, 99, 235, 0.05));
+}
+
+.feature-item:hover::before {
+  transform: scaleY(1);
 }
 
 .feature-icon-wrapper {
@@ -88,32 +123,38 @@
 }
 
 .feature-number {
-  font-size: 48px;
+  font-size: 3rem;
   font-weight: 800;
-  background: linear-gradient(135deg, var(--primary-blue), var(--primary-orange));
+  background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
   background-clip: text;
   -webkit-text-fill-color: transparent;
   line-height: 1;
+  transition: all 0.3s ease;
 }
 
-/* Icône de fonctionnalité avec fond gradient utilisant les couleurs du logo */
+.feature-item:hover .feature-number {
+  transform: scale(1.1);
+}
+
+/* Icône de fonctionnalité avec fond gradient uniformisé */
 .feature-icon {
-  width: 50px;
-  height: 50px;
-  /* Gradient bleu/orange du logo */
-  background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(255, 140, 0, 0.1));
-  border-radius: 12px;
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(30, 58, 138, 0.1));
+  border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--primary-blue);
   transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.1);
 }
 
 .feature-item:hover .feature-icon {
-  background: linear-gradient(135deg, var(--primary-blue), var(--primary-orange));
+  background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
   color: var(--white);
-  transform: scale(1.1);
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
 }
 
 .feature-content {
@@ -137,16 +178,41 @@
 /* Image */
 /* Image de la section About */
 .about-image {
-  margin-top: 40px;
-  border-radius: 16px;
+  margin-top: 2.5rem;
+  border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 8px 30px rgba(37, 99, 235, 0.1); /* Ombre avec couleur bordeaux du logo */
+  box-shadow: 0 12px 40px rgba(37, 99, 235, 0.2);
+  border: 1px solid rgba(37, 99, 235, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.about-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(37, 99, 235, 0.05) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.about-image:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 50px rgba(37, 99, 235, 0.3);
 }
 
 .about-image img {
   width: 100%;
   height: 400px;
   object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.about-image:hover img {
+  transform: scale(1.05);
 }
 
 /* Highlights en bas */
@@ -161,32 +227,63 @@
 .highlight {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 16px 20px;
-  background: var(--light-bg);
-  border-radius: 12px;
+  gap: 1rem;
+  padding: 1.5rem 2rem;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(37, 99, 235, 0.02));
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid rgba(37, 99, 235, 0.1);
   flex: 1;
   min-width: 200px;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.highlight::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-blue), var(--dark-blue));
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
 }
 
 /* Effet hover sur les highlights */
 .highlight:hover {
-  background: var(--white);
-  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.08); /* Ombre avec couleur bleue */
-  transform: translateY(-3px);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(37, 99, 235, 0.05));
+  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.15);
+  transform: translateY(-5px);
+  border-color: var(--primary-blue);
+}
+
+.highlight:hover::before {
+  transform: scaleX(1);
 }
 
 .highlight-icon {
-  width: 40px;
-  height: 40px;
-  background: linear-gradient(135deg, var(--primary-blue), var(--primary-orange));
-  color: var(--white);
-  border-radius: 8px;
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(30, 58, 138, 0.1));
+  color: var(--primary-blue);
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.1);
+}
+
+.highlight:hover .highlight-icon {
+  background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
+  color: var(--white);
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
 }
 
 .highlight-text {

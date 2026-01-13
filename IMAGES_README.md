@@ -91,3 +91,5 @@ Les images externes (Unsplash, Pexels) peuvent ne pas se charger si :
 
 Il est recommandé de télécharger toutes les images et de les ajouter localement pour garantir leur disponibilité.
 
+
+

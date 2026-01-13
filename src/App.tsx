@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import './styles/App.css';
+import './styles/Icons.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Hero from './components/Hero';
@@ -15,6 +16,8 @@ import Career from './components/Career';
 import Boutique from './components/Boutique';
 import Map from './components/Map';
 import JobDetail from './components/JobDetail';
+import NewsletterPopup from './components/NewsletterPopup';
+import Legal from './components/Legal';
 
 type Page =
   | 'home'
@@ -26,7 +29,10 @@ type Page =
   | 'boutique'
   | 'exchangeRates'
   | 'map'
-  | 'jobDetail';
+  | 'jobDetail'
+  | 'mentions'
+  | 'confidentialite'
+  | 'cgu';
 
 /**
  * Système de routing basé sur le hash de l'URL
@@ -82,7 +88,13 @@ const getPageFromHash = (): { page: Page; jobSlug?: string } => {
     'taux-change': 'exchangeRates',
     'map': 'map',
     'stations': 'map',
-    'nos-stations': 'map'
+    'nos-stations': 'map',
+    'mentions-legales': 'mentions',
+    'mentions': 'mentions',
+    'politique-de-confidentialite': 'confidentialite',
+    'confidentialite': 'confidentialite',
+    'cgu': 'cgu',
+    'conditions-generales': 'cgu'
   };
   
   return { page: hashToPage[hash] || 'home' };
@@ -102,7 +114,10 @@ const updateUrlHash = (page: Page, jobSlug?: string) => {
     'career': 'career',
     'exchangeRates': 'exchangeRates',
     'map': 'map',
-    'jobDetail': jobSlug ? `job-detail/${jobSlug}` : 'career'
+    'jobDetail': jobSlug ? `job-detail/${jobSlug}` : 'career',
+    'mentions': 'mentions-legales',
+    'confidentialite': 'politique-de-confidentialite',
+    'cgu': 'cgu'
   };
   
   const hash = pageToHash[page] || '';
@@ -130,6 +145,7 @@ export default function App() {
   const [selectedJobId, setSelectedJobId] = useState<number | null>(null);
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [showApplicationForm, setShowApplicationForm] = useState(false);
+  const [showNewsletterPopup, setShowNewsletterPopup] = useState(false);
 
   // Écouter les changements de hash dans l'URL (navigation via URL)
   useEffect(() => {
@@ -218,6 +234,17 @@ export default function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Afficher la pop-up newsletter après 3 secondes (une seule fois)
+  useEffect(() => {
+    const hasSeenPopup = localStorage.getItem('newsletter-popup-seen');
+    if (!hasSeenPopup && !showNewsletterPopup) {
+      const timer = setTimeout(() => {
+        setShowNewsletterPopup(true);
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [showNewsletterPopup]);
+
   // Scroller vers le haut quand on change de page (sauf pour home)
   useEffect(() => {
     if (currentPage !== 'home') {
@@ -271,6 +298,12 @@ export default function App() {
             <Contact />
           </>
         );
+      case 'mentions':
+        return <Legal page="mentions" />;
+      case 'confidentialite':
+        return <Legal page="confidentialite" />;
+      case 'cgu':
+        return <Legal page="cgu" />;
       case 'restaurant':
         return <Restaurant />;
       case 'piscine':
@@ -340,11 +373,38 @@ export default function App() {
 
       <Footer />
 
-      {showScrollTop && (
+      <NewsletterPopup 
+        isOpen={showNewsletterPopup} 
+        onClose={() => setShowNewsletterPopup(false)} 
+      />
+
+      <div className="floating-buttons">
+        {showScrollTop && (
+          <button
+            className="scroll-to-top"
+            onClick={scrollToTop}
+            aria-label="Retour au haut"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <path d="M12 19V5M5 12l7-7 7 7" />
+            </svg>
+          </button>
+        )}
         <button
-          className="scroll-to-top"
-          onClick={scrollToTop}
-          aria-label="Retour au haut"
+          className="newsletter-button-floating"
+          onClick={() => {
+            localStorage.removeItem('newsletter-popup-seen');
+            setShowNewsletterPopup(true);
+          }}
+          aria-label="S'inscrire à la newsletter"
+          title="S'inscrire à la newsletter"
         >
           <svg
             width="24"
@@ -354,10 +414,11 @@ export default function App() {
             stroke="currentColor"
             strokeWidth="2"
           >
-            <path d="M12 19V5M5 12l7-7 7 7" />
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+            <polyline points="22,6 12,13 2,6" />
           </svg>
         </button>
-      )}
+      </div>
     </div>
   );
 }

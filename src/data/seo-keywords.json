@@ -1,0 +1,118 @@
+{
+  "seo": {
+    "primary_keywords": [
+      "station service cameroun",
+      "carburant cameroun",
+      "africa petroleum",
+      "station essence cameroun",
+      "pompe à essence cameroun"
+    ],
+    "local_keywords": [
+      "station service douala",
+      "station service yaoundé",
+      "station service bafoussam",
+      "carburant douala",
+      "carburant yaoundé",
+      "carburant bafoussam",
+      "essence douala",
+      "essence yaoundé",
+      "diesel cameroun"
+    ],
+    "service_keywords": [
+      "boutique station service",
+      "restaurant station service",
+      "piscine station service",
+      "lavage auto cameroun",
+      "lubrifiants cameroun"
+    ],
+    "long_tail_keywords": [
+      "meilleure station service cameroun",
+      "station service 24h 24 cameroun",
+      "prix carburant cameroun",
+      "station service moderne cameroun",
+      "réseau stations service cameroun"
+    ],
+    "meta_descriptions": {
+      "home": "Africa Petroleum - Votre réseau de stations-service au Cameroun. Carburant de qualité, services complets, 24h/24. Stations à Douala, Yaoundé, Bafoussam.",
+      "stations": "Trouvez la station Africa Petroleum la plus proche. Carte interactive avec toutes nos stations à Douala, Yaoundé, Bafoussam. Horaires, services, coordonnées.",
+      "boutique": "Boutiques Africa Petroleum - Boissons, snacks, lubrifiants, accessoires auto. Disponibles dans toutes nos stations au Cameroun.",
+      "contact": "Contactez Africa Petroleum - Siège social, coordonnées des stations, formulaire de contact. Service client disponible 24h/24.",
+      "about": "À propos d'Africa Petroleum - Notre mission, nos valeurs, notre histoire. Leader de la distribution de produits pétroliers au Cameroun."
+    },
+    "schema_markup": {
+      "organization": {
+        "@type": "Organization",
+        "name": "Africa Petroleum",
+        "url": "https://www.africapetroleum.cm",
+        "logo": "https://www.africapetroleum.cm/logo.webp",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+237-XXX-XXX-XXX",
+          "contactType": "customer service",
+          "areaServed": "CM",
+          "availableLanguage": ["French", "English"]
+        }
+      },
+      "local_business": {
+        "@type": "GasStation",
+        "name": "Africa Petroleum",
+        "image": "https://www.africapetroleum.cm/images/station.jpg",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "CM",
+          "addressLocality": "Douala",
+          "addressRegion": "Littoral"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 4.0511,
+          "longitude": 9.7679
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "00:00",
+          "closes": "23:59"
+        }
+      }
+    },
+    "cities_focus": [
+      {
+        "city": "Douala",
+        "keywords": [
+          "station service douala",
+          "carburant douala",
+          "essence douala",
+          "pompe à essence douala"
+        ]
+      },
+      {
+        "city": "Yaoundé",
+        "keywords": [
+          "station service yaoundé",
+          "carburant yaoundé",
+          "essence yaoundé",
+          "pompe à essence yaoundé"
+        ]
+      },
+      {
+        "city": "Bafoussam",
+        "keywords": [
+          "station service bafoussam",
+          "carburant bafoussam",
+          "essence bafoussam",
+          "pompe à essence bafoussam"
+        ]
+      }
+    ]
+  }
+}
+

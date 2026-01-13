@@ -1,0 +1,161 @@
+{
+  "hero": {
+    "title": "À Propos d'Africa Petroleum",
+    "subtitle": "Votre Partenaire Énergétique de Confiance au Cameroun"
+  },
+  "history": {
+    "title": "Notre Histoire",
+    "paragraphs": [
+      "Africa Petroleum a été fondée avec une vision claire : devenir le leader de la distribution de produits pétroliers au Cameroun en offrant des services de qualité supérieure et en étant toujours proche de nos clients.",
+      "Depuis notre création, nous avons connu une croissance constante, ouvrant progressivement de nouvelles stations dans les principales villes du pays. Chaque nouvelle station est une étape vers notre objectif de couvrir l'ensemble du territoire camerounais.",
+      "Notre expansion reflète notre engagement envers l'excellence opérationnelle et notre capacité à répondre aux besoins croissants de nos clients. Nous avons investi dans des infrastructures modernes, formé des équipes dévouées, et développé des partenariats stratégiques pour garantir la qualité de nos services.",
+      "Aujourd'hui, avec plus de 7 stations réparties dans 3 villes principales, Africa Petroleum est reconnue comme une référence dans le secteur de la distribution pétrolière au Cameroun."
+    ],
+    "milestones": [
+      {
+        "year": "2020",
+        "event": "Création d'Africa Petroleum et ouverture de la première station"
+      },
+      {
+        "year": "2021",
+        "event": "Expansion avec l'ouverture de nouvelles stations à Douala et Yaoundé"
+      },
+      {
+        "year": "2022",
+        "event": "Développement du réseau dans la région de l'Ouest avec plusieurs stations à Bafoussam"
+      },
+      {
+        "year": "2024",
+        "event": "Atteinte du cap de 7 stations et lancement de services premium"
+      }
+    ]
+  },
+  "mission": {
+    "title": "Notre Mission",
+    "paragraphs": [
+      "Notre mission est de fournir des produits énergétiques fiables, accessibles et de qualité supérieure à tous nos clients au Cameroun, tout en respectant les normes de sécurité et d'environnement les plus strictes.",
+      "Nous nous engageons à être plus qu'un simple fournisseur de carburant. Nous voulons être votre partenaire de confiance, celui sur qui vous pouvez compter pour tous vos besoins énergétiques, que vous soyez un particulier, une entreprise ou une institution.",
+      "Pour y parvenir, nous investissons continuellement dans la qualité de nos produits, la formation de nos équipes, la modernisation de nos équipements, et l'amélioration de l'expérience client dans chacune de nos stations.",
+      "Nous croyons que chaque interaction avec un client est une opportunité de renforcer notre relation et de démontrer notre engagement envers l'excellence."
+    ]
+  },
+  "values": {
+    "title": "Nos Valeurs",
+    "values": [
+      {
+        "name": "Qualité",
+        "description": "Nous garantissons des produits et services de la plus haute qualité, conformes aux normes internationales. Chaque litre de carburant, chaque service, chaque interaction est soumis à nos standards d'excellence.",
+        "example": "Nos carburants sont testés à chaque livraison pour garantir leur pureté et leur conformité aux spécifications techniques."
+      },
+      {
+        "name": "Sécurité",
+        "description": "La sécurité de nos clients, employés et communautés est notre priorité absolue. Nous investissons dans des équipements de sécurité de pointe et formons régulièrement notre personnel.",
+        "example": "Toutes nos stations sont équipées de systèmes de détection de fuites et d'extinction automatique, et notre personnel est certifié en sécurité."
+      },
+      {
+        "name": "Proximité Client",
+        "description": "Nous sommes toujours à l'écoute de nos clients et nous adaptons nos services à leurs besoins. Notre réseau étendu garantit que vous trouverez toujours une station près de chez vous.",
+        "example": "Nous avons développé notre réseau pour être présent dans les principales villes et sur les axes routiers stratégiques."
+      },
+      {
+        "name": "Intégrité",
+        "description": "Nous agissons avec transparence, honnêteté et respect dans toutes nos relations. Nos prix sont clairs et compétitifs, sans frais cachés ni surprises.",
+        "example": "Tous nos prix sont affichés clairement à la pompe, et nous communiquons ouvertement sur nos pratiques et nos engagements."
+      },
+      {
+        "name": "Innovation",
+        "description": "Nous innovons constamment pour améliorer l'expérience client et nos processus opérationnels. De nouvelles technologies et services sont régulièrement intégrés dans nos stations.",
+        "example": "Nous avons introduit des systèmes de paiement mobile, des services premium, et explorons actuellement les énergies alternatives."
+      }
+    ]
+  },
+  "vision": {
+    "title": "Notre Vision",
+    "paragraphs": [
+      "Notre vision est de devenir le leader de la distribution de produits pétroliers au Cameroun, reconnu pour notre excellence opérationnelle, notre engagement client et notre responsabilité environnementale.",
+      "Nous aspirons à construire un réseau de stations qui soit non seulement le plus étendu, mais aussi le plus moderne, le plus sûr et le plus respectueux de l'environnement du pays.",
+      "À long terme, nous envisageons d'étendre notre présence à toutes les régions du Cameroun, d'introduire des services innovants comme les énergies renouvelables, et de devenir un modèle de référence dans le secteur énergétique africain.",
+      "Nous croyons que notre succès se mesure non seulement à notre croissance, mais aussi à la satisfaction de nos clients, au bien-être de nos employés, et à notre contribution positive aux communautés que nous servons."
+    ]
+  },
+  "team": {
+    "title": "Notre Équipe",
+    "description": "Africa Petroleum est fière de compter sur une équipe dévouée et qualifiée, composée de professionnels passionnés par l'excellence du service client.",
+    "sections": [
+      {
+        "title": "Direction Générale",
+        "description": "Notre direction générale apporte une vision stratégique et une expérience approfondie du secteur pétrolier, guidant l'entreprise vers l'excellence opérationnelle et la croissance durable."
+      },
+      {
+        "title": "Équipes sur le Terrain",
+        "description": "Chaque station est gérée par une équipe locale formée et certifiée, qui comprend les besoins spécifiques de sa communauté et s'engage à fournir un service exceptionnel à chaque client."
+      },
+      {
+        "title": "Engagement des Employés",
+        "description": "Nous investissons dans la formation continue de nos employés, leur offrant des opportunités de développement professionnel et créant un environnement de travail positif et motivant."
+      }
+    ]
+  },
+  "statistics": {
+    "title": "Chiffres Clés",
+    "stats": [
+      {
+        "value": "7+",
+        "label": "Stations",
+        "description": "Réseau en expansion constante"
+      },
+      {
+        "value": "3",
+        "label": "Villes",
+        "description": "Douala, Yaoundé, Bafoussam"
+      },
+      {
+        "value": "10 000+",
+        "label": "Clients Satisfaits",
+        "description": "Clients qui nous font confiance quotidiennement"
+      },
+      {
+        "value": "24/7",
+        "label": "Disponibilité",
+        "description": "Service continu toute la semaine"
+      },
+      {
+        "value": "5+",
+        "label": "Années d'Expérience",
+        "description": "Expertise et savoir-faire reconnus"
+      }
+    ]
+  },
+  "commitment": {
+    "title": "Notre Engagement",
+    "sections": [
+      {
+        "title": "Engagement envers nos Clients",
+        "description": "Nous nous engageons à fournir des produits de qualité, des services exceptionnels, et une expérience client irréprochable à chaque visite. Votre satisfaction est notre priorité."
+      },
+      {
+        "title": "Engagement envers nos Communautés",
+        "description": "Nous sommes fiers de contribuer au développement économique local en créant des emplois, en soutenant les entreprises locales, et en participant à des initiatives communautaires."
+      },
+      {
+        "title": "Engagement Environnemental",
+        "description": "Nous nous engageons à minimiser notre impact environnemental, à respecter les normes les plus strictes, et à explorer des solutions durables pour l'avenir énergétique du Cameroun."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Rejoignez l'Aventure Africa Petroleum",
+    "description": "Découvrez notre réseau de stations, nos services, et notre engagement envers l'excellence. Nous sommes là pour vous servir.",
+    "buttons": [
+      {
+        "text": "Découvrir nos stations",
+        "action": "Voir la carte"
+      },
+      {
+        "text": "Nous contacter",
+        "action": "Formulaire de contact"
+      }
+    ]
+  }
+}
+

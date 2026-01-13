@@ -47,7 +47,7 @@
   background: var(--white);
   border: 2px solid var(--border-color);
   border-radius: 20px;
-  padding: 28px;
+  padding: 20px;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(125, 25, 53, 0.08);
   display: flex;
@@ -63,22 +63,45 @@
 .job-header {
   display: flex;
   align-items: flex-start;
-  gap: 16px;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
+  gap: 12px;
+  margin-bottom: 14px;
+  padding-bottom: 14px;
   border-bottom: 2px solid var(--border-color);
 }
 
+/* Style simple et épuré pour les icônes */
 .job-icon {
   width: 56px;
   height: 56px;
-  background: linear-gradient(135deg, var(--primary-blue), var(--primary-orange));
-  border-radius: 14px;
+  background: rgba(37, 99, 235, 0.1);
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--white);
   flex-shrink: 0;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(37, 99, 235, 0.2);
+}
+
+.job-icon svg {
+  width: 48px !important;
+  height: 48px !important;
+  color: var(--primary-blue) !important;
+  stroke: var(--primary-blue) !important;
+  stroke-width: 2.5 !important;
+  fill: none !important;
+  transition: all 0.3s ease;
+}
+
+.job-card:hover .job-icon {
+  background: var(--primary-blue);
+  border-color: var(--primary-blue);
+  transform: scale(1.05);
+}
+
+.job-card:hover .job-icon svg {
+  color: var(--white) !important;
+  stroke: var(--white) !important;
 }
 
 .job-title-section {
@@ -86,10 +109,10 @@
 }
 
 .job-title {
-  font-size: 1.4rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--text-dark);
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
 .job-department {
@@ -105,8 +128,8 @@
 .job-info {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
-  margin-bottom: 20px;
+  gap: 12px;
+  margin-bottom: 14px;
 }
 
 .job-info-item {
@@ -118,29 +141,45 @@
 }
 
 .job-info-item svg {
-  color: var(--primary-blue);
+  width: 20px !important;
+  height: 20px !important;
+  color: var(--primary-blue) !important;
+  stroke: var(--primary-blue) !important;
+  stroke-width: 2.5 !important;
   flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.job-card:hover .job-info-item svg {
+  color: var(--primary-blue) !important;
+  stroke: var(--primary-blue) !important;
+  transform: scale(1.1);
 }
 
 .job-description {
-  font-size: 0.95rem;
-  line-height: 1.6;
+  font-size: 0.9rem;
+  line-height: 1.5;
   color: var(--text-light);
-  margin-bottom: 20px;
+  margin-bottom: 14px;
   flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .job-requirements {
-  margin-bottom: 24px;
-  padding-top: 20px;
+  margin-bottom: 16px;
+  padding-top: 14px;
   border-top: 1px solid var(--border-color);
 }
 
 .job-requirements strong {
   display: block;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: var(--text-dark);
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   font-weight: 600;
 }
 
@@ -151,10 +190,10 @@
 }
 
 .job-requirements li {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: var(--text-light);
-  padding: 6px 0;
-  padding-left: 20px;
+  padding: 4px 0;
+  padding-left: 18px;
   position: relative;
 }
 
@@ -171,13 +210,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding: 14px 24px;
+  gap: 8px;
+  padding: 12px 20px;
   background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
   color: var(--white);
   border: none;
   border-radius: 12px;
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;

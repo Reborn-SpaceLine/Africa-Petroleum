@@ -150,7 +150,7 @@
 .footer-links a {
   background: none;
   border: none;
-  padding: 0;
+  padding: 8px 0;
   font-family: inherit;
   font-size: 14px;
   color: rgba(255, 255, 255, 0.8);
@@ -159,12 +159,14 @@
   text-decoration: none;
   display: inline-block;
   text-align: left;
+  width: 100%;
 }
 
 .footer-links button:hover,
 .footer-links a:hover {
   color: var(--secondary-orange);
-  transform: translateX(10x);
+  transform: translateX(5px);
+  padding-left: 5px;
 }
 
 /* ============================================
@@ -189,29 +191,44 @@
   line-height: 1.6;
 }
 
-.contact-icon-svg {
-  flex-shrink: 0;
-  margin-top: 2px;
-  opacity: 0.8;
-  color: rgba(255, 255, 255, 0.8);
-}
 
 .contact-info-footer {
   display: flex;
   align-items: flex-start;
-  gap: 10px;
+  gap: 12px;
   font-size: 14px;
   color: rgba(255, 255, 255, 0.8);
   line-height: 1.6;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .contact-info-footer:last-child {
   margin-bottom: 0;
 }
 
-.contact-info-footer span {
+.contact-info-footer span,
+.contact-info-footer .contact-link {
   flex: 1;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact-info-footer .contact-link:hover {
+  color: var(--secondary-orange);
+  text-decoration: underline;
+}
+
+.contact-icon-svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+}
+
+.contact-info-footer:hover .contact-icon-svg {
+  color: var(--secondary-orange);
+  transform: scale(1.1);
 }
 
 /* ============================================
@@ -254,6 +271,23 @@
 }
 
 .footer-copyright a:hover {
+  color: var(--secondary-orange);
+}
+
+.footer-link-btn {
+  background: none;
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-link-btn:hover {
   color: var(--secondary-orange);
 }
 

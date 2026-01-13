@@ -131,17 +131,23 @@ export default function RestaurantPage() {
 
         <div className="restaurant-info">
           <div className="info-card">
-            <Sparkles size={24} />
+            <div className="info-icon">
+              <Sparkles size={48} strokeWidth={2.5} />
+            </div>
             <h3>Service 24/7</h3>
             <p>Notre restaurant est ouvert toute la journée pour votre confort</p>
           </div>
           <div className="info-card">
-            <ChefHat size={24} />
+            <div className="info-icon">
+              <ChefHat size={48} strokeWidth={2.5} />
+            </div>
             <h3>Cuisine Traditionnelle</h3>
             <p>Des plats authentiques préparés avec des ingrédients frais locaux</p>
           </div>
           <div className="info-card">
-            <Utensils size={24} />
+            <div className="info-icon">
+              <Utensils size={48} strokeWidth={2.5} />
+            </div>
             <h3>Service Rapide</h3>
             <p>Commandes préparées rapidement pour ne pas vous faire attendre</p>
           </div>

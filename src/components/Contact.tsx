@@ -41,7 +41,7 @@ export default function Contact() {
           <div className="contact-info">
             <div className="info-card">
               <div className="info-icon">
-                <MapPin size={48} />
+                <MapPin size={48} strokeWidth={2.5} />
               </div>
               <div className="info-content">
                 <h3 className="info-title">Adresse</h3>
@@ -51,7 +51,7 @@ export default function Contact() {
 
             <div className="info-card">
               <div className="info-icon">
-                <Phone size={48} />
+                <Phone size={48} strokeWidth={2.5} />
               </div>
               <div className="info-content">
                 <h3 className="info-title">Téléphone</h3>
@@ -61,7 +61,7 @@ export default function Contact() {
 
             <div className="info-card">
               <div className="info-icon">
-                <Mail size={48} />
+                <Mail size={48} strokeWidth={2.5} />
               </div>
               <div className="info-content">
                 <h3 className="info-title">Email</h3>
@@ -71,7 +71,7 @@ export default function Contact() {
 
             <div className="info-card">
               <div className="info-icon">
-                <Clock size={48} />
+                <Clock size={48} strokeWidth={2.5} />
               </div>
               <div className="info-content">
                 <h3 className="info-title">Horaires d'Ouverture</h3>

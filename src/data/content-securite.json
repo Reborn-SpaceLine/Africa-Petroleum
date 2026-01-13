@@ -1,0 +1,118 @@
+{
+  "introduction": {
+    "title": "Sécurité & Qualité",
+    "subtitle": "Notre Engagement pour Votre Sécurité et la Qualité de nos Produits",
+    "paragraphs": [
+      "Chez Africa Petroleum, la sécurité et la qualité ne sont pas de simples mots, mais des engagements concrets que nous respectons au quotidien. Nous comprenons que la confiance de nos clients repose sur notre capacité à garantir des produits de qualité supérieure dans un environnement sécurisé.",
+      "C'est pourquoi nous avons mis en place des protocoles stricts de contrôle qualité, des formations régulières pour notre personnel, et des équipements de sécurité de dernière génération dans toutes nos stations."
+    ]
+  },
+  "safety_standards": {
+    "title": "Nos Normes de Sécurité",
+    "sections": [
+      {
+        "title": "Protocoles de Sécurité",
+        "description": "Toutes nos stations respectent les protocoles de sécurité les plus rigoureux, conformes aux normes internationales. Nos équipements sont régulièrement inspectés et entretenus par des professionnels certifiés pour garantir leur bon fonctionnement et leur sécurité."
+      },
+      {
+        "title": "Formation du Personnel",
+        "description": "Notre personnel bénéficie de formations continues sur les meilleures pratiques de sécurité, la manipulation des produits pétroliers, et la gestion des situations d'urgence. Chaque employé est certifié et régulièrement recyclé pour maintenir les plus hauts standards."
+      },
+      {
+        "title": "Équipements de Sécurité",
+        "description": "Nos stations sont équipées de systèmes de sécurité avancés : détecteurs de fuites, systèmes d'extinction automatique, signalisation claire, éclairage de sécurité, et zones de confinement pour prévenir tout risque d'incident."
+      },
+      {
+        "title": "Prévention des Accidents",
+        "description": "Nous mettons tout en œuvre pour prévenir les accidents grâce à une signalisation claire, des procédures strictes, des inspections régulières, et une culture de sécurité partagée par toute l'équipe."
+      }
+    ]
+  },
+  "quality_control": {
+    "title": "Contrôles Qualité",
+    "sections": [
+      {
+        "title": "Tests de Qualité des Produits",
+        "description": "Chaque lot de carburant est soumis à des tests de qualité rigoureux avant d'être mis à disposition. Nous vérifions la pureté, la composition, la teneur en eau, et la conformité aux normes internationales pour garantir des produits de la plus haute qualité."
+      },
+      {
+        "title": "Traçabilité",
+        "description": "Tous nos produits sont traçables depuis leur origine jusqu'à la pompe. Nous maintenons des registres détaillés de chaque livraison, chaque test, et chaque vente pour assurer une traçabilité complète et transparente."
+      },
+      {
+        "title": "Conformité aux Normes",
+        "description": "Nos produits respectent et dépassent les normes camerounaises et internationales en vigueur. Nous sommes régulièrement audités par des organismes indépendants pour garantir notre conformité continue."
+      },
+      {
+        "title": "Certifications",
+        "description": "Africa Petroleum détient plusieurs certifications attestant de notre engagement envers la qualité et la sécurité. Ces certifications sont régulièrement renouvelées après des audits approfondis."
+      }
+    ]
+  },
+  "environmental_commitment": {
+    "title": "Engagement Environnemental",
+    "sections": [
+      {
+        "title": "Protection de l'Environnement",
+        "description": "Nous sommes conscients de notre responsabilité environnementale et mettons en œuvre des pratiques durables pour minimiser notre impact. Cela inclut la gestion responsable des déchets, la prévention des fuites, et l'utilisation de technologies respectueuses de l'environnement."
+      },
+      {
+        "title": "Gestion des Déchets",
+        "description": "Tous les déchets générés par nos activités sont collectés, triés et éliminés selon les normes environnementales en vigueur. Nous travaillons avec des partenaires certifiés pour garantir une élimination responsable et conforme."
+      },
+      {
+        "title": "Économie d'Énergie",
+        "description": "Nos stations sont équipées de systèmes d'éclairage à LED économes en énergie, et nous optimisons continuellement nos processus pour réduire notre consommation énergétique et notre empreinte carbone."
+      },
+      {
+        "title": "Initiatives Écologiques",
+        "description": "Nous explorons activement des initiatives écologiques telles que l'installation de bornes de recharge pour véhicules électriques, l'utilisation d'énergies renouvelables, et le développement de programmes de recyclage pour nos clients."
+      }
+    ]
+  },
+  "certifications": {
+    "title": "Nos Certifications",
+    "description": "Africa Petroleum est fière de détenir les certifications suivantes, attestant de notre engagement envers la qualité, la sécurité et l'environnement :",
+    "certifications": [
+      {
+        "name": "Normes de Qualité ISO",
+        "issuer": "Organisme certificateur indépendant",
+        "description": "Certification attestant de notre système de management de la qualité"
+      },
+      {
+        "name": "Certification Sécurité",
+        "issuer": "Autorités compétentes",
+        "description": "Conformité aux normes de sécurité pour la manipulation et le stockage de produits pétroliers"
+      },
+      {
+        "name": "Conformité Environnementale",
+        "issuer": "Ministère de l'Environnement",
+        "description": "Respect des normes environnementales et engagement envers le développement durable"
+      }
+    ],
+    "note": "Nos certifications sont régulièrement renouvelées après des audits approfondis par des organismes indépendants."
+  },
+  "transparency": {
+    "title": "Transparence",
+    "sections": [
+      {
+        "title": "Communication sur les Incidents",
+        "description": "En cas d'incident, même mineur, nous nous engageons à communiquer de manière transparente avec les autorités compétentes et à prendre toutes les mesures nécessaires pour résoudre la situation rapidement et efficacement."
+      },
+      {
+        "title": "Processus de Réclamation",
+        "description": "Si vous avez une préoccupation concernant la qualité de nos produits ou la sécurité de nos stations, nous avons mis en place un processus de réclamation clair et accessible. Votre feedback est essentiel pour nous améliorer continuellement."
+      },
+      {
+        "title": "Contact Sécurité & Qualité",
+        "description": "Pour toute question concernant la sécurité ou la qualité de nos produits et services, n'hésitez pas à nous contacter. Notre équipe dédiée est à votre disposition pour répondre à toutes vos interrogations."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Votre Sécurité est Notre Priorité",
+    "description": "Nous nous engageons à maintenir les plus hauts standards de sécurité et de qualité. Si vous avez des questions ou des préoccupations, contactez-nous.",
+    "button": "Nous contacter"
+  }
+}
+

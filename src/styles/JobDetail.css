@@ -74,12 +74,10 @@
 }
 
 .job-meta-item svg {
-  width: 18px;
-  height: 18px;
-}
-
-.job-meta-item svg {
+  width: 18px !important;
+  height: 18px !important;
   flex-shrink: 0;
+  color: var(--primary-blue);
 }
 
 /* Contenu détaillé */

@@ -1,0 +1,912 @@
+/* ============================================
+   ICONS.CSS - Styles uniformisés pour les icônes
+   Standardisation de toutes les icônes du site
+   ============================================ */
+
+/* ============================================
+   STYLES DE BASE POUR TOUTES LES ICÔNES LUCIDE REACT
+   ============================================ */
+
+/* Styles de base pour toutes les icônes Lucide React */
+svg[class*="lucide"],
+svg[class*="lucide-react"] {
+  width: inherit;
+  height: inherit;
+  stroke-width: 2.5 !important; /* Augmenté pour meilleure visibilité */
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  flex-shrink: 0;
+  display: inline-block;
+  vertical-align: middle;
+  /* Amélioration de la visibilité */
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+  opacity: 1 !important;
+}
+
+/* Amélioration de la qualité de rendu */
+svg[class*="lucide"] {
+  shape-rendering: geometricPrecision;
+  text-rendering: geometricPrecision;
+  fill: none !important;
+  /* Style bleu par défaut pour toutes les icônes */
+  color: var(--primary-blue);
+  stroke: var(--primary-blue);
+}
+
+/* Icônes dans les éléments cliquables */
+button svg[class*="lucide"],
+a svg[class*="lucide"],
+[role="button"] svg[class*="lucide"] {
+  pointer-events: none;
+}
+
+/* Animation de pulse pour les icônes importantes */
+@keyframes iconPulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+.icon-pulse {
+  animation: iconPulse 2s ease-in-out infinite;
+}
+
+/* Animation de rotation */
+@keyframes iconRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.icon-rotate {
+  animation: iconRotate 2s linear infinite;
+}
+
+/* Animation de bounce */
+@keyframes iconBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.icon-bounce {
+  animation: iconBounce 1s ease-in-out infinite;
+}
+
+/* ============================================
+   STANDARDISATION PAR CONTEXTE
+   ============================================ */
+
+/* Section Badge - Icônes dans les badges de section */
+.section-badge svg {
+  width: 18px !important;
+  height: 18px !important;
+  color: var(--primary-blue) !important;
+  stroke: var(--primary-blue) !important;
+  stroke-width: 3 !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: drop-shadow(0 2px 3px rgba(37, 99, 235, 0.3));
+}
+
+.section-badge:hover svg,
+.section-badge:focus svg {
+  transform: scale(1.1);
+  color: var(--white) !important;
+  stroke: var(--white) !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  stroke-width: 3.5 !important;
+}
+
+/* Feature Items - Icônes dans les éléments de fonctionnalités */
+.feature-item svg,
+.hero-features svg {
+  width: 20px !important;
+  height: 20px !important;
+  color: var(--primary-blue) !important;
+  stroke: var(--primary-blue) !important;
+  stroke-width: 3 !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: drop-shadow(0 2px 3px rgba(37, 99, 235, 0.25));
+}
+
+.feature-item:hover svg,
+.feature-item:focus svg,
+.hero-features .feature-item:hover svg {
+  transform: scale(1.15) rotate(5deg);
+  color: var(--white) !important;
+  stroke: var(--white) !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  stroke-width: 3.5 !important;
+}
+
+/* Boutons - Icônes dans les boutons */
+button svg,
+.button-icon {
+  width: 20px !important;
+  height: 20px !important;
+  stroke-width: 3 !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--primary-blue) !important;
+  stroke: var(--primary-blue) !important;
+  filter: drop-shadow(0 1px 2px rgba(37, 99, 235, 0.2));
+}
+
+button:hover:not(:disabled) svg,
+button:focus:not(:disabled) svg,
+.button-icon:hover {
+  transform: translateX(3px) scale(1.1);
+  color: var(--white) !important;
+  stroke: var(--white) !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  stroke-width: 3.5 !important;
+}
+
+button:active:not(:disabled) svg {
+  transform: translateX(2px) scale(1.05);
+  stroke-width: 3.2 !important;
+}
+
+button:disabled svg {
+  opacity: 0.6 !important; /* Légèrement augmenté pour visibilité */
+  cursor: not-allowed;
+  filter: none;
+}
+
+button .button-icon-small,
+.button-icon-small {
+  width: 16px !important;
+  height: 16px !important;
+  stroke-width: 2.5 !important; /* Augmenté */
+}
+
+button .button-icon-large,
+.button-icon-large {
+  width: 24px !important;
+  height: 24px !important;
+  stroke-width: 3 !important; /* Augmenté */
+}
+
+/* Cartes de service - Icônes dans les cartes */
+.service-icon svg,
+.facility-icon svg {
+  width: 28px !important;
+  height: 28px !important;
+  color: var(--primary-blue) !important;
+  stroke: var(--primary-blue) !important;
+  stroke-width: 3 !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: drop-shadow(0 2px 3px rgba(37, 99, 235, 0.25));
+}
+
+.service-card:hover .service-icon svg,
+.service-card:focus-within .service-icon svg,
+.facility-card:hover .facility-icon svg {
+  transform: scale(1.15) rotate(5deg);
+  color: var(--white) !important;
+  stroke: var(--white) !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  stroke-width: 3.5 !important;
+}
+
+/* Product Icon - Icônes de produits */
+.product-icon svg {
+  width: 24px !important;
+  height: 24px !important;
+  color: var(--primary-blue) !important;
+  stroke: var(--primary-blue) !important;
+  stroke-width: 3 !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: drop-shadow(0 2px 4px rgba(37, 99, 235, 0.25));
+}
+
+.product-card:hover .product-icon svg,
+.product-card:focus-within .product-icon svg {
+  transform: scale(1.2) rotate(5deg);
+  color: var(--white) !important;
+  stroke: var(--white) !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  stroke-width: 3.5 !important;
+}
+
+/* Info Cards - Icônes dans les cartes d'information */
+.info-card svg,
+.restaurant-info svg,
+.boutique-info svg {
+  width: 24px !important;
+  height: 24px !important;
+  color: var(--primary-blue) !important;
+  stroke: var(--primary-blue) !important;
+  stroke-width: 3 !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: drop-shadow(0 2px 4px rgba(37, 99, 235, 0.25));
+}
+
+.info-card:hover svg,
+.info-card:focus svg,
+.restaurant-info .info-card:hover svg,
+.boutique-info .info-card:hover svg {
+  transform: scale(1.2) rotate(5deg);
+  color: var(--white) !important;
+  stroke: var(--white) !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  stroke-width: 3.5 !important;
+}
+
+/* Footer - Icônes sociales et de contact */
+.footer-social-link svg {
+  width: 20px !important;
+  height: 20px !important;
+  stroke-width: 2.5 !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--primary-blue) !important;
+  stroke: var(--primary-blue) !important;
+  filter: drop-shadow(0 1px 2px rgba(37, 99, 235, 0.2));
+}
+
+.footer-social-link:hover svg,
+.footer-social-link:focus svg {
+  transform: scale(1.2) translateY(-2px);
+  color: var(--white) !important;
+  stroke: var(--white) !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  stroke-width: 3 !important;
+}
+
+.contact-icon-svg {
+  width: 16px !important;
+  height: 16px !important;
+  stroke-width: 2.5 !important;
+  color: var(--primary-blue) !important;
+  stroke: var(--primary-blue) !important;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 1px 2px rgba(37, 99, 235, 0.2));
+}
+
+.contact-icon-svg:hover,
+.contact-icon-svg:focus {
+  transform: scale(1.1);
+  color: var(--white) !important;
+  stroke: var(--white) !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  stroke-width: 3 !important;
+}
+
+/* Menu/Restaurant - Icônes dans les menus */
+.menu-badge svg {
+  width: 14px !important;
+  height: 14px !important;
+  stroke-width: 3 !important; /* Augmenté pour meilleure visibilité */
+  color: var(--secondary-orange) !important;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 1px 2px rgba(255, 140, 0, 0.3));
+}
+
+.menu-card:hover .menu-badge svg {
+  transform: scale(1.1) rotate(10deg);
+  filter: drop-shadow(0 3px 6px rgba(255, 140, 0, 0.4));
+  stroke-width: 3.5 !important;
+}
+
+.menu-time svg {
+  width: 16px !important;
+  height: 16px !important;
+  stroke-width: 2.5 !important;
+  color: var(--primary-blue) !important;
+  stroke: var(--primary-blue) !important;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 1px 2px rgba(37, 99, 235, 0.2));
+}
+
+.menu-card:hover .menu-time svg,
+.menu-card:focus .menu-time svg {
+  transform: scale(1.1);
+  color: var(--white) !important;
+  stroke: var(--white) !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  stroke-width: 3 !important;
+}
+
+.category-btn svg {
+  width: 20px !important;
+  height: 20px !important;
+  stroke-width: 3 !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--primary-blue) !important;
+  stroke: var(--primary-blue) !important;
+  filter: drop-shadow(0 1px 2px rgba(37, 99, 235, 0.2));
+}
+
+.category-btn:hover svg,
+.category-btn:focus svg {
+  transform: scale(1.15) rotate(5deg);
+  color: var(--white) !important;
+  stroke: var(--white) !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  stroke-width: 3.5 !important;
+}
+
+.category-btn.active svg {
+  color: var(--white) !important;
+  stroke: var(--white) !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  stroke-width: 3.5 !important;
+}
+
+/* Map/Stations - Icônes dans la carte */
+.station-icon svg {
+  width: 24px !important;
+  height: 24px !important;
+  color: var(--primary-blue) !important;
+  stroke: var(--primary-blue) !important;
+  stroke-width: 3 !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: drop-shadow(0 2px 4px rgba(37, 99, 235, 0.25));
+}
+
+.station-card:hover .station-icon svg,
+.station-card:focus-within .station-icon svg {
+  transform: scale(1.2) rotate(5deg);
+  color: var(--white) !important;
+  stroke: var(--white) !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  stroke-width: 3.5 !important;
+}
+
+.map-info svg {
+  width: 24px !important;
+  height: 24px !important;
+  color: var(--primary-blue) !important;
+  stroke: var(--primary-blue) !important;
+  stroke-width: 3 !important;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 2px 4px rgba(37, 99, 235, 0.25));
+}
+
+.map-info:hover svg,
+.map-info:focus svg {
+  transform: scale(1.1);
+  color: var(--white) !important;
+  stroke: var(--white) !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  stroke-width: 3.5 !important;
+}
+
+.station-meta svg,
+.station-card svg {
+  width: 18px !important;
+  height: 18px !important;
+  color: var(--primary-blue) !important;
+  stroke: var(--primary-blue) !important;
+  stroke-width: 2.5 !important;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 1px 2px rgba(37, 99, 235, 0.2));
+}
+
+.station-card:hover .station-meta svg,
+.station-card:focus .station-meta svg {
+  transform: scale(1.1);
+  color: var(--white) !important;
+  stroke: var(--white) !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  stroke-width: 3 !important;
+}
+
+/* Career/Jobs - Icônes dans les offres d'emploi */
+.job-meta svg,
+.job-detail-meta svg,
+.job-meta-item svg {
+  width: 16px !important;
+  height: 16px !important;
+  color: var(--primary-blue) !important;
+  stroke: var(--primary-blue) !important;
+  stroke-width: 2.5 !important;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 1px 2px rgba(37, 99, 235, 0.2));
+}
+
+.job-card:hover .job-meta svg,
+.job-card:focus .job-meta svg,
+.job-meta-item:hover svg {
+  transform: scale(1.1);
+  color: var(--white) !important;
+  stroke: var(--white) !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  stroke-width: 3 !important;
+}
+
+.job-icon svg {
+  width: 24px !important;
+  height: 24px !important;
+  color: var(--primary-blue) !important;
+  stroke: var(--primary-blue) !important;
+  stroke-width: 3 !important;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 2px 3px rgba(37, 99, 235, 0.25));
+}
+
+/* Piscine Info Section - Icônes dans les infos pratiques */
+.info-item svg,
+.piscine-info svg,
+.info-section svg {
+  width: 20px !important;
+  height: 20px !important;
+  color: var(--primary-blue) !important;
+  stroke: var(--primary-blue) !important;
+  stroke-width: 3 !important;
+  filter: drop-shadow(0 2px 3px rgba(37, 99, 235, 0.25));
+  transition: all 0.3s ease;
+}
+
+.info-item:hover svg,
+.info-item:focus svg,
+.piscine-info:hover svg {
+  color: var(--white) !important;
+  stroke: var(--white) !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+/* Newsletter - Icônes dans les formulaires */
+.newsletter-input-icon {
+  width: 18px !important;
+  height: 18px !important;
+  stroke-width: 2.5 !important; /* Augmenté */
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+}
+
+.newsletter-button svg {
+  width: 18px !important;
+  height: 18px !important;
+  stroke-width: 3 !important; /* Augmenté pour meilleure visibilité */
+  filter: drop-shadow(0 1px 2px rgba(255, 255, 255, 0.3));
+}
+
+.newsletter-error svg {
+  width: 16px !important;
+  height: 16px !important;
+  stroke-width: 2.5 !important; /* Augmenté */
+  filter: drop-shadow(0 1px 2px rgba(239, 68, 68, 0.3));
+}
+
+.newsletter-success-icon-wrapper svg {
+  width: 24px !important;
+  height: 24px !important;
+  stroke-width: 3 !important; /* Augmenté pour meilleure visibilité */
+  filter: drop-shadow(0 2px 4px rgba(34, 197, 94, 0.3));
+}
+
+/* Popup Newsletter */
+.newsletter-popup-close svg {
+  width: 24px !important;
+  height: 24px !important;
+  stroke-width: 3 !important; /* Augmenté pour meilleure visibilité */
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.newsletter-popup-badge svg {
+  width: 18px !important;
+  height: 18px !important;
+  stroke-width: 3 !important; /* Augmenté */
+  filter: drop-shadow(0 2px 3px rgba(37, 99, 235, 0.3));
+}
+
+.newsletter-popup-benefit-item svg {
+  width: 20px !important;
+  height: 20px !important;
+  stroke-width: 3 !important; /* Augmenté pour meilleure visibilité */
+  filter: drop-shadow(0 2px 3px rgba(37, 99, 235, 0.25));
+}
+
+/* About - Icônes dans la section À propos */
+.feature-icon svg {
+  width: 24px !important;
+  height: 24px !important;
+  stroke-width: 3 !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--primary-blue) !important;
+  stroke: var(--primary-blue) !important;
+  filter: drop-shadow(0 2px 4px rgba(37, 99, 235, 0.25));
+}
+
+.feature-item:hover .feature-icon svg,
+.feature-item:focus .feature-icon svg {
+  transform: scale(1.2) rotate(5deg);
+  color: var(--white) !important;
+  stroke: var(--white) !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  stroke-width: 3.5 !important;
+}
+
+.highlight-icon svg {
+  width: 20px !important;
+  height: 20px !important;
+  stroke-width: 3 !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--primary-blue) !important;
+  stroke: var(--primary-blue) !important;
+  filter: drop-shadow(0 2px 3px rgba(37, 99, 235, 0.25));
+}
+
+.highlight:hover .highlight-icon svg,
+.highlight:focus .highlight-icon svg {
+  transform: scale(1.2) rotate(5deg);
+  color: var(--white) !important;
+  stroke: var(--white) !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  stroke-width: 3.5 !important;
+}
+
+/* Legal - Icônes dans les pages légales */
+.legal-header svg {
+  width: 24px !important;
+  height: 24px !important;
+  stroke-width: 3 !important;
+  color: var(--primary-blue) !important;
+  stroke: var(--primary-blue) !important;
+  filter: drop-shadow(0 2px 4px rgba(37, 99, 235, 0.25));
+  transition: all 0.3s ease;
+}
+
+.legal-header:hover svg,
+.legal-header:focus svg {
+  color: var(--white) !important;
+  stroke: var(--white) !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+/* Hero - Icônes dans la section hero */
+.hero-cta svg {
+  width: 20px !important;
+  height: 20px !important;
+  stroke-width: 3 !important;
+  color: var(--primary-blue) !important;
+  stroke: var(--primary-blue) !important;
+  filter: drop-shadow(0 1px 2px rgba(37, 99, 235, 0.2));
+  transition: all 0.3s ease;
+}
+
+.hero-cta:hover svg,
+.hero-cta:focus svg {
+  color: var(--white) !important;
+  stroke: var(--white) !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+/* Fuel Prices - Icônes dans les cartes de prix */
+.price-icon svg {
+  width: 36px !important;
+  height: 36px !important;
+  stroke-width: 3 !important;
+  color: var(--primary-blue) !important;
+  stroke: var(--primary-blue) !important;
+  filter: drop-shadow(0 3px 6px rgba(37, 99, 235, 0.3));
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.price-card:hover .price-icon svg,
+.price-card:focus .price-icon svg {
+  transform: scale(1.15) rotate(5deg);
+  color: var(--white) !important;
+  stroke: var(--white) !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  stroke-width: 3.5 !important;
+}
+
+.price-card-selected .price-icon svg {
+  color: var(--white) !important;
+  stroke: var(--white) !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+/* Exchange Rates - Icônes dans les taux de change */
+.exchange-icon svg,
+.rate-icon svg {
+  width: 24px !important;
+  height: 24px !important;
+  stroke-width: 3 !important;
+  color: var(--primary-blue) !important;
+  stroke: var(--primary-blue) !important;
+  filter: drop-shadow(0 2px 4px rgba(37, 99, 235, 0.25));
+  transition: all 0.3s ease;
+}
+
+.exchange-icon:hover svg,
+.exchange-icon:focus svg,
+.rate-icon:hover svg {
+  color: var(--white) !important;
+  stroke: var(--white) !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+/* Contact - Icônes dans le formulaire de contact */
+.contact-form-icon svg,
+.form-icon svg {
+  width: 20px !important;
+  height: 20px !important;
+  stroke-width: 3 !important;
+  color: var(--primary-blue) !important;
+  stroke: var(--primary-blue) !important;
+  filter: drop-shadow(0 1px 2px rgba(37, 99, 235, 0.2));
+  transition: all 0.3s ease;
+}
+
+.contact-form-icon:hover svg,
+.contact-form-icon:focus svg,
+.form-icon:hover svg {
+  color: var(--white) !important;
+  stroke: var(--white) !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+/* Conteneurs d'icônes avec fond */
+.icon-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.icon-container-small {
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+}
+
+.icon-container-medium {
+  width: 48px;
+  height: 48px;
+  padding: 10px;
+}
+
+.icon-container-large {
+  width: 56px;
+  height: 56px;
+  padding: 12px;
+}
+
+.icon-container-xlarge {
+  width: 64px;
+  height: 64px;
+  padding: 14px;
+}
+
+/* Conteneur avec gradient bleu */
+.icon-container-gradient {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(30, 58, 138, 0.1));
+  color: var(--icon-color-primary);
+  border: 1px solid rgba(37, 99, 235, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-container-gradient svg {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-container-gradient:hover {
+  background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
+  border-color: transparent;
+  color: var(--icon-color-white);
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+}
+
+.icon-container-gradient:hover svg {
+  transform: scale(1.1);
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+/* Conteneur circulaire */
+.icon-container-circle {
+  border-radius: 50%;
+}
+
+/* Conteneur carré avec coins arrondis */
+.icon-container-rounded {
+  border-radius: 16px;
+}
+
+/* Espacement autour des icônes */
+.icon-with-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.icon-before-text {
+  margin-right: 0.5rem;
+}
+
+.icon-after-text {
+  margin-left: 0.5rem;
+}
+
+/* Animation au hover - Classes utilitaires */
+.icon-hover-scale:hover {
+  transform: scale(1.15);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-hover-rotate:hover {
+  transform: rotate(5deg) scale(1.1);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-hover-lift:hover {
+  transform: translateY(-3px);
+  filter: drop-shadow(0 4px 8px rgba(37, 99, 235, 0.2));
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-hover-glow:hover {
+  filter: drop-shadow(0 0 8px rgba(37, 99, 235, 0.5));
+  color: var(--primary-blue);
+}
+
+.icon-hover-color:hover {
+  color: var(--dark-blue);
+  transition: color 0.3s ease;
+}
+
+/* États actifs */
+.icon-active {
+  color: var(--dark-blue);
+  transform: scale(1.1);
+}
+
+.icon-active svg {
+  filter: drop-shadow(0 2px 4px rgba(37, 99, 235, 0.3));
+}
+
+/* États focus pour l'accessibilité */
+.icon-focus:focus-visible {
+  outline: 2px solid var(--primary-blue);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ============================================
+   VARIANTES VISUELLES
+   ============================================ */
+
+/* Icônes avec ombre portée */
+.icon-shadow {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.icon-shadow-lg {
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+}
+
+/* Icônes avec glow */
+.icon-glow {
+  filter: drop-shadow(0 0 6px rgba(37, 99, 235, 0.4));
+}
+
+.icon-glow-lg {
+  filter: drop-shadow(0 0 12px rgba(37, 99, 235, 0.6));
+}
+
+/* Icônes avec bordure */
+.icon-bordered {
+  padding: 4px;
+  border: 2px solid currentColor;
+  border-radius: 8px;
+}
+
+/* Icônes avec fond circulaire */
+.icon-circle-bg {
+  padding: 8px;
+  background: rgba(37, 99, 235, 0.1);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.icon-circle-bg:hover {
+  background: rgba(37, 99, 235, 0.2);
+  transform: scale(1.1);
+}
+
+/* Icônes avec gradient de couleur */
+.icon-gradient {
+  background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Icônes animées au chargement */
+.icon-loading {
+  animation: iconRotate 1s linear infinite;
+}
+
+/* Icônes avec effet de brillance */
+.icon-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.icon-shine::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transform: rotate(45deg);
+  animation: iconShine 3s infinite;
+}
+
+@keyframes iconShine {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) translateY(100%) rotate(45deg);
+  }
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+  .icon-container-large {
+    width: 48px;
+    height: 48px;
+    padding: 10px;
+  }
+  
+  .icon-container-xlarge {
+    width: 56px;
+    height: 56px;
+    padding: 12px;
+  }
+  
+  .service-icon svg,
+  .facility-icon svg {
+    width: 24px !important;
+    height: 24px !important;
+  }
+  
+  .info-card svg {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  /* Réduire les animations sur mobile pour les performances */
+  .icon-pulse,
+  .icon-rotate,
+  .icon-bounce {
+    animation: none;
+  }
+
+  /* Simplifier les effets hover sur mobile */
+  svg[class*="lucide"]:hover {
+    transform: scale(1.05);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /* Respecter les préférences d'accessibilité */
+  svg[class*="lucide"],
+  .icon-pulse,
+  .icon-rotate,
+  .icon-bounce,
+  .icon-shine::before {
+    animation: none;
+    transition: none;
+  }
+}
+

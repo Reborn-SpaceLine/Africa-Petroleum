@@ -213,7 +213,7 @@
   transform: translateX(-50%) scaleX(0);
   width: 70%;
   height: 2px;
-  background: linear-gradient(90deg, var(--primary-blue), var(--primary-orange));
+  background: linear-gradient(90deg, var(--primary-blue), var(--dark-blue));
   border-radius: 2px;
   transition: var(--header-transition-transform);
 }
@@ -301,7 +301,7 @@
   transform: translateX(-50%) scaleX(0);
   width: 70%;
   height: 2px;
-  background: linear-gradient(90deg, var(--primary-blue), var(--primary-orange));
+  background: linear-gradient(90deg, var(--primary-blue), var(--dark-blue));
   border-radius: 2px;
   transition: var(--header-transition-transform);
 }
@@ -355,7 +355,7 @@
   transform: translateY(-50%) scaleX(0);
   width: 3px;
   height: 60%;
-  background: linear-gradient(180deg, var(--primary-blue), var(--primary-orange));
+  background: linear-gradient(180deg, var(--primary-blue), var(--dark-blue));
   border-radius: 0 2px 2px 0;
   transition: var(--header-transition-transform);
 }

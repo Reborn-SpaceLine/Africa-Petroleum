@@ -217,7 +217,7 @@ export default function Career({ onJobClick, selectedJobIdForForm, onCloseForm }
               <div key={job.id} className="job-card">
                 <div className="job-header">
                   <div className="job-icon">
-                    <Briefcase size={24} />
+                    <Briefcase size={48} strokeWidth={2.5} />
                   </div>
                   <div className="job-title-section">
                     <h3 className="job-title">{job.title}</h3>
@@ -227,16 +227,16 @@ export default function Career({ onJobClick, selectedJobIdForForm, onCloseForm }
 
                 <div className="job-info">
                   <div className="job-info-item">
-                    <MapPin size={16} />
+                    <MapPin size={20} strokeWidth={2.5} />
                     <span>{job.location}</span>
                   </div>
                   <div className="job-info-item">
-                    <Clock size={16} />
+                    <Clock size={20} strokeWidth={2.5} />
                     <span>{job.type}</span>
                   </div>
                   {job.salary && (
                     <div className="job-info-item">
-                      <DollarSign size={16} />
+                      <DollarSign size={20} strokeWidth={2.5} />
                       <span>{job.salary}</span>
                     </div>
                   )}
