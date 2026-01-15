@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { ChefHat, Coffee, Pizza, Utensils, Sparkles, Clock, Star } from 'lucide-react';
+import InfoCard from './InfoCard';
 import '../styles/Restaurant.css';
 
 export default function RestaurantPage() {
@@ -129,28 +130,25 @@ export default function RestaurantPage() {
           ))}
         </div>
 
-        <div className="restaurant-info">
-          <div className="info-card">
-            <div className="info-icon">
-              <Sparkles size={48} strokeWidth={2.5} />
-            </div>
-            <h3>Service 24/7</h3>
-            <p>Notre restaurant est ouvert toute la journée pour votre confort</p>
-          </div>
-          <div className="info-card">
-            <div className="info-icon">
-              <ChefHat size={48} strokeWidth={2.5} />
-            </div>
-            <h3>Cuisine Traditionnelle</h3>
-            <p>Des plats authentiques préparés avec des ingrédients frais locaux</p>
-          </div>
-          <div className="info-card">
-            <div className="info-icon">
-              <Utensils size={48} strokeWidth={2.5} />
-            </div>
-            <h3>Service Rapide</h3>
-            <p>Commandes préparées rapidement pour ne pas vous faire attendre</p>
-          </div>
+        <div className="restaurant-info info-cards-grid">
+          <InfoCard
+            icon={Sparkles}
+            title="Service 24/7"
+            description="Notre restaurant est ouvert toute la journée pour votre confort"
+            layout="vertical"
+          />
+          <InfoCard
+            icon={ChefHat}
+            title="Cuisine Traditionnelle"
+            description="Des plats authentiques préparés avec des ingrédients frais locaux"
+            layout="vertical"
+          />
+          <InfoCard
+            icon={Utensils}
+            title="Service Rapide"
+            description="Commandes préparées rapidement pour ne pas vous faire attendre"
+            layout="vertical"
+          />
         </div>
       </div>
     </div>

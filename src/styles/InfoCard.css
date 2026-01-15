@@ -1,0 +1,249 @@
+/* ============================================
+   INFO CARD - Composant réutilisable
+   Style unique basé sur Contact - Non modifiable
+   ============================================ */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Style unique avec !important pour éviter tout override */
+.info-card {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 16px !important;
+  padding: 20px !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px) !important;
+  border-radius: 16px !important;
+  border: 2px solid var(--primary-blue) !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.06) !important;
+  animation: fadeInUp 0.6s ease-out backwards !important;
+}
+
+/* Layout vertical */
+.info-card-vertical {
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+/* Délai d'animation pour chaque carte */
+.info-card:nth-child(1) { animation-delay: 0.1s !important; }
+.info-card:nth-child(2) { animation-delay: 0.2s !important; }
+.info-card:nth-child(3) { animation-delay: 0.3s !important; }
+.info-card:nth-child(4) { animation-delay: 0.3s !important; }
+.info-card:nth-child(5) { animation-delay: 0.4s !important; }
+
+/* Barre décorative en haut avec effet de brillance */
+.info-card::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 3px !important;
+  background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue)) !important;
+  transform: scaleX(0) !important;
+  transform-origin: left !important;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: 0 2px 10px rgba(255, 140, 0, 0.3) !important;
+}
+
+/* Effet de brillance animé sur la barre */
+.info-card::after {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: -100% !important;
+  width: 100% !important;
+  height: 3px !important;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent) !important;
+  transition: left 0.6s ease !important;
+}
+
+.info-card:hover::after {
+  left: 100% !important;
+}
+
+/* Effet hover avec élévation */
+.info-card:hover {
+  border-color: var(--secondary-orange) !important;
+  transform: translateX(8px) translateY(-4px) scale(1.02) !important;
+  box-shadow: 0 12px 40px rgba(37, 99, 235, 0.15), 
+              0 0 0 1px rgba(255, 140, 0, 0.1) !important;
+  background: var(--white) !important;
+}
+
+.info-card-vertical:hover {
+  transform: translateY(-4px) scale(1.02) !important;
+}
+
+.info-card:hover::before {
+  transform: scaleX(1) !important;
+}
+
+/* Icône avec style identique à Contact */
+.info-icon {
+  width: 48px !important;
+  height: 48px !important;
+  background: rgba(37, 99, 235, 0.1) !important;
+  border-radius: 10px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+  transition: all 0.3s ease !important;
+  border: 2px solid rgba(37, 99, 235, 0.2) !important;
+}
+
+.info-icon svg {
+  width: 48px !important;
+  height: 48px !important;
+  color: var(--primary-blue) !important;
+  stroke: var(--primary-blue) !important;
+  stroke-width: 2.5 !important;
+  fill: none !important;
+  transition: all 0.3s ease !important;
+}
+
+.info-card:hover .info-icon {
+  background: var(--primary-blue) !important;
+  border-color: var(--primary-blue) !important;
+  transform: scale(1.05) !important;
+}
+
+.info-card:hover .info-icon svg {
+  color: var(--white) !important;
+  stroke: var(--white) !important;
+}
+
+/* Contenu */
+.info-content {
+  flex: 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+  align-items: flex-start !important;
+  text-align: left !important;
+}
+
+.info-card-vertical .info-content {
+  align-items: center !important;
+  text-align: center !important;
+}
+
+/* Titre avec style identique à Contact */
+.info-title {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: var(--primary-blue) !important;
+  margin-bottom: 2px !important;
+  transition: color 0.3s ease !important;
+  line-height: 1.3 !important;
+}
+
+.info-card:hover .info-title {
+  color: var(--secondary-orange) !important;
+}
+
+/* Description avec style identique à Contact */
+.info-text {
+  font-size: 13px !important;
+  line-height: 1.6 !important;
+  color: var(--text-dark) !important;
+  transition: color 0.3s ease !important;
+  margin: 0 !important;
+}
+
+.info-card:hover .info-text {
+  color: var(--text-dark) !important;
+}
+
+/* ============================================
+   LAYOUTS
+   ============================================ */
+
+.info-cards-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+  gap: 16px !important;
+  margin-top: 1.5rem !important;
+}
+
+.info-cards-row {
+  display: flex !important;
+  gap: 16px !important;
+  flex-wrap: wrap !important;
+  margin-top: 1.5rem !important;
+}
+
+.info-cards-row .info-card {
+  flex: 1 !important;
+  min-width: 200px !important;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+  .info-card {
+    padding: 18px !important;
+    gap: 14px !important;
+  }
+  .info-icon {
+    width: 44px !important;
+    height: 44px !important;
+  }
+  .info-icon svg {
+    width: 36px !important;
+    height: 36px !important;
+  }
+  .info-title {
+    font-size: 14px !important;
+  }
+  .info-text {
+    font-size: 12px !important;
+  }
+  .info-cards-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  .info-cards-row {
+    flex-direction: column !important;
+    gap: 16px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .info-card {
+    padding: 16px !important;
+    gap: 12px !important;
+  }
+  .info-icon {
+    width: 40px !important;
+    height: 40px !important;
+  }
+  .info-icon svg {
+    width: 32px !important;
+    height: 32px !important;
+  }
+  .info-title {
+    font-size: 13px !important;
+  }
+  .info-text {
+    font-size: 11px !important;
+  }
+}

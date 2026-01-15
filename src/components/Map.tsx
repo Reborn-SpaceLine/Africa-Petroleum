@@ -4,6 +4,7 @@
  */
 import { useState } from 'react';
 import { MapPin, Phone, Clock, Navigation, Mail } from 'lucide-react';
+import InfoCard from './InfoCard';
 import '../styles/Map.css';
 
 interface Station {
@@ -187,22 +188,25 @@ export default function MapPage() {
           ))}
         </div>
 
-        <div className="stations-info">
-          <div className="info-card">
-            <MapPin size={24} />
-            <h3>Réseau National</h3>
-            <p>{stations.length} stations réparties dans les principales villes du Cameroun</p>
-          </div>
-          <div className="info-card">
-            <Clock size={24} />
-            <h3>Disponibilité 24/7</h3>
-            <p>Toutes nos stations sont ouvertes 24h/24 et 7j/7 pour votre commodité</p>
-          </div>
-          <div className="info-card">
-            <Navigation size={24} />
-            <h3>Services Complets</h3>
-            <p>Carburant, lubrifiants, boutique, restaurant et bien plus encore</p>
-          </div>
+        <div className="stations-info info-cards-grid">
+          <InfoCard
+            icon={MapPin}
+            title="Réseau National"
+            description={`${stations.length} stations réparties dans les principales villes du Cameroun`}
+            layout="vertical"
+          />
+          <InfoCard
+            icon={Clock}
+            title="Disponibilité 24/7"
+            description="Toutes nos stations sont ouvertes 24h/24 et 7j/7 pour votre commodité"
+            layout="vertical"
+          />
+          <InfoCard
+            icon={Navigation}
+            title="Services Complets"
+            description="Carburant, lubrifiants, boutique, restaurant et bien plus encore"
+            layout="vertical"
+          />
         </div>
       </div>
     </section>

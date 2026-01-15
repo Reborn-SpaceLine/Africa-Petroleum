@@ -1,4 +1,5 @@
 import { ShoppingBag, Package, Car, Wrench, Coffee, Gift } from 'lucide-react';
+import InfoCard from './InfoCard';
 import '../styles/Boutique.css';
 
 export default function Boutique() {
@@ -103,28 +104,25 @@ export default function Boutique() {
           ))}
         </div>
 
-        <div className="boutique-info">
-          <div className="info-card">
-            <div className="info-icon">
-              <ShoppingBag size={48} strokeWidth={2.5} />
-            </div>
-            <h3>Large Choix</h3>
-            <p>Une gamme complète de produits pour votre véhicule</p>
-          </div>
-          <div className="info-card">
-            <div className="info-icon">
-              <Package size={48} strokeWidth={2.5} />
-            </div>
-            <h3>Qualité Garantie</h3>
-            <p>Produits de marques reconnues et de qualité supérieure</p>
-          </div>
-          <div className="info-card">
-            <div className="info-icon">
-              <Coffee size={48} strokeWidth={2.5} />
-            </div>
-            <h3>Service Rapide</h3>
-            <p>Disponible pendant les heures d'ouverture de la station</p>
-          </div>
+        <div className="boutique-info info-cards-grid">
+          <InfoCard
+            icon={ShoppingBag}
+            title="Large Choix"
+            description="Une gamme complète de produits pour votre véhicule"
+            layout="vertical"
+          />
+          <InfoCard
+            icon={Package}
+            title="Qualité Garantie"
+            description="Produits de marques reconnues et de qualité supérieure"
+            layout="vertical"
+          />
+          <InfoCard
+            icon={Coffee}
+            title="Service Rapide"
+            description="Disponible pendant les heures d'ouverture de la station"
+            layout="vertical"
+          />
         </div>
       </div>
     </div>

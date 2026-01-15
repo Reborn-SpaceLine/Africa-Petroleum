@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
+import InfoCard from './InfoCard';
 import '../styles/Contact.css';
 
 export default function Contact() {
@@ -38,49 +39,27 @@ export default function Contact() {
         </div>
 
         <div className="contact-content">
-          <div className="contact-info">
-            <div className="info-card">
-              <div className="info-icon">
-                <MapPin size={48} strokeWidth={2.5} />
-              </div>
-              <div className="info-content">
-                <h3 className="info-title">Adresse</h3>
-                <p className="info-text">Bafoussam, Douala, Yaoundé<br />Cameroun</p>
-              </div>
-            </div>
-
-            <div className="info-card">
-              <div className="info-icon">
-                <Phone size={48} strokeWidth={2.5} />
-              </div>
-              <div className="info-content">
-                <h3 className="info-title">Téléphone</h3>
-                <p className="info-text">+237 6 96 44 99 08<br />+237 6 YY YY YY YY</p>
-              </div>
-            </div>
-
-            <div className="info-card">
-              <div className="info-icon">
-                <Mail size={48} strokeWidth={2.5} />
-              </div>
-              <div className="info-content">
-                <h3 className="info-title">Email</h3>
-                <p className="info-text">contact@africapetroleum.cm<br />info@africapetroleum.cm</p>
-              </div>
-            </div>
-
-            <div className="info-card">
-              <div className="info-icon">
-                <Clock size={48} strokeWidth={2.5} />
-              </div>
-              <div className="info-content">
-                <h3 className="info-title">Horaires d'Ouverture</h3>
-                <p className="info-text">
-                  Ouvert 24h/24 - 7j/7<br />
-                  Service continu
-                </p>
-              </div>
-            </div>
+          <div className="contact-info info-cards-grid">
+            <InfoCard
+              icon={MapPin}
+              title="Adresse"
+              description={<>{'Bafoussam, Douala, Yaoundé'}<br />{'Cameroun'}</>}
+            />
+            <InfoCard
+              icon={Phone}
+              title="Téléphone"
+              description={<>{'+237 6 96 44 99 08'}<br />{'+237 6 YY YY YY YY'}</>}
+            />
+            <InfoCard
+              icon={Mail}
+              title="Email"
+              description={<>{'contact@africapetroleum.cm'}<br />{'info@africapetroleum.cm'}</>}
+            />
+            <InfoCard
+              icon={Clock}
+              title="Horaires d'Ouverture"
+              description={<>{'Ouvert 24h/24 - 7j/7'}<br />{'Service continu'}</>}
+            />
           </div>
 
           <form className="contact-form" onSubmit={handleSubmit}>

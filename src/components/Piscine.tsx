@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Waves, Users, Clock, Sparkles, Calendar, MapPin } from 'lucide-react';
+import InfoCard from './InfoCard';
 import '../styles/Piscine.css';
 
 export default function PiscinePage() {
@@ -166,28 +167,25 @@ export default function PiscinePage() {
         <div className="piscine-info">
           <div className="info-section">
             <h3>Informations Pratiques</h3>
-            <div className="info-grid">
-              <div className="info-item">
-                <Calendar size={48} strokeWidth={2.5} />
-                <div>
-                  <strong>Horaires</strong>
-                  <p>6h00 - 22h00</p>
-                </div>
-              </div>
-              <div className="info-item">
-                <MapPin size={48} strokeWidth={2.5} />
-                <div>
-                  <strong>Localisation</strong>
-                  <p>À côté de la station-service</p>
-                </div>
-              </div>
-              <div className="info-item">
-                <Users size={48} strokeWidth={2.5} />
-                <div>
-                  <strong>Capacité</strong>
-                  <p>Jusqu'à 100 personnes</p>
-                </div>
-              </div>
+            <div className="info-cards-row">
+              <InfoCard
+                icon={Calendar}
+                title="Horaires"
+                description="6h00 - 22h00"
+                layout="vertical"
+              />
+              <InfoCard
+                icon={MapPin}
+                title="Localisation"
+                description="À côté de la station-service"
+                layout="vertical"
+              />
+              <InfoCard
+                icon={Users}
+                title="Capacité"
+                description="Jusqu'à 100 personnes"
+                layout="vertical"
+              />
             </div>
           </div>
         </div>

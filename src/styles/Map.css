@@ -265,50 +265,7 @@
 
 /* Section d'information */
 .stations-info {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
   margin-top: 60px;
-}
-
-.info-card {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  padding: 32px;
-  border-radius: 20px;
-  text-align: center;
-  transition: all 0.3s ease;
-  border: 2px solid rgba(37, 99, 235, 0.1);
-  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.06);
-}
-
-.info-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 30px rgba(37, 99, 235, 0.12);
-  border-color: var(--secondary-orange);
-}
-
-.info-card svg {
-  width: 48px;
-  height: 48px;
-  color: var(--primary-blue);
-  margin-bottom: 16px;
-  background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(255, 140, 0, 0.1));
-  padding: 12px;
-  border-radius: 12px;
-}
-
-.info-card h3 {
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--text-dark);
-  margin-bottom: 12px;
-}
-
-.info-card p {
-  font-size: 14px;
-  color: var(--text-light);
-  line-height: 1.6;
 }
 
 /* Responsive */
@@ -341,9 +298,6 @@
     font-size: 14px;
   }
 
-  .stations-info {
-    grid-template-columns: 1fr;
-  }
 }
 
 @media (max-width: 480px) {
