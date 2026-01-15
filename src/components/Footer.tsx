@@ -50,13 +50,13 @@ export default function Footer() {
             </p>
             <div className="footer-social-links">
                 <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="footer-social-link" aria-label="Facebook">
-                    <Facebook size={20} />
+                    <Facebook size={18} strokeWidth={2.5} />
                 </a>
                 <a href="https://wa.me/237696449908" target="_blank" rel="noopener noreferrer" className="footer-social-link" aria-label="WhatsApp">
-                    <MessageCircle size={20} />
+                    <MessageCircle size={18} strokeWidth={2.5} />
                 </a>
                 <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="footer-social-link" aria-label="Instagram">
-                    <Instagram size={20} />
+                    <Instagram size={18} strokeWidth={2.5} />
                 </a>
               </div>
           </div>
@@ -85,31 +85,65 @@ export default function Footer() {
           <div className="footer-section">
             <h4 className="footer-title">Contact</h4>
             <div className="contact-info-footer">
-              <MapPin size={20} strokeWidth={2.5} className="contact-icon-svg" />
+              <MapPin size={16} strokeWidth={2.5} className="contact-icon-svg" />
               <span>Bafoussam, Douala, Yaoundé</span>
             </div>
             <div className="contact-info-footer">
-              <Phone size={20} strokeWidth={2.5} className="contact-icon-svg" />
+              <Phone size={16} strokeWidth={2.5} className="contact-icon-svg" />
               <a href="tel:+237696449908" className="contact-link">+237 6 96 44 99 08</a>
             </div>
             <div className="contact-info-footer">
-              <Mail size={20} strokeWidth={2.5} className="contact-icon-svg" />
+              <Mail size={16} strokeWidth={2.5} className="contact-icon-svg" />
               <a href="mailto:contact@africapetroleum.cm" className="contact-link">contact@africapetroleum.cm</a>
             </div>
             <div className="contact-info-footer">
-              <Clock size={20} strokeWidth={2.5} className="contact-icon-svg" />
+              <Clock size={16} strokeWidth={2.5} className="contact-icon-svg" />
               <span>Ouvert 24h/24 - 7j/7</span>
             </div>
           </div>
       </div>
       
       <div className="footer-copyright">
-        <p>
-          <a href="https://www.oicpole.com" target="_blank" rel="noopener noreferrer"> © {currentYear} Ocean Innovation Center (OIC). Tous droits réservés.</a> | 
-          <button onClick={() => navigateToPage('mentions-legales')} className="footer-link-btn"> Mentions Légales</button> | 
-          <button onClick={() => navigateToPage('politique-de-confidentialite')} className="footer-link-btn"> Politique de Confidentialité</button> | 
-          <button onClick={() => navigateToPage('cgu')} className="footer-link-btn"> Conditions d'Utilisation</button>
-        </p>
+        <div className="footer-copyright-content">
+          <div className="footer-copyright-text">
+            <span className="copyright-symbol">©</span>
+            <span className="copyright-year">{currentYear}</span>
+            <a 
+              href="https://www.oicpole.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="copyright-link"
+            >
+              Ocean Innovation Center (OIC)
+            </a>
+            <span className="copyright-rights">Tous droits réservés.</span>
+          </div>
+          <div className="footer-legal-links">
+            <button 
+              onClick={() => navigateToPage('mentions-legales')} 
+              className="footer-link-btn"
+              aria-label="Mentions légales"
+            >
+              Mentions Légales
+            </button>
+            <span className="separator">|</span>
+            <button 
+              onClick={() => navigateToPage('politique-de-confidentialite')} 
+              className="footer-link-btn"
+              aria-label="Politique de confidentialité"
+            >
+              Politique de Confidentialité
+            </button>
+            <span className="separator">|</span>
+            <button 
+              onClick={() => navigateToPage('cgu')} 
+              className="footer-link-btn"
+              aria-label="Conditions d'utilisation"
+            >
+              Conditions d'Utilisation
+            </button>
+          </div>
+        </div>
       </div>
     </footer>
   );
