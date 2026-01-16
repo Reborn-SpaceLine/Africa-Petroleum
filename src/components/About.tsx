@@ -66,15 +66,15 @@ export default function About() {
     <section className="about" id="apropos">
       <div className="container">
         <div className="section-header">
-          <div className="section-badge">
-            <Award size={18} />
-            <span>À Propos de Nous</span>
-          </div>
-          <h1 className="section-title">Africa Petroleum</h1>
+        <div className="section-badge">
+          <Award size={18} />
+          <span>À Propos de Nous</span>
+        </div>
+            <h1 className="section-title">Africa Petroleum</h1>
           <p className="section-description">
             Votre partenaire énergétique de confiance au Cameroun. Nous transformons l'expérience de ravitaillement avec des services de pointe et une qualité inégalée.
           </p>
-        </div>
+          </div>
 
         <div className="about-sections">
           {sections.map((section, index) => (
@@ -87,13 +87,13 @@ export default function About() {
                 <h2 className="section-content-title">{section.title}</h2>
                 <h3 className="section-content-subtitle">{section.subtitle}</h3>
                 <p className="section-content-description">{section.description}</p>
-              </div>
+                    </div>
               <div className="section-image-wrapper">
                 <div className="section-image-trapezoid">
                   <img src={section.image} alt={section.title} />
+                  </div>
                 </div>
-              </div>
-            </div>
+          </div>
           ))}
         </div>
 
