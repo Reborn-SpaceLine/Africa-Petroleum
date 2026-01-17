@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { ChevronDown } from 'lucide-react';
 import logoImage from '../assets/logo.webp';
-import '../styles/Header.css';
+import '../styles/portrait/Header.css';
 
 interface HeaderProps {
   onRestaurantClick: () => void;
@@ -92,7 +92,7 @@ export default function Header({
     // Essayer plusieurs fois si l'élément n'est pas encore disponible
     let attempts = 0;
     const maxAttempts = 10;
-    
+
     const tryScroll = () => {
       const el = document.getElementById(id);
       if (el) {
@@ -138,18 +138,18 @@ export default function Header({
     // Empêcher tout comportement par défaut et la propagation
     e.preventDefault();
     e.stopPropagation();
-    
+
     // Fermer les menus immédiatement (important pour mobile)
     closeAll();
-    
+
     // Forcer le scroll vers le haut immédiatement (sans animation)
     window.scrollTo({ top: 0, behavior: 'auto' });
-    
+
     // Navigation : utiliser à la fois setCurrentPage ET le callback
     // pour double sécurité
     setCurrentPage('map');
     onMapClick();
-    
+
     // Fallback : forcer une nouvelle fois après un court délai
     // pour s'assurer que React a bien traité la mise à jour
     setTimeout(() => {
@@ -177,8 +177,8 @@ export default function Header({
             </div>
 
             {/* BOUTON NOS STATIONS (visible sur mobile, à gauche du menu) */}
-            <button 
-              className="mobile-stations-btn" 
+            <button
+              className="mobile-stations-btn"
               onClick={handleMapNavigation}
               onMouseDown={(e) => e.preventDefault()}
               type="button"
@@ -258,8 +258,8 @@ export default function Header({
                 Offres d'emploi
               </button>
 
-              <button 
-                className="nav-link nav-link-cta desktop-stations-btn" 
+              <button
+                className="nav-link nav-link-cta desktop-stations-btn"
                 onClick={handleMapNavigation}
                 onMouseDown={(e) => e.preventDefault()}
                 type="button"
