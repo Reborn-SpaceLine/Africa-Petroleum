@@ -135,4 +135,3 @@ Fichier contenant toutes les actualités affichées sur la page "Actualités".
 - Le fichier doit rester un JSON valide
 - Après modification, vérifiez que le JSON est bien formaté
 - En production, un redémarrage peut être nécessaire pour voir les changements
-

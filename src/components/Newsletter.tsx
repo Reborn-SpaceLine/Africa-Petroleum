@@ -21,7 +21,7 @@ export default function Newsletter({ onSubscribeSuccess }: NewsletterProps) {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
-    
+
     if (!email) {
       setError('Veuillez entrer votre adresse email');
       return;
@@ -40,7 +40,7 @@ export default function Newsletter({ onSubscribeSuccess }: NewsletterProps) {
       setIsLoading(false);
       setIsSubscribed(true);
       setEmail('');
-      
+
       // Appeler le callback de succès si fourni
       if (onSubscribeSuccess) {
         // Attendre 2 secondes pour afficher le message de succès, puis fermer
@@ -102,7 +102,7 @@ export default function Newsletter({ onSubscribeSuccess }: NewsletterProps) {
             )}
           </form>
           <p className="newsletter-privacy">
-            En vous inscrivant, vous acceptez de recevoir nos emails. 
+            En vous inscrivant, vous acceptez de recevoir nos emails.
             Vous pouvez vous désabonner à tout moment.
           </p>
         </>

@@ -16,31 +16,46 @@
    ============================================ */
 :root {
   /* Couleurs principales - 35% bleu (couleur dominante) */
-  --primary-blue: #2563eb; /* Bleu vif principal */
-  --secondary-blue: #1e40af; /* Bleu foncé */
-  --light-blue: #3b82f6; /* Bleu moyen */
-  --dark-blue: #1e3a8a; /* Bleu très foncé */
-  
+  --primary-blue: #2563eb;
+  /* Bleu vif principal */
+  --secondary-blue: #1e40af;
+  /* Bleu foncé */
+  --light-blue: #3b82f6;
+  /* Bleu moyen */
+  --dark-blue: #1e3a8a;
+  /* Bleu très foncé */
+
   /* Couleurs principales - 35% orange (couleur dominante) */
-  --primary-orange: #FF8C00; /* Orange vif principal */
-  --secondary-orange: #ff9500; /* Orange clair */
-  --dark-orange: #e67e00; /* Orange foncé */
-  
+  --primary-orange: #FF8C00;
+  /* Orange vif principal */
+  --secondary-orange: #ff9500;
+  /* Orange clair */
+  --dark-orange: #e67e00;
+  /* Orange foncé */
+
   /* Variables de compatibilité (remplacées par bleu/orange) */
-  --primary-bordeaux: var(--primary-blue); /* Remplacé par bleu */
-  --dark-bordeaux: var(--dark-blue); /* Remplacé par bleu foncé */
-  
+  --primary-bordeaux: var(--primary-blue);
+  /* Remplacé par bleu */
+  --dark-bordeaux: var(--dark-blue);
+  /* Remplacé par bleu foncé */
+
   /* Couleurs d'accent du logo */
-  --accent-green: #2d5016; /* Vert foncé du liquide sur la carte (optionnel) */
-  --accent-silver: #C0C0C0; /* Gris argenté de la pompe à essence (optionnel) */
-  
+  --accent-green: #2d5016;
+  /* Vert foncé du liquide sur la carte (optionnel) */
+  --accent-silver: #C0C0C0;
+  /* Gris argenté de la pompe à essence (optionnel) */
+
   /* Couleurs de fond et texte */
-  --light-bg: #f5f5f5; /* Fond clair neutre (remplace le rose) */
+  --light-bg: #f5f5f5;
+  /* Fond clair neutre (remplace le rose) */
   --white: #ffffff;
-  --text-dark: #2c2c2c; /* Texte principal */
-  --text-light: #666666; /* Texte secondaire */
-  --border-color: #e0e0e0; /* Bordures et séparateurs */
-  
+  --text-dark: #2c2c2c;
+  /* Texte principal */
+  --text-light: #666666;
+  /* Texte secondaire */
+  --border-color: #e0e0e0;
+  /* Bordures et séparateurs */
+
   /* Standards pour les icônes */
   --icon-size-small: 16px;
   --icon-size-medium: 20px;
@@ -101,7 +116,8 @@ body {
 
 /* Style du header quand on scroll (avec ombre) */
 .header.scrolled {
-  box-shadow: 0 2px 20px rgba(37, 99, 235, 0.08); /* Ombre avec couleur bleue */
+  box-shadow: 0 2px 20px rgba(37, 99, 235, 0.08);
+  /* Ombre avec couleur bleue */
   border-bottom-color: var(--border-color);
 }
 
@@ -138,12 +154,14 @@ body {
 .logo-name {
   font-size: 20px;
   font-weight: 700;
-  color: var(--white); /* Texte blanc pour contraste sur fond orange */
+  color: var(--white);
+  /* Texte blanc pour contraste sur fond orange */
 }
 
 .logo-tagline {
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.9); /* Texte blanc semi-transparent */
+  color: rgba(255, 255, 255, 0.9);
+  /* Texte blanc semi-transparent */
   font-weight: 500;
 }
 
@@ -181,116 +199,8 @@ body {
 .nav-link-cta:hover {
   background: linear-gradient(135deg, var(--dark-blue), var(--primary-blue));
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25); /* Ombre avec couleur bordeaux du logo */
-}
-
-/* ============================================
-   HERO SECTION - Section d'accueil principale
-   ============================================ */
-
-/* Conteneur principal de la section Hero */
-.hero {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  padding: 120px 0 80px;
-  overflow: hidden;
-}
-
-/* Fond de la section Hero avec dégradé subtil basé sur les couleurs du logo */
-.hero-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  /* Dégradé subtil utilisant les couleurs du logo (bleu et orange) */
-  background: linear-gradient(135deg, 
-    rgba(37, 99, 235, 0.02) 0%, 
-    rgba(255, 140, 0, 0.02) 50%, 
-    rgba(37, 99, 235, 0.01) 100%
-  );
-}
-
-.hero-content {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
-}
-
-/* Badge de la section Hero */
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: var(--white);
-  padding: 8px 16px;
-  border-radius: 50px;
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--primary-blue);
-  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.1); /* Ombre avec couleur bordeaux du logo */
-  margin-bottom: 24px;
-}
-
-.hero-title {
-  font-size: 52px;
-  font-weight: 800;
-  line-height: 1.15;
-  color: var(--primary-blue);
-  margin-bottom: 24px;
-}
-
-/* ============================================
-   BOUTONS - Styles des boutons de l'application
-   ============================================ */
-
-/* Actions de la section Hero */
-.hero-actions {
-  display: flex;
-  gap: 16px;
-  margin-bottom: 48px;
-}
-
-/* Style de base pour tous les boutons */
-.btn {
-  padding: 14px 32px;
-  border-radius: 12px;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border: none;
-  font-family: inherit;
-}
-
-/* Bouton principal avec gradient bleu/orange du logo */
-.btn-primary {
-  background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
-  color: var(--white);
-  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.25); /* Ombre avec couleur bordeaux du logo */
-}
-
-/* Effet hover sur le bouton principal */
-.btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 25px rgba(37, 99, 235, 0.35); /* Ombre plus prononcée au survol */
-}
-
-.btn-secondary {
-  background: var(--white);
-  color: var(--primary-blue);
-  border: 2px solid var(--primary-blue);
-}
-
-.btn-secondary:hover {
-  background: var(--primary-blue);
-  color: var(--white);
-  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+  /* Ombre avec couleur bordeaux du logo */
 }
 
 /* Services Grid */
@@ -353,7 +263,7 @@ body {
     padding: 6px 12px;
     gap: 6px;
   }
-  
+
   .section-badge svg {
     width: 16px;
     height: 16px;
@@ -393,7 +303,8 @@ body {
 /* Effet hover sur les cartes de service */
 .service-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 40px rgba(37, 99, 235, 0.15); /* Ombre avec couleur bordeaux du logo */
+  box-shadow: 0 12px 40px rgba(37, 99, 235, 0.15);
+  /* Ombre avec couleur bordeaux du logo */
   border-color: var(--secondary-orange);
 }
 
@@ -534,13 +445,15 @@ body {
   background: var(--white);
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.08); /* Ombre avec couleur bordeaux du logo */
+  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.08);
+  /* Ombre avec couleur bordeaux du logo */
   transition: all 0.3s ease;
 }
 
 .menu-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 30px rgba(37, 99, 235, 0.15); /* Ombre avec couleur bordeaux du logo */
+  box-shadow: 0 8px 30px rgba(37, 99, 235, 0.15);
+  /* Ombre avec couleur bordeaux du logo */
 }
 
 .menu-item-image {
@@ -1111,6 +1024,7 @@ body {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -1172,6 +1086,7 @@ body {
     height: 18px;
   }
 }
+
 /* Modal Styles */
 .modal-overlay {
   position: fixed;
@@ -1226,7 +1141,8 @@ body {
 /* Leaflet CSS */
 .leaflet-container {
   width: 100%;
-  height: 500px; /* ou ajuster selon besoin */
+  height: 500px;
+  /* ou ajuster selon besoin */
   margin: 20px 0;
 }
 
@@ -1235,6 +1151,7 @@ body {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -1245,6 +1162,7 @@ body {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);

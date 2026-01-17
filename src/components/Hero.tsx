@@ -181,8 +181,8 @@ export default function Hero() {
           <Loader2 className="loader-icon" size={48} />
           <p className="loader-text">Chargement des images...</p>
           <div className="loader-progress">
-            <div 
-              className="loader-progress-bar" 
+            <div
+              className="loader-progress-bar"
               style={{ width: `${loadingProgress}%` }}
             ></div>
           </div>
@@ -206,7 +206,7 @@ export default function Hero() {
   return (
     <section className="hero" id="accueil">
       {/* Carrousel d'images */}
-      <div 
+      <div
         className="hero-slider"
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
@@ -258,7 +258,7 @@ export default function Hero() {
             <span className="hero-subtitle">Votre Réseau de Stations-Service de Confiance au Cameroun</span>
           </h1>
           <p className="hero-description">
-            Découvrez notre réseau de stations-service modernes réparties dans les principales villes du Cameroun. 
+            Découvrez notre réseau de stations-service modernes réparties dans les principales villes du Cameroun.
             Carburants de qualité supérieure, services complets et disponibilité 24h/24 pour répondre à tous vos besoins.
           </p>
           <div className="hero-actions">

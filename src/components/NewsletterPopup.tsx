@@ -33,7 +33,7 @@ export default function NewsletterPopup({ isOpen, onClose }: NewsletterPopupProp
               Ne manquez aucune <span className="highlight">actualité</span>
             </h2>
             <p className="newsletter-popup-description">
-              Inscrivez-vous à notre newsletter pour recevoir en exclusivité nos dernières promotions, 
+              Inscrivez-vous à notre newsletter pour recevoir en exclusivité nos dernières promotions,
               actualités et événements directement dans votre boîte mail.
             </p>
           </div>
@@ -52,10 +52,7 @@ export default function NewsletterPopup({ isOpen, onClose }: NewsletterPopupProp
               <span>Événements et nouveautés</span>
             </div>
           </div>
-
-          <div className="newsletter-popup-form">
-            <Newsletter onSubscribeSuccess={handleClose} />
-          </div>
+          <Newsletter onSubscribeSuccess={handleClose} />
         </div>
       </div>
     </div>
